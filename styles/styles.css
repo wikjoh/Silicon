@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  /* Project colors and formatting */
+  --color-primary: hsl(239, 84%, 67%);    /* #6366F1 */
+  --color-white: hsl(0, 0%, 100%);        /* #FFFFFF */
+  --color-gray-100: hsl(225, 100%, 98%);  /* #F3F6FF */
+  --color-gray-200: hsl(226, 68%, 96%);   /* #EFF2FC */
+  --color-gray-300: hsl(228, 35%, 92%);   /* #E2E5F1 */
+  --color-gray-400: hsl(229, 25%, 86%);   /* #D4D7E5 */
+  --color-gray-500: hsl(231, 16%, 75%);   /* #B4B7C9 */
+  --color-gray-600: hsl(231, 14%, 63%);   /* #9397AD */
+  --color-gray-700: hsl(234, 14%, 39%);   /* #565973 */
+  --color-gray-800: hsl(235, 20%, 25%);   /* #33354d */
+  --color-gray-900: hsl(223, 39%, 7%);    /* #0B0F19 */
+
+  --color-bg-white: var(--color-white);
+  --color-bg-dark: var(--color-gray-900);
+  --color-paragraph-whitebg: var(--color-gray-700);
+  --color-paragraph-darkbg: var(--color-gray-500);
+  --color-heading-darkbg: var(--color-white);
+  --color-heading-whitebg: var(--color-gray-900);
+  --color-navlink-whitebg: var(--color-gray-800);
+  --color-navlink-darkbg: hsl(from var(--color-white) h s calc(l - 15));
+  --color-bg-btnstore-whitebg: var(--color-gray-900);
+  --color-bg-btnstore-darkbg: var(--color-gray-200);
+
+  /* Font sizes */
+  --fs-d1: 80px;
+  --fs-d2: 72px;
+  --fs-d3: 64px;
+  --fs-d4: 56px;
+  --fs-d5: 48px;
+  --fs-d6: 42px;
+  --fs-h1: 40px;
+  --fs-h2: 32px;
+  --fs-h3: 28px;
+  --fs-h4: 24px;
+  --fs-h5: 20px;
+  --fs-h6: 16px;
+  --fs-body-l: 18px;
+  --fs-body-m: 16px;
+  --fs-body-s: 14px;
+
+  /* Font weights */
+  --fw-extra: 800;
+  --fw-semi: 600;
+  --fw-reg: 400;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
