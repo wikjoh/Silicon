@@ -46,6 +46,9 @@
   --fw-extra: 800;
   --fw-semi: 600;
   --fw-reg: 400;
+
+  --wrapper-p: .75rem;
+  --header-pt: .75rem;
 }
 
 * {
@@ -53,3 +56,27 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+/* Utility classes */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding-inline: var(--wrapper-p);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/* Header */
+
+.header {
+  justify-content: space-between;
+  padding-top: var(--header-pt);
+}
+
+
+
+/* Showcase */
