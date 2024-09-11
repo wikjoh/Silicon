@@ -240,17 +240,19 @@ a {
   "discover-more";
 
   .showcase-h1 {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
   .showcase-pitch {
     margin-top: 2rem;
+    line-height: 28.8px;
   }
   .store-buttons {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
   }
   .discover-more {
     gap: 1.5rem;
-    margin: 2rem 0;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
   }
 
   /* Mobile first */
@@ -306,8 +308,18 @@ a {
   }
 
   .discover-more-text {
+    display: flex;
     color: var(--color-paragraph);
     font-size: 14px;
+
+    &::before {
+      content:url('/assets/icons/chevron-dn-white.svg');
+      position: relative;
+      width: 44px;
+      height: 44px;
+      bottom: 10px;
+      right: 1rem;
+    }
   }
 }
 
@@ -331,13 +343,16 @@ a {
     .logo-img {
       content: url('/assets/logo-bgdark.svg');
     }
+    .showcase-pitch {
+      color: var(--color-white);
+    }
     .btn-apple-img {
       content: url('/assets/appstorebadges/appstore-dark.svg');
     }
     .btn-google-img {
       content: url('/assets/appstorebadges/googleplay-dark.svg');
     }
-    .discover-more-img {
+    .discover-more-text::before {
       content: url('/assets/icons/chevron-dn-dark.svg');
     }
     /* Set darkmode switch to active position */
@@ -363,13 +378,16 @@ a {
     .logo-img {
       content: url('/assets/logo-bgdark.svg');
     }
+    .showcase-pitch {
+      color: var(--color-white);
+    }
     .btn-apple-img {
       content: url('/assets/appstorebadges/appstore-dark.svg');
     }
     .btn-google-img {
       content: url('/assets/appstorebadges/googleplay-dark.svg');
     }
-    .discover-more-img {
+    .discover-more-text::before {
       content: url('/assets/icons/chevron-dn-dark.svg');
     }
     /* Set darkmode switch to active position */
