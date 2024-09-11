@@ -25,6 +25,19 @@
   --color-bg-btnstore-whitebg: var(--color-gray-900);
   --color-bg-btnstore-darkbg: var(--color-gray-200);
 
+  /* Default theme - white/light */
+  --color-bg: var(--color-bg-white);
+  --color-navlink: var(--color-navlink-whitebg);
+  --color-burger: var(--color-gray-800);
+  --color-heading: var(--color-heading-whitebg);
+  --color-paragraph: var(--color-paragraph-whitebg);
+  --color-switch-bg: var(--color-gray-600);
+  --color-bg-btnstore: var(--color-bg-btnstore-whitebg);  
+
+  /* Transitions */
+  --transition-default: all .25s;
+  --transition-theme: all .5s ease;
+
   /* Font sizes */
   --fs-d1: 80px;
   --fs-d2: 72px;
@@ -47,7 +60,8 @@
   --fw-semi: 600;
   --fw-reg: 400;
 
-  --wrapper-p: .75rem;
+  /* Padding, margins */
+  --wrapper-pi: .75rem;
   --header-pt: .75rem;
 }
 
@@ -57,26 +71,219 @@
   box-sizing: border-box;
 }
 
-/* Utility classes */
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--fw-reg);
+  font-style: normal;
+  font-size: var(--fs-body-m);
+}
 
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+
+          /* Utility classes start */
 .wrapper {
+  max-width: 1320px;
+  margin-inline: auto;
   display: flex;
   align-items: center;
-  padding-inline: var(--wrapper-p);
+  padding-inline: var(--wrapper-pi);
 }
 
 .flex {
   display: flex;
   align-items: center;
 }
+          /* Utility classes end */
 
-/* Header */
 
-.header {
-  justify-content: space-between;
-  padding-top: var(--header-pt);
+          /* Darkmode start */
+/* Disable to show hidden checkboxes used for darkmode syncing. */
+.dm-chbox-hidden {
+  display: none;
 }
 
 
 
-/* Showcase */
+.themeswap {
+  background-color: var(--color-bg);
+  transition: var(--transition-theme);
+}
+          /* Darkmode end */
+
+          /* Header start */
+
+.header-div {
+  justify-content: space-between;
+  padding-top: var(--header-pt);
+
+  #header-nav {
+    margin-left: 3rem;
+  }
+  .btn-signin {
+    margin-left: 2rem;
+  }
+  .btn-burger {
+    margin-left: 2rem;
+    margin-right: .5rem;
+  }
+  /* Mobile first */
+  #header-nav, .btn-signin {
+    display: none;
+  }
+}
+
+#header-nav {
+  .nav-link {
+    color: var(--color-navlink);
+    font-size: 16px;
+    font-weight: 600;
+    opacity: var(--navlink-opacity);
+    transition: var(--transition-default);
+    
+    &:hover {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+  }
+}
+
+/* Darkmode toggle-switch stuff */
+/* In preferred-color-scheme light, hide label-darkmode-switch-darkbg */
+#label-darkmode-switch-darkbg {display: none;}
+
+.toggle-switch {
+  display: inline-block;
+  position: relative;
+  width: 46px;
+  height: 24px;
+
+  .dmswitchbg {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    border-radius: 46px;
+    background-color: var(--color-switch-bg);
+    transition: var(--transition-theme);
+  }    
+  .dmswitchbg::before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    transition: var(--transition-theme);
+  }
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 6px;
+  padding: 11px 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-default);
+  
+  &:hover {
+    background-color: var(--color-gray-600);
+    color: var(--color-white);
+    text-decoration: none;
+  }
+}
+
+.btn-signin {
+  width: 140px;
+  height: 36px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0px;
+  border-radius: 4px;
+  
+  .usericon {
+    margin-right: 0.5rem;
+  }
+}
+
+/* Hamburger/mobile menu */
+.btn-burger {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: var(--color-burger);
+}
+
+          /* Header end */
+
+          /* Showcase start */
+
+
+
+
+
+
+          /* Media queries start */
+
+/* Darkmode media queries */
+@media (prefers-color-scheme: light) {
+  #darkmode-switch-whitebg:checked ~ .themeswap {
+    --color-bg: var(--color-bg-dark);
+    --color-navlink: var(--color-navlink-darkbg);
+    --color-burger: var(--color-white);
+    --color-heading: var(--color-heading-darkbg);
+    --color-paragraph: var(--color-paragraph-darkbg);
+    --color-bg-btnstore: var(--color-bg-btnstore-darkbg);
+    /* Change themeswitch-bg to active color */
+    --color-switch-bg: var(--color-primary);
+    /* Swap to light-texted logo */
+    .logo-img {
+      content: url('/assets/logo-bgdark.svg');
+    }
+
+    /* Set darkmode switch to active position */
+    .dmswitchbg::before {
+      transform: translateX(20px);
+    }
+  }
+}
+
+/* Auto-enable darkmode if user has prefers-color-scheme: dark */
+@media (prefers-color-scheme: dark) {
+  #darkmode-switch-darkbg:checked ~ .themeswap {
+    --color-bg: var(--color-bg-dark);
+    --color-navlink: var(--color-navlink-darkbg);
+    --color-burger: var(--color-white);
+    --color-heading: var(--color-heading-darkbg);
+    --color-paragraph: var(--color-paragraph-darkbg);
+    --color-bg-btnstore: var(--color-bg-btnstore-darkbg);
+    /* Change themeswitch-bg to active color */
+    --color-switch-bg: var(--color-primary);
+
+    /* Swap to light-texted logo */
+    .logo-img {
+      content: url('/assets/logo-bgdark.svg');
+    }
+    /* Set darkmode switch to active position */
+    .dmswitchbg::before {
+      transform: translateX(20px);
+    }
+  }
+  /* In preferred scheme dark, display pre-checked darkbg checkbox
+  and hide unchecked whitebg checkbox */
+  #label-darkmode-switch-darkbg {display: inline-block;}
+  #label-darkmode-switch-whitebg {display: none;}
+}
+
+          /* Media queries end */

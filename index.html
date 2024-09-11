@@ -9,47 +9,73 @@
 </head>
 <body>
 
-  <header>
-    <div class="wrapper header">
-
-      <div class="header-left flex">
-        <a class="logo" href="index.html">
-          <img class="logo-img" src="/assets/logo-bglight.svg" alt="Silicon Logo">
-        </a>
-
-        <nav id="main-menu" class="navbar">
-          <a class="nav-link" href="#">Features</a>
-        </nav>
-      </div>
-
-      <div class="header-right flex">
-        <span class="test">test</span>
-      </div>
-
-    </div>
-  </header>
-
-  <main>
+  <!-- Inspired by CSS-only darkmode: https://codepen.io/kleinfreund/pen/bJwqpB
+  Insert themeswapping checkboxes for later use. One of the buttons is pre-checked.
+  In order to "sync" toggleswitch with pref colorscheme, the one corresponding to users preferred color scheme will be used. -->
+  <span class="dm-chbox-hidden">prefers-color-scheme-light-box</span>
+  <input id="darkmode-switch-whitebg" class="darkmode-checkboxes dm-chbox-hidden" type="checkbox">
+  <span class="dm-chbox-hidden">prefers-color-scheme-dark-box</span>
+  <input id="darkmode-switch-darkbg" class="darkmode-checkboxes dm-chbox-hidden" type="checkbox" checked>
+  <!-- Put everything inside a container on the same DOM-level as the checkboxes in order for theme swapping to work-->
+  <div class="themeswap">
     
-    <section id="showcase">
-    </section>
+    <header>
+      <div class="wrapper header-div">
+      
+        <div class="header-left flex">
+          <a class="logo" href="index.html">
+            <img class="logo-img" src="/assets/logo-bglight.svg" alt="Silicon Logo">
+          </a>
+        
+          <nav id="header-nav" class="navbar">
+            <a class="nav-link" href="#">Features</a>
+          </nav>
+        </div>
+      
+        <div class="header-right flex">
+          <!-- Labels for toggling darkmode.
+          The label that doesn't correspond to users preffered scheme will be hidden.  -->
+          <div class="theme-toggle-switches">
+            <label id="label-darkmode-switch-whitebg" for="darkmode-switch-whitebg" class="toggle-switch">
+              <span class="dmswitchbg"></span>
+            </label>
+            <label id="label-darkmode-switch-darkbg" for="darkmode-switch-darkbg" class="toggle-switch">
+              <span class="dmswitchbg"></span>
+            </label>
+          </div>
 
-    <section id="features">
-    </section>
+          <a id="signin-button" class="btn-primary btn-signin" href="#">
+            <img class="usericon" src="/assets/icons/signupbuttonusericon.svg" alt="">
+            <span>Sign in / up</span>
+          </a>
 
-    <section id="how">
-    </section>
+          <button class="btn-burger">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      
+      </div>
+    </header>
 
-    <section id="features2">
-    </section>
+    <main>
+      <section id="showcase">
+      </section>
 
-    <section id="reviews">
-    </section>
+      <section id="features">
+      </section>
 
-    <section id="faq-cta">
-    </section>
+      <section id="how">
+      </section>
 
-  </main>
-  
+      <section id="payment">
+      </section>
+
+      <section id="reviews">
+      </section>
+
+      <section id="faq-cta">
+      </section>
+    </main>
+  </div>
 </body>
 </html>
