@@ -139,12 +139,6 @@ a {
   transition: var(--transition-theme);
 }
 
-/* Separate transition for header background change
-** due to it not changing at same pace as rest of page.
-** Still looks weird... */
-header {
-  transition: all .2s ease;
-}
           /* Darkmode end */
           /* Header start */
 .header-container {
@@ -453,8 +447,6 @@ header {
 /* Darkmode media queries */
 @media (prefers-color-scheme: light) {
   #darkmode-switch-whitebg:checked ~ .themewrapper {
-    /* In darkmode, set header-bgcolor to ending color of gradient */
-    header {background-color: #1B1F29}
     --color-bg: var(--color-bg-dark);
     --color-navlink: var(--color-navlink-darkbg);
     --color-burger: var(--color-white);
@@ -489,8 +481,6 @@ header {
 /* Auto-enable darkmode if user has prefers-color-scheme: dark */
 @media (prefers-color-scheme: dark) {
   #darkmode-switch-darkbg:checked ~ .themewrapper {
-    /* In darkmode, set header-bgcolor to ending color of gradient */
-    header {background-color: #1B1F29}
     --color-bg: var(--color-bg-dark);
     --color-navlink: var(--color-navlink-darkbg);
     --color-burger: var(--color-white);
