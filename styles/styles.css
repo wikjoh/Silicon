@@ -138,6 +138,13 @@ a {
   background-color: var(--color-bg);
   transition: var(--transition-theme);
 }
+
+/* Separate transition for header background change
+** due to it not changing at same pace as rest of page.
+** Still looks weird... */
+header {
+  transition: all .2s ease;
+}
           /* Darkmode end */
           /* Header start */
 .header-container {
@@ -239,6 +246,11 @@ a {
 
           /* Header end */
           /* Hero start */
+#hero {
+  background: rgb(99,102,241);
+  background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
+}
+
 .hero-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -443,6 +455,8 @@ a {
 /* Darkmode media queries */
 @media (prefers-color-scheme: light) {
   #darkmode-switch-whitebg:checked ~ .themewrapper {
+    /* In darkmode, set header-bgcolor to ending color of gradient */
+    header {background-color: #1B1F29}
     --color-bg: var(--color-bg-dark);
     --color-navlink: var(--color-navlink-darkbg);
     --color-burger: var(--color-white);
@@ -477,6 +491,8 @@ a {
 /* Auto-enable darkmode if user has prefers-color-scheme: dark */
 @media (prefers-color-scheme: dark) {
   #darkmode-switch-darkbg:checked ~ .themewrapper {
+    /* In darkmode, set header-bgcolor to ending color of gradient */
+    header {background-color: #1B1F29}
     --color-bg: var(--color-bg-dark);
     --color-navlink: var(--color-navlink-darkbg);
     --color-burger: var(--color-white);
