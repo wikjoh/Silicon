@@ -177,7 +177,16 @@ a {
 
 /* Darkmode toggle-switch stuff */
 /* In preferred-color-scheme light, hide label-darkmode-switch-darkbg */
+#label-darkmode-switch-lightbg {display: flex;}
 #label-darkmode-switch-darkbg {display: none;}
+
+.dm-text {
+  font-size: var(--fs-body-m);
+  color: var(--color-gray-700);
+  margin-right: 1rem;
+  /* Hide on mobile */
+  display: none;
+}
 
 .toggle-switch {
   display: inline-block;
@@ -294,6 +303,7 @@ a {
   }
 
   .hero-images {
+    grid-area: hero-images;
     align-self: end;
     justify-self: right;
     position: relative;
@@ -329,6 +339,10 @@ a {
     --header-pt: 1.5rem;
   }
 
+  .dm-text {
+    display: block;
+  }
+
   .hero-container {
     grid-template-columns: 2fr 3fr;
     grid-template-areas:  "hero-headline hero-headline"
@@ -353,6 +367,74 @@ a {
     }
     .paragraph-splitter, .hero-images {
       display: block;
+    }
+  }
+}
+
+@media (width >= 1400px) {
+  /* Change margin & padding */
+  :root {
+    --wrapper-pi: 2rem;
+    --header-pt: 1rem;
+  }
+
+  .btn-burger {
+    display: none;
+  }
+
+  .header-container {
+    #header-nav, .btn-signin {
+      display: flex;
+    }
+  }
+
+  .hero-container {
+    align-items: start;
+    height: 800px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:  "hero-headline hero-images"
+                          "hero-content hero-images";
+    gap: 0rem;
+
+    .headline {
+      font-size: var(--fs-hero-headline-desktop);
+      margin-top: 9rem;
+      text-align: left;
+    }
+    .content {
+      margin-top: 0;
+    }
+    .dlbuttons {
+      flex-direction: row;
+    }
+    .discover-more {
+      margin-top: 15rem;
+    }
+
+    .hero-images {
+      .hero-img-shadow {
+        bottom: 0;
+        right: 425px;
+      }
+      .hero-img-back {
+        bottom: 0;
+        right: 235px;
+      }
+      .hero-img-front {
+        right: 0;
+        bottom: 0;
+      }
+    }
+    
+    /* Replace images with desktop versions */
+    .hero-img-shadow {
+      content: url('/assets/images/desktop/hero-shadow.png');
+    }
+    .hero-img-back {
+      content: url('/assets/images/desktop/hero-back.png');
+    }
+    .hero-img-front {
+      content: url('/assets/images/desktop/hero-front.png');
     }
   }
 }
@@ -427,7 +509,7 @@ a {
   }
   /* In preferred scheme dark, display pre-checked darkbg checkbox
   and hide unchecked whitebg checkbox */
-  #label-darkmode-switch-darkbg {display: inline-block;}
+  #label-darkmode-switch-darkbg {display: flex;}
   #label-darkmode-switch-whitebg {display: none;}
 }
 
