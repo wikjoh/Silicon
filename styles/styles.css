@@ -231,7 +231,6 @@ a {
           /* Header end */
           /* Hero start */
 .hero-container {
-  text-align: center;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -239,30 +238,27 @@ a {
   "hero-content";
 
   /* Hide in mobile */
-  .paragraph-splitter, .hero-img-container {
+  .paragraph-splitter, .hero-images {
     display: none;
   }
-
   .headline {
     grid-area: hero-headline;
+    text-align: center;
     font-weight: var(--fw-extra);
     font-size: var(--fs-hero-headline-mobile);
     color: var(--color-heading);
     margin-top: 1.5rem;    
   }
-
   .content {
     grid-area: hero-content;
     text-align: center;
     margin-top: 2rem;
   }
-
   .pitch {
     color: var(--color-paragraph);
     font-size: var(--fs-body-l);
     line-height: 28.8px;
   }
-
   .dlbuttons {
     display: flex;
     flex-direction: column;
@@ -296,10 +292,71 @@ a {
     margin-bottom: 2rem;
     gap: 1rem;
   }
+
+  .hero-images {
+    align-self: end;
+    justify-self: right;
+    position: relative;
+
+    .hero-img-shadow {
+      position: absolute;
+      bottom: 0;
+      right: 200px;
+      z-index: 5;
+    }
+    .hero-img-back {
+      position: absolute;
+      bottom: 0;
+      right: 142px;
+      z-index: 10;
+    }
+    .hero-img-front {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 15;
+    }
+  }
 }
 
           /* Hero end */
           /* Media queries start */
+
+@media (width >= 768px) {
+  /* Change margin & padding */
+  :root {
+    --wrapper-pi: 2rem;
+    --header-pt: 1.5rem;
+  }
+
+  .hero-container {
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas:  "hero-headline hero-headline"
+                          "hero-content hero-images";
+    /* Set minimum height of second row to equal height of tallest image 
+    ** due to position:absolute messing up the flow */
+    grid-template-rows: auto minmax(417px, auto);
+    gap: 2.5rem;
+
+    
+    .headline {
+      font-size: var(--fs-hero-headline-tablet);
+    }
+    .content {
+      text-align: left;
+    }
+    .dlbuttons {
+      margin-top: 3rem;
+    }
+    .discover-more {
+      justify-content: left;
+    }
+    .paragraph-splitter, .hero-images {
+      display: block;
+    }
+  }
+}
+
 
 /* Darkmode media queries */
 @media (prefers-color-scheme: light) {
