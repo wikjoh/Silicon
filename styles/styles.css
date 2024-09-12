@@ -22,8 +22,8 @@
   --color-heading-whitebg: var(--color-gray-900);
   --color-navlink-whitebg: var(--color-gray-800);
   --color-navlink-darkbg: hsl(from var(--color-white) h s calc(l - 15));
-  --color-bg-btnstore-whitebg: var(--color-gray-900);
-  --color-bg-btnstore-darkbg: var(--color-gray-200);
+  --color-bg-dlbtn-whitebg: var(--color-gray-900);
+  --color-bg-dlbtn-darkbg: var(--color-gray-200);
 
   /* Default theme - white/light */
   --color-bg: var(--color-bg-white);
@@ -32,7 +32,7 @@
   --color-heading: var(--color-heading-whitebg);
   --color-paragraph: var(--color-paragraph-whitebg);
   --color-switch-bg: var(--color-gray-600);
-  --color-bg-btnstore: var(--color-bg-btnstore-whitebg);  
+  --color-bg-dlbtn: var(--color-bg-dlbtn-whitebg);  
 
   /* Transitions */
   --transition-default: all .25s;
@@ -55,6 +55,10 @@
   --fs-body-m: 16px;
   --fs-body-s: 14px;
 
+  --fs-hero-headline-mobile: 34.1px;
+  --fs-hero-headline-tablet: 44.3px;
+  --fs-hero-headline-desktop: var(--fs-d4);
+
   /* Font weights */
   --fw-extra: 800;
   --fw-semi: 600;
@@ -64,6 +68,8 @@
   --wrapper-pi: .75rem;
   --header-pt: .75rem;
 }
+
+          /* Set "default" formatting */
 
 * {
   padding: 0;
@@ -88,6 +94,24 @@ a {
   }
 }
 
+          /* Reusable buttons */
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 8px;
+  padding: 11px 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-default);
+  
+  &:hover {
+    background-color: var(--color-gray-600);
+    color: var(--color-white);
+    text-decoration: none;
+  }
+}
 
           /* Utility classes start */
 .wrapper {
@@ -104,24 +128,18 @@ a {
   align-items: center;
 }
           /* Utility classes end */
-
-
           /* Darkmode start */
 /* Disable to show hidden checkboxes used for darkmode syncing. */
 .dm-chbox-hidden {
   display: none;
 }
 
-
-
-.themeswap {
+.themewrapper {
   background-color: var(--color-bg);
   transition: var(--transition-theme);
 }
           /* Darkmode end */
-
           /* Header start */
-
 .header-container {
   justify-content: space-between;
   padding-top: var(--header-pt);
@@ -136,7 +154,7 @@ a {
     margin-left: 2rem;
     margin-right: .5rem;
   }
-  /* Mobile first */
+  /* Hide in mobile */
   #header-nav, .btn-signin {
     display: none;
   }
@@ -188,23 +206,7 @@ a {
   }
 }
 
-.btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  border-radius: 6px;
-  padding: 11px 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: var(--transition-default);
-  
-  &:hover {
-    background-color: var(--color-gray-600);
-    color: var(--color-white);
-    text-decoration: none;
-  }
-}
-
+/* Sign-in button */
 .btn-signin {
   width: 140px;
   height: 36px;
@@ -227,133 +229,104 @@ a {
 }
 
           /* Header end */
-
-          /* Showcase start */
-.showcase-container {
+          /* Hero start */
+.hero-container {
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-  "showcase-h1"
-  "showcase-pitch"
-  "store-buttons"
-  "discover-more";
+  "hero-headline"
+  "hero-content";
 
-  .showcase-h1 {
-    margin-top: 1.5rem;
-  }
-  .showcase-pitch {
-    margin-top: 2rem;
-    line-height: 28.8px;
-  }
-  .store-buttons {
-    margin-top: 2rem;
-  }
-  .discover-more {
-    gap: 1.5rem;
-    margin-top: 2.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  /* Mobile first */
-  .paragraph-splitter, .showcase-image-container {
+  /* Hide in mobile */
+  .paragraph-splitter, .hero-img-container {
     display: none;
   }
-}
 
-.showcase-h1 {
-  grid-area: showcase-h1;
-  font-weight: var(--fw-extra);
-  font-size: 34.1px;
-  color: var(--color-heading);
-}
-
-.showcase-pitch {
-  grid-area: showcase-pitch;
-  color: var(--color-paragraph);
-  font-size: var(--fs-body-l);
-}
-
-/* Scaleable app store buttons */
-.store-buttons {
-  grid-area: store-buttons;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.btn-store-container {
-  width: 100%;
-}
-
-.btn-store {
-  background-color: var(--color-bg-btnstore);
-  border-radius: .5rem;
-  padding: auto;
-  height: 50px;
-  width: 100%;
-}
-
-.btn-store-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: .4rem;
-}
-
-.discover-more {
-  grid-area: discover-more;
-
-  &:hover{
-    cursor: pointer;
+  .headline {
+    grid-area: hero-headline;
+    font-weight: var(--fw-extra);
+    font-size: var(--fs-hero-headline-mobile);
+    color: var(--color-heading);
+    margin-top: 1.5rem;    
   }
 
-  .discover-more-text {
-    display: flex;
-    color: var(--color-paragraph);
-    font-size: 14px;
+  .content {
+    grid-area: hero-content;
+    text-align: center;
+    margin-top: 2rem;
+  }
 
-    &::before {
-      content:url('/assets/icons/chevron-dn-white.svg');
-      position: relative;
-      width: 44px;
-      height: 44px;
-      bottom: 10px;
-      right: 1rem;
+  .pitch {
+    color: var(--color-paragraph);
+    font-size: var(--fs-body-l);
+    line-height: 28.8px;
+  }
+
+  .dlbuttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+
+  .btn-dl {
+    background-color: var(--color-bg-dlbtn);
+    border-radius: 8px;
+    padding: 8px 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-default);
+    
+    &:hover {
+      background-color: var(--color-gray-600);
+      color: var(--color-white);
+      text-decoration: none;
     }
   }
+
+  .discover-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-paragraph);
+    font-size: 14px;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
 }
 
-          /* Showcase end */
-
-
+          /* Hero end */
           /* Media queries start */
 
 /* Darkmode media queries */
 @media (prefers-color-scheme: light) {
-  #darkmode-switch-whitebg:checked ~ .themeswap {
+  #darkmode-switch-whitebg:checked ~ .themewrapper {
     --color-bg: var(--color-bg-dark);
     --color-navlink: var(--color-navlink-darkbg);
     --color-burger: var(--color-white);
     --color-heading: var(--color-heading-darkbg);
     --color-paragraph: var(--color-paragraph-darkbg);
-    --color-bg-btnstore: var(--color-bg-btnstore-darkbg);
+    --color-bg-dlbtn: var(--color-bg-dlbtn-darkbg);
     /* Change themeswitch-bg to active color */
     --color-switch-bg: var(--color-primary);
     /* Swap to light-texted logo */
     .logo-img {
       content: url('/assets/logo-bgdark.svg');
     }
-    .showcase-pitch {
+    .hero-container .pitch {
       color: var(--color-white);
+    }
+    .chevron-dn-img {
+      content: url('/assets/icons/chevron-dn-dark.svg');
     }
     .btn-apple-img {
       content: url('/assets/appstorebadges/appstore-dark.svg');
     }
     .btn-google-img {
       content: url('/assets/appstorebadges/googleplay-dark.svg');
-    }
-    .discover-more-text::before {
-      content: url('/assets/icons/chevron-dn-dark.svg');
     }
     /* Set darkmode switch to active position */
     .dmswitchbg::before {
@@ -364,13 +337,13 @@ a {
 
 /* Auto-enable darkmode if user has prefers-color-scheme: dark */
 @media (prefers-color-scheme: dark) {
-  #darkmode-switch-darkbg:checked ~ .themeswap {
+  #darkmode-switch-darkbg:checked ~ .themewrapper {
     --color-bg: var(--color-bg-dark);
     --color-navlink: var(--color-navlink-darkbg);
     --color-burger: var(--color-white);
     --color-heading: var(--color-heading-darkbg);
     --color-paragraph: var(--color-paragraph-darkbg);
-    --color-bg-btnstore: var(--color-bg-btnstore-darkbg);
+    --color-bg-dlbtn: var(--color-bg-dlbtn-darkbg);
     /* Change themeswitch-bg to active color */
     --color-switch-bg: var(--color-primary);
 
@@ -378,17 +351,17 @@ a {
     .logo-img {
       content: url('/assets/logo-bgdark.svg');
     }
-    .showcase-pitch {
+    .hero-container .pitch {
       color: var(--color-white);
+    }
+    .chevron-dn-img {
+      content: url('/assets/icons/chevron-dn-dark.svg');
     }
     .btn-apple-img {
       content: url('/assets/appstorebadges/appstore-dark.svg');
     }
     .btn-google-img {
       content: url('/assets/appstorebadges/googleplay-dark.svg');
-    }
-    .discover-more-text::before {
-      content: url('/assets/icons/chevron-dn-dark.svg');
     }
     /* Set darkmode switch to active position */
     .dmswitchbg::before {
