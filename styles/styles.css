@@ -356,12 +356,10 @@ header {
   }
 
   .hero-container {
+    height: 618px;
     grid-template-columns: 2fr 3fr;
     grid-template-areas:  "hero-headline hero-headline"
                           "hero-content hero-images";
-    /* Set minimum height of second row to equal height of tallest image 
-    ** due to position:absolute messing up the flow */
-    grid-template-rows: auto minmax(417px, auto);
     gap: 2.5rem;
 
     
