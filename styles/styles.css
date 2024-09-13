@@ -25,6 +25,13 @@
   --color-bg-dlbtn-whitebg: var(--color-gray-900);
   --color-bg-dlbtn-darkbg: var(--color-gray-200);
 
+  --color-brandlogo-border-whitebg: var(--color-gray-300);
+  --color-brandlogo-border-darkbg: hsl(0, 0%, 85%);
+  --color-brandlogo-bg-darkbg-tablet: #131022;
+  --color-features-body: hsl(0, 0%, 30%);
+  --color-feature-cards-img-bg-bgwhite: var(--color-gray-100);
+  --color-feature-cards-img-bg-bgdark: #171B25;
+
   /* Default theme - white/light */
   --color-bg: var(--color-bg-white);
   --color-navlink: var(--color-navlink-whitebg);
@@ -32,7 +39,8 @@
   --color-heading: var(--color-heading-whitebg);
   --color-paragraph: var(--color-paragraph-whitebg);
   --color-switch-bg: var(--color-gray-600);
-  --color-bg-dlbtn: var(--color-bg-dlbtn-whitebg);  
+  --color-bg-dlbtn: var(--color-bg-dlbtn-whitebg); 
+  --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgwhite); 
 
   /* Transitions */
   --transition-default: all .25s;
@@ -282,6 +290,9 @@ a {
   }
 
   .btn-dl {
+    /* Give buttons a higher z-index to make sure they aren't covered
+    ** by overflow from position: absolute images */
+    z-index: 50;
     background-color: var(--color-bg-dlbtn);
     border-radius: 8px;
     padding: 8px 22px;
@@ -341,6 +352,38 @@ a {
 .features-container {
   display: grid;
   grid-template-columns: 1fr;
+  margin-bottom: 3rem;
+
+  h2, h3 {
+    color: var(--color-heading);
+    font-weight: var(--fw-extra);
+  }
+
+  .brandlogo-container {
+    /* Hide on mobile */
+    display: none;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 3rem;
+
+    .desktop-only {
+      display: none;
+    }
+  }
+
+  .brandlogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--color-brandlogo-border-whitebg);
+    border-radius: 8px;
+    width: 160px;
+    height: 100px;
+
+    .brandlogo-img {
+      max-width: 85%;
+    }
+  }
 
   .headline, .paragraph {
     text-align: center;
@@ -349,7 +392,6 @@ a {
   .headline {
     margin-top: 2.5rem;
     font-size: 28px;
-    font-weight: var(--fw-extra);
   }
 
   .paragraph {
@@ -360,8 +402,11 @@ a {
   }
 
   /* Hide on mobile */
-  .left-img {
+  .left-content {
     display: none;
+    /* Set height equal to height of image,
+    ** to prevent overflow due to position: absolute */
+    height: 683px;
   }
 
   .right-content {
@@ -379,13 +424,13 @@ a {
     margin-bottom: 2.25rem;
 
     .card-img-container {
-      flex-shrink: 0; /* Prevent flex container from shrining box below 60x60*/
+      flex-shrink: 0; /*Prevent flex container from shrinking box below 60x60*/
       display: flex;
       justify-content: center;
       align-items: center;
       width: 60px;
       height: 60px;
-      background-color: var(--color-gray-100); /* Change to theme-var later */
+      background-color: var(--color-feature-cards-img-bg);
       border-radius: 8px;
     }
 
@@ -396,14 +441,9 @@ a {
       }
       h3 {
         font-size: 20px;
-        font-weight: var(--fw-extra);
       }
     }
   }
-
-
-
-
 }        
 
           /* Media queries start */
@@ -419,6 +459,7 @@ a {
     display: block;
   }
 
+  /* Hero section */
   .hero-container {
     height: 618px;
     grid-template-columns: 2fr 3fr;
@@ -443,6 +484,24 @@ a {
       display: block;
     }
   }
+
+    /* Features section */
+  .features-container {
+    margin-bottom: 4rem;
+    .brandlogo-container {
+      display: flex;
+    }
+
+    .feature-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      
+      .card {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 @media (width >= 1400px) {
@@ -462,6 +521,7 @@ a {
     }
   }
 
+  /* Hero section */
   .hero-container {
     align-items: start;
     height: 800px;
@@ -511,6 +571,44 @@ a {
       content: url('/assets/images/desktop/hero-front.png');
     }
   }
+
+  /* Features section */
+  .features-container {
+    .content-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      margin-top: 7rem;
+      margin-bottom: 7rem;
+      gap: 8rem;
+
+      .headline {
+        margin-top: 0;
+      }
+      .feature-cards {
+        gap: 3rem;
+      }
+    }
+
+
+    .brandlogo-container {
+      .desktop-only {
+        display: flex;
+      }
+    }
+    .left-content {
+      display: block;
+      position: relative;
+
+      .phone-img {
+        position: absolute;
+      }
+      .card-img {
+        position: absolute;
+        top: 90px;
+        left: 25px;
+      }
+    }
+  }
 }
 
 
@@ -523,6 +621,7 @@ a {
     --color-heading: var(--color-heading-darkbg);
     --color-paragraph: var(--color-paragraph-darkbg);
     --color-bg-dlbtn: var(--color-bg-dlbtn-darkbg);
+    --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgdark);
     /* Change themeswitch-bg to active color */
     --color-switch-bg: var(--color-primary);
     /* Swap to light-texted logo */
@@ -557,6 +656,7 @@ a {
     --color-heading: var(--color-heading-darkbg);
     --color-paragraph: var(--color-paragraph-darkbg);
     --color-bg-dlbtn: var(--color-bg-dlbtn-darkbg);
+    --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgdark);
     /* Change themeswitch-bg to active color */
     --color-switch-bg: var(--color-primary);
 
