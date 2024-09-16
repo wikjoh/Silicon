@@ -32,6 +32,9 @@
   --color-feature-cards-img-bg-bgwhite: var(--color-gray-100);
   --color-feature-cards-img-bg-bgdark: #171B25;
 
+  --color-how-bg-white: var(--color-gray-100);
+  --color-how-bg-dark: #1c2029; /* Doesn't match any of grayscale colors? */
+
   /* Default theme - white/light */
   --color-bg: var(--color-bg-white);
   --color-navlink: var(--color-navlink-whitebg);
@@ -40,7 +43,8 @@
   --color-paragraph: var(--color-paragraph-whitebg);
   --color-switch-bg: var(--color-gray-600);
   --color-bg-dlbtn: var(--color-bg-dlbtn-whitebg); 
-  --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgwhite); 
+  --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgwhite);
+  --color-how-bg: var(--color-how-bg-white);
 
   /* Transitions */
   --transition-default: all .25s;
@@ -91,6 +95,11 @@ body {
   font-weight: var(--fw-reg);
   font-style: normal;
   font-size: var(--fs-body-m);
+}
+
+h1, h2, h3 {
+  color: var(--color-heading);
+  font-weight: var(--fw-extra);
 }
 
 a {
@@ -267,9 +276,7 @@ a {
   .headline {
     grid-area: hero-headline;
     text-align: center;
-    font-weight: var(--fw-extra);
     font-size: var(--fs-hero-headline-mobile);
-    color: var(--color-heading);
     margin-top: 1.5rem;    
   }
   .content {
@@ -380,6 +387,7 @@ a {
     width: 160px;
     height: 100px;
 
+    /* Add some space between image and border */
     .brandlogo-img {
       max-width: 85%;
     }
@@ -444,11 +452,59 @@ a {
       }
     }
   }
-}        
+}
+
+          /* Features end */
+          /* How-does-it-work start */
+#how {
+  background-color: var(--color-how-bg);
+}
+
+.how-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .tablet, .desktop {
+    display: none;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 36.2px;
+    margin-top: 4.5rem;
+  }
+
+  .images-container {
+    display: flex;
+    margin-top: 2.5rem;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .image-description {
+    h3 {
+      display: inline-block;
+      font-size: 22px;
+      line-height: 30px;
+      margin-top: 2.5rem;
+      width: 85%;
+    }
+    p {
+      color: var(--color-paragraph);
+      font-size: var(--fs-body-m);
+      margin-top: 1rem;
+      margin-bottom: 4rem;
+    }
+  }
+}
+
 
           /* Media queries start */
 
-@media (width >= 768px) {
+@media (768px <= width < 1400px) {
   /* Change margin & padding */
   :root {
     --wrapper-pi: 2rem;
@@ -499,6 +555,54 @@ a {
       
       .card {
         margin-bottom: 0;
+      }
+    }
+  }
+
+  /* How does it work-section */
+  .how-container {
+    h2 {
+      font-size: 34px;
+      line-height: 43.6px;
+    }
+
+    .mobile, .desktop {
+      display: none;
+    }
+    .tablet {
+      display: block;
+    }
+
+    .images-container {
+      /* Increase spacing between images as container grows in width */
+      width: 100%;
+      max-width: 900px;
+      .mobile-img, .desktop-img {
+        display: none;
+      }
+      .tablet.img {
+        display: block;
+        flex-shrink: 0;
+        flex-grow: 1;
+      }
+      .img.left {
+        text-align: right;
+      }
+      .img.right {
+        text-align: left;
+      }
+    }
+
+    .image-description {
+      width: 65%;
+      max-width: 550px;
+      h3 {
+        width: 100%;
+        font-size: 23px;
+        line-height: 32px;   
+      }
+      p {
+        line-height: 26px;
       }
     }
   }
@@ -609,6 +713,43 @@ a {
       }
     }
   }
+
+  /* How does it work-section */
+  .how-container {
+    h2 {
+      font-size: var(--fs-h1);
+      line-height: 130%;
+    }
+
+    .mobile, .tablet {
+      display: none;
+    }
+    .desktop {
+      display: block;
+    }
+
+    .images-container {
+      /* Increase spacing between images as container grows in width */
+      width: 100%;
+      .desktop.img {
+        display: block;
+        flex-grow: 1;
+      }
+    }
+
+    .image-description {
+      width: 65%;
+      max-width: 550px;
+      h3 {
+        width: 100%;
+        font-size: 23px;
+        line-height: 32px;   
+      }
+      p {
+        line-height: 26px;
+      }
+    }
+  }
 }
 
 
@@ -622,6 +763,7 @@ a {
     --color-paragraph: var(--color-paragraph-darkbg);
     --color-bg-dlbtn: var(--color-bg-dlbtn-darkbg);
     --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgdark);
+    --color-how-bg: var(--color-how-bg-dark);
     /* Change themeswitch-bg to active color */
     --color-switch-bg: var(--color-primary);
     /* Swap to light-texted logo */
@@ -657,6 +799,7 @@ a {
     --color-paragraph: var(--color-paragraph-darkbg);
     --color-bg-dlbtn: var(--color-bg-dlbtn-darkbg);
     --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgdark);
+    --color-how-bg: var(--color-how-bg-dark);
     /* Change themeswitch-bg to active color */
     --color-switch-bg: var(--color-primary);
 
