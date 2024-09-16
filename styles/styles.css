@@ -504,7 +504,7 @@ a {
 
           /* Media queries start */
 
-@media (768px <= width < 1400px) {
+@media (768px <= width) {
   /* Change margin & padding */
   :root {
     --wrapper-pi: 2rem;
@@ -577,7 +577,7 @@ a {
       /* Increase spacing between images as container grows in width */
       width: 100%;
       max-width: 900px;
-      .mobile-img, .desktop-img {
+      .mobile.img, .desktop.img {
         display: none;
       }
       .tablet.img {
@@ -608,7 +608,7 @@ a {
   }
 }
 
-@media (width >= 1400px) {
+@media (1400px <= width) {
   /* Change margin & padding */
   :root {
     --wrapper-pi: 2rem;
@@ -730,10 +730,16 @@ a {
 
     .images-container {
       /* Increase spacing between images as container grows in width */
-      width: 100%;
+      max-width: unset;
+      .mobile.img, .tablet.img {
+        display: none;
+      }
       .desktop.img {
         display: block;
         flex-grow: 1;
+      }
+      .img.left, .img.right {
+        text-align: center;
       }
     }
 
