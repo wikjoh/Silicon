@@ -144,6 +144,10 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+.tac {
+  text-align: center;
+}
           /* Utility classes end */
           /* Darkmode start */
 /* Disable to show hidden checkboxes used for darkmode syncing. */
@@ -518,7 +522,85 @@ section#reviews {
 
           /* Reviews end */
           /* FAQ-contact start */
-          
+section#faq-contact {
+
+  .faq-contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    color: var(--color-heading);
+    margin-top: 3rem;
+    font-size: 25px;
+    font-weight: var(--fw-extra);
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: var(--fs-body-l);
+    line-height: 29px;
+    color: var(--color-paragraph);
+
+  }
+
+  .faq-accordion {
+    --_faq-border: 1px solid lightgray;
+    margin-top: 3rem;
+    border: var(--_faq-border);
+    border-radius: 8px;
+
+    details {
+      border-bottom: var(--_faq-border);
+      /* No border on last details-element to prevent double border*/
+      &:last-child {
+        border-bottom: unset;
+      }
+      &[open] {
+        .answer {
+          border-top: var(--_faq-border);
+        }
+      }
+    }
+
+    summary {
+      color: var(--color-heading);
+      font-size: var(--fs-body-m);
+      font-weight: var(--fw-semi);
+      line-height: 21px;
+      padding: 1rem;
+
+      /* Hide marker */
+      list-style: none;
+    }
+
+    p {
+      padding-inline: 1rem;
+      font-size: var(--fs-body-s);
+      line-height: 22px;
+      &:last-child {
+        padding-bottom: 1rem;
+      }
+    }
+  }
+
+  .contact {
+    margin: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-contact {
+    border-style: none;
+    border-radius: 6px;
+    font-size: var(--fs-body-s);
+    font-weight: var(--fw-semi);
+    line-height: 22px;
+    padding: 1em 2em;
+  }
+}
           /* FAQ-contact end */
           /* Subscribe start */
           
