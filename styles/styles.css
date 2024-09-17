@@ -39,6 +39,11 @@
   --color-how-bg-white: var(--color-gray-100);
   --color-how-bg-dark: #1c2029; /* Doesn't match any of grayscale colors? */
 
+  --color-faqchevronbg-whitebg: var(--color-gray-100);
+  --color-faqchevronbg-darkbg: #1E212B;
+  --color-faqchevronarrow-whitebg: var(--color-gray-800);
+  --color-faqchevronarrow-darkbg: var(--color-white);
+
   /* Default theme - white/light */
   --color-bg: var(--color-bg-white);
   --color-navlink: var(--color-navlink-whitebg);
@@ -51,6 +56,8 @@
   --color-chevronarrow: var(--color-chevronarrow-whitebg);
   --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgwhite);
   --color-how-bg: var(--color-how-bg-white);
+  --color-faqchevronbg: var(--color-faqchevronbg-whitebg);
+  --color-faqchevronarrow: var(--color-faqchevronarrow-whitebg);
 
   /* Transitions */
   --transition-default: all .25s;
@@ -150,19 +157,6 @@ a {
     content: "\f078";
     text-align: center;
   }
-}
-
-.chevron-discovermore {
-  background-color: var(--color-chevronbg);
-  color: var(--color-chevronarrow);
-  width: 44px;
-  height: 44px;
-  font-size: 12px;
-}
-
-.chevron-faq {
-  width: 36px;
-  height: 36px;
 }
 
           /* Utility classes start */
@@ -363,6 +357,14 @@ section#hero {
     margin-top: 2.5rem;
     margin-bottom: 2rem;
     gap: 1rem;
+  }
+
+  .chevron-discovermore {
+    background-color: var(--color-chevronbg);
+    color: var(--color-chevronarrow);
+    width: 44px;
+    height: 44px;
+    font-size: 12px;
   }
 
   .hero-images {
@@ -599,6 +601,9 @@ section#faq-contact {
     }
 
     summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       color: var(--color-heading);
       font-size: var(--fs-body-m);
       font-weight: var(--fw-semi);
@@ -617,6 +622,20 @@ section#faq-contact {
         padding-bottom: 1rem;
       }
     }
+
+    .chevron-faq {
+      background-color: var(--color-faqchevronbg);
+      color: var(--color-faqchevronarrow);
+      width: 36px;
+      height: 36px;
+      font-size: 10px;
+      /* Set pointer-events none for click to pass through to summary element*/
+      pointer-events: none;
+      /* Prevent shrunk and skewed chevron buttons */
+      flex-shrink: 0;
+      /* Add margin to the left of the button equal to parent padding-right */
+      margin-left: 1rem;
+    }
   }
 
   .contact {
@@ -634,12 +653,6 @@ section#faq-contact {
     font-weight: var(--fw-semi);
     line-height: 22px;
     padding: 1em 2em;
-  }
-
-  .chevron-test::before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f078";
   }
 }
           /* FAQ-contact end */
@@ -920,6 +933,8 @@ section#faq-contact {
     --color-chevronarrow: var(--color-chevronarrow-darkbg);
     --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgdark);
     --color-how-bg: var(--color-how-bg-dark);
+    --color-faqchevronbg: var(--color-faqchevronbg-darkbg);
+    --color-faqchevronarrow: var(--color-faqchevronarrow-darkbg);
     /* Change themeswitch-bg to active color */
     --color-switch-bg: var(--color-primary);
     /* Swap to light-texted logo */
@@ -958,6 +973,8 @@ section#faq-contact {
     --color-chevronarrow: var(--color-chevronarrow-darkbg);
     --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgdark);
     --color-how-bg: var(--color-how-bg-dark);
+    --color-faqchevronbg: var(--color-faqchevronbg-darkbg);
+    --color-faqchevronarrow: var(--color-faqchevronarrow-darkbg);
     /* Change themeswitch-bg to active color */
     --color-switch-bg: var(--color-primary);
 
