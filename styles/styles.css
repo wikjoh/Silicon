@@ -24,6 +24,10 @@
   --color-navlink-darkbg: hsl(from var(--color-white) h s calc(l - 15));
   --color-bg-dlbtn-whitebg: var(--color-gray-900);
   --color-bg-dlbtn-darkbg: var(--color-gray-200);
+  --color-chevronbg-whitebg: var(--color-white);
+  --color-chevronbg-darkbg: #222032;
+  --color-chevronarrow-whitebg: var(--color-gray-800);
+  --color-chevronarrow-darkbg: var(--color-white);
 
   --color-brandlogo-border-whitebg: var(--color-gray-300);
   --color-brandlogo-border-darkbg: hsl(0, 0%, 85%);
@@ -42,7 +46,9 @@
   --color-heading: var(--color-heading-whitebg);
   --color-paragraph: var(--color-paragraph-whitebg);
   --color-switch-bg: var(--color-gray-600);
-  --color-bg-dlbtn: var(--color-bg-dlbtn-whitebg); 
+  --color-bg-dlbtn: var(--color-bg-dlbtn-whitebg);
+  --color-chevronbg: var(--color-chevronbg-whitebg);
+  --color-chevronarrow: var(--color-chevronarrow-whitebg);
   --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgwhite);
   --color-how-bg: var(--color-how-bg-white);
 
@@ -111,7 +117,7 @@ a {
   }
 }
 
-          /* Reusable buttons */
+          /* Reusable buttons etc */
 
 .btn-primary {
   background-color: var(--color-primary);
@@ -128,6 +134,35 @@ a {
     color: var(--color-white);
     text-decoration: none;
   }
+}
+
+.btn-chevron {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::before {
+    display: block;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f078";
+    text-align: center;
+  }
+}
+
+.chevron-discovermore {
+  background-color: var(--color-chevronbg);
+  color: var(--color-chevronarrow);
+  width: 44px;
+  height: 44px;
+  font-size: 12px;
+}
+
+.chevron-faq {
+  width: 36px;
+  height: 36px;
 }
 
           /* Utility classes start */
@@ -600,6 +635,12 @@ section#faq-contact {
     line-height: 22px;
     padding: 1em 2em;
   }
+
+  .chevron-test::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f078";
+  }
 }
           /* FAQ-contact end */
           /* Subscribe start */
@@ -875,6 +916,8 @@ section#faq-contact {
     --color-heading: var(--color-heading-darkbg);
     --color-paragraph: var(--color-paragraph-darkbg);
     --color-bg-dlbtn: var(--color-bg-dlbtn-darkbg);
+    --color-chevronbg: var(--color-chevronbg-darkbg);
+    --color-chevronarrow: var(--color-chevronarrow-darkbg);
     --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgdark);
     --color-how-bg: var(--color-how-bg-dark);
     /* Change themeswitch-bg to active color */
@@ -911,6 +954,8 @@ section#faq-contact {
     --color-heading: var(--color-heading-darkbg);
     --color-paragraph: var(--color-paragraph-darkbg);
     --color-bg-dlbtn: var(--color-bg-dlbtn-darkbg);
+    --color-chevronbg: var(--color-chevronbg-darkbg);
+    --color-chevronarrow: var(--color-chevronarrow-darkbg);
     --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgdark);
     --color-how-bg: var(--color-how-bg-dark);
     /* Change themeswitch-bg to active color */
