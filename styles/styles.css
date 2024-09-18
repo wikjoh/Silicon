@@ -618,6 +618,11 @@ section#faq-contact {
       padding: 1rem;
       cursor: pointer;
       user-select: none;
+      transition: var(--transition-default);
+
+      &:hover {
+        background-color: var(--color-faqchevronbg);
+      }
 
 
       /* Hide marker */
