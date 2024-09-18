@@ -616,6 +616,9 @@ section#faq-contact {
       font-weight: var(--fw-semi);
       line-height: 21px;
       padding: 1rem;
+      cursor: pointer;
+      user-select: none;
+
 
       /* Hide marker */
       list-style: none;
