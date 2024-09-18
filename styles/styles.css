@@ -635,6 +635,14 @@ section#faq-contact {
       flex-shrink: 0;
       /* Add margin to the left of the button equal to parent padding-right */
       margin-left: 1rem;
+      /* Transition to smooth out color change and rotation */
+      transition: var(--transition-default);
+    }
+
+    details[open] .btn-chevron {
+      transform: rotate(180deg);
+      background-color: var(--color-primary);
+      color: var(--color-white);
     }
   }
 
