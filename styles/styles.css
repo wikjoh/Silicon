@@ -39,6 +39,10 @@
   --color-how-bg-white: var(--color-gray-100);
   --color-how-bg-dark: #1c2029; /* Doesn't match any of grayscale colors? */
 
+  --color-faqbg-whitebg: var(--color-bg-white);
+  --color-faqbg-darkbg: #131022; /* Doesn't match any of grayscale colors? */
+  --color-faqoutline-whitebg: #e2e5f1;
+  --color-faqoutline-darkbg: #363443;
   --color-faqchevronbg-whitebg: var(--color-gray-100);
   --color-faqchevronbg-darkbg: #1E212B;
   --color-faqchevronarrow-whitebg: var(--color-gray-800);
@@ -56,6 +60,8 @@
   --color-chevronarrow: var(--color-chevronarrow-whitebg);
   --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgwhite);
   --color-how-bg: var(--color-how-bg-white);
+  --color-faqbg: var(--color-faqbg-whitebg);
+  --color-faqoutline: var(--color-faqoutline-whitebg);
   --color-faqchevronbg: var(--color-faqchevronbg-whitebg);
   --color-faqchevronarrow: var(--color-faqchevronarrow-whitebg);
 
@@ -582,7 +588,8 @@ section#faq-contact {
   }
 
   .faq-accordion {
-    --_faq-border: 1px solid lightgray;
+    background-color: var(--color-faqbg);
+    --_faq-border: 1px solid var(--color-faqoutline);
     margin-top: 3rem;
     border: var(--_faq-border);
     border-radius: 8px;
@@ -636,13 +643,17 @@ section#faq-contact {
       /* Add margin to the left of the button equal to parent padding-right */
       margin-left: 1rem;
       /* Transition to smooth out color change and rotation */
-      transition: var(--transition-default);
+      transition: all .5s ease;
+      /* Add some slight outlining around the chevrons */
+      box-shadow: 0 0 4px 0px var(--color-faqoutline);
     }
 
     details[open] .btn-chevron {
       transform: rotate(180deg);
       background-color: var(--color-primary);
       color: var(--color-white);
+      /* Change outline color to give it a glowing appearance */
+      box-shadow: 0 0 4px 0px var(--color-primary);
     }
   }
 
@@ -941,6 +952,8 @@ section#faq-contact {
     --color-chevronarrow: var(--color-chevronarrow-darkbg);
     --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgdark);
     --color-how-bg: var(--color-how-bg-dark);
+    --color-faqbg: var(--color-faqbg-darkbg);
+    --color-faqoutline: var(--color-faqoutline-darkbg);
     --color-faqchevronbg: var(--color-faqchevronbg-darkbg);
     --color-faqchevronarrow: var(--color-faqchevronarrow-darkbg);
     /* Change themeswitch-bg to active color */
@@ -981,6 +994,8 @@ section#faq-contact {
     --color-chevronarrow: var(--color-chevronarrow-darkbg);
     --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgdark);
     --color-how-bg: var(--color-how-bg-dark);
+    --color-faqbg: var(--color-faqbg-darkbg);
+    --color-faqoutline: var(--color-faqoutline-darkbg);
     --color-faqchevronbg: var(--color-faqchevronbg-darkbg);
     --color-faqchevronarrow: var(--color-faqchevronarrow-darkbg);
     /* Change themeswitch-bg to active color */
