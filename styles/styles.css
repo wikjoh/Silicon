@@ -40,7 +40,7 @@
   --color-how-bg-dark: #1c2029; /* Doesn't match any of grayscale colors? */
 
   --color-faqbg-whitebg: var(--color-bg-white);
-  --color-faqbg-darkbg: #131022; /* Doesn't match any of grayscale colors? */
+  --color-faqbg-darkbg: #151822; /* Doesn't match any of grayscale colors? */
   --color-faqoutline-whitebg: #e2e5f1;
   --color-faqoutline-darkbg: #363443;
   --color-faqchevronbg-whitebg: var(--color-gray-100);
@@ -569,113 +569,153 @@ section#reviews {
 .faq-contact-container {
   display: grid;
   grid-template-columns: 1fr;
-}
 
-h2 {
-  color: var(--color-heading);
-  margin-top: 3rem;
-  font-size: 25px;
-  font-weight: var(--fw-extra);
-}
-
-p {
-  margin-top: 1rem;
-  font-size: var(--fs-body-l);
-  line-height: 29px;
-  color: var(--color-paragraph);
-}
-
-.faq-accordion {
-  background-color: var(--color-faqbg);
-  --_faq-border: 1px solid var(--color-faqoutline);
-  margin-top: 3rem;
-  border: var(--_faq-border);
-  border-radius: 8px;
-
-  details {
-    border-bottom: var(--_faq-border);
-    /* No border on last details-element to prevent double border*/
-    &:last-child {
-      border-bottom: unset;
-    }
-    &[open] {
-      .answer {
-        border-top: var(--_faq-border);
-      }
-    }
-  }
-
-  summary {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  h2 {
     color: var(--color-heading);
-    font-size: var(--fs-body-m);
-    font-weight: var(--fw-semi);
-    line-height: 21px;
-    padding: 1rem;
-    cursor: pointer;
-    user-select: none;
-    transition: var(--transition-default);
-
-    &:hover {
-      background-color: var(--color-faqchevronbg);
-    }
-
-    /* Hide marker */
-    list-style: none;
+    margin-top: 3rem;
+    font-size: 25px;
+    font-weight: var(--fw-extra);
   }
 
   p {
-    padding-inline: 1rem;
-    font-size: var(--fs-body-s);
-    line-height: 22px;
-    &:last-child {
-      padding-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: var(--fs-body-l);
+    line-height: 29px;
+    color: var(--color-paragraph);
+  }
+
+  .faq-accordion {
+    --_faq-border: 1px solid var(--color-faqoutline);
+    margin-top: 3rem;
+    border: var(--_faq-border);
+    border-radius: 8px;
+
+    details {
+      background-color: var(--color-faqbg);
+      border-bottom: var(--_faq-border);
+      /* No border on last details-element to prevent double border*/
+      &:last-child {
+        border-bottom: unset;
+      }
+      &[open] {
+        .answer {
+          border-top: var(--_faq-border);
+        }
+      }
+    }
+
+    summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--color-heading);
+      font-size: var(--fs-body-m);
+      font-weight: var(--fw-semi);
+      line-height: 21px;
+      padding: 1rem;
+      cursor: pointer;
+      user-select: none;
+      transition: var(--transition-default);
+
+      &:hover {
+        background-color: var(--color-faqchevronbg);
+      }
+
+      /* Hide marker */
+      list-style: none;
+    }
+
+    p {
+      padding-inline: 1rem;
+      font-size: var(--fs-body-s);
+      line-height: 22px;
+      &:last-child {
+        padding-bottom: 1rem;
+      }
+    }
+
+    .chevron-faq {
+      background-color: var(--color-faqchevronbg);
+      color: var(--color-faqchevronarrow);
+      width: 36px;
+      height: 36px;
+      font-size: 10px;
+      /* Set pointer-events none for click to pass through to summary element*/
+      pointer-events: none;
+      /* Prevent shrunk and skewed chevron buttons */
+      flex-shrink: 0;
+      /* Add margin to the left of the button equal to parent padding-right */
+      margin-left: 1rem;
+      /* Transition to smooth out color change and rotation */
+      transition: all .5s ease;
+      /* Add some slight outlining around the chevrons */
+      box-shadow: 0 0 4px 0px var(--color-faqoutline);
+    }
+
+    details[open] .btn-chevron {
+      transform: rotate(180deg);
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      /* Change outline color to give it a glowing appearance */
+      box-shadow: 0 0 4px 0px var(--color-primary);
     }
   }
 
-  .chevron-faq {
-    background-color: var(--color-faqchevronbg);
-    color: var(--color-faqchevronarrow);
-    width: 36px;
-    height: 36px;
-    font-size: 10px;
-    /* Set pointer-events none for click to pass through to summary element*/
-    pointer-events: none;
-    /* Prevent shrunk and skewed chevron buttons */
-    flex-shrink: 0;
-    /* Add margin to the left of the button equal to parent padding-right */
-    margin-left: 1rem;
-    /* Transition to smooth out color change and rotation */
-    transition: all .5s ease;
-    /* Add some slight outlining around the chevrons */
-    box-shadow: 0 0 4px 0px var(--color-faqoutline);
+  .contact {
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  details[open] .btn-chevron {
-    transform: rotate(180deg);
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    /* Change outline color to give it a glowing appearance */
-    box-shadow: 0 0 4px 0px var(--color-primary);
+  .btn-contact {
+    border-style: none;
+    border-radius: 6px;
+    font-size: var(--fs-body-s);
+    font-weight: var(--fw-semi);
+    line-height: 22px;
+    padding: 1em 2em;
   }
-}
 
-.contact {
-  margin: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .contact-cards {
+    display: none;
+    width: 100%;
+    gap: 2rem;
+    .chat-card, .phone-card {
+      /* Make cards take up equal width */
+      flex-basis: 100%;
+    }
+  }
 
-.btn-contact {
-  border-style: none;
-  border-radius: 6px;
-  font-size: var(--fs-body-s);
-  font-weight: var(--fw-semi);
-  line-height: 22px;
-  padding: 1em 2em;
+  .contact-card {
+    padding: 1.5em;
+    border: 1px solid var(--color-gray-300);
+    border-radius: 8px;
+  }
+
+  .fa-comment-dots {
+    /* Flip icon horizontally to match design */
+    transform: scaleX(-1);
+  }
+  .cc-icon {
+    font-size: 28px;
+  }
+  .phone-color {
+    color: var(--color-primary);
+  }
+  .chat-color {
+    color: #22C55E;
+  }
+  .card-text, a {
+    font-size: var(--fs-body-s);
+  }
+  a {
+    display: block;
+    margin-top: 1rem;
+    i {
+      margin-left: 1rem;
+    }
+  }
 }
   
           /* FAQ-contact end */
@@ -788,6 +828,39 @@ p {
       p {
         line-height: 26px;
       }
+    }
+  }
+
+  /* FAQ-Contact section */
+  .faq-contact-container {
+    h2 {
+      font-size: var(--fs-h2);
+      line-height: 100%;
+    }
+
+    .faq-accordion {
+      /* Start by removing FAQ borders */
+      --_faq-border: unset;
+
+      details {
+        box-shadow: 0px 2px 5px var(--color-faqoutline);
+        border-radius: 8px;
+        /* Apply margin-top to all details-elements except first one */
+        &:not(:first-child) {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    /* Hide contact button and show contact cards */
+    .btn-contact {
+      display: none;
+    }
+    .contact-cards {
+      display: flex;
+    }
+    .contact {
+      margin: 2rem 0;
     }
   }
 }
@@ -982,6 +1055,20 @@ p {
     .dmswitchbg::before {
       transform: translateX(20px);
     }
+
+    /* In width 768px+ and darkmode, remove shadow from FAQ
+    **  and apply border on open details elements*/
+    @media (768px <= width) {
+      .faq-accordion {
+        details {
+          box-shadow: none;
+
+          &[open] {
+            border: 1px solid #383A43;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1024,6 +1111,20 @@ p {
     /* Set darkmode switch to active position */
     .dmswitchbg::before {
       transform: translateX(20px);
+    }
+
+    /* In width 768px+ and darkmode, remove shadow from FAQ
+    **  and apply border on open details elements*/
+    @media (768px <= width) {
+      .faq-accordion {
+        details {
+          box-shadow: none;
+
+          &[open] {
+            border: 1px solid #383A43;
+          }
+        }
+      }
     }
   }
   /* In preferred scheme dark, display pre-checked darkbg checkbox
