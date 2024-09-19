@@ -569,12 +569,17 @@ section#reviews {
 .faq-contact-container {
   display: grid;
   grid-template-columns: 1fr;
+  margin-bottom: 2.5rem;
 
   h2 {
     color: var(--color-heading);
     margin-top: 3rem;
     font-size: 25px;
     font-weight: var(--fw-extra);
+  }
+
+  .headline-splitter {
+    display: none;
   }
 
   p {
@@ -662,7 +667,7 @@ section#reviews {
   }
 
   .contact {
-    margin: 3rem;
+    margin-top: 3.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -680,7 +685,7 @@ section#reviews {
   .contact-cards {
     display: none;
     width: 100%;
-    gap: 2rem;
+    gap: 1.5rem;
     .chat-card, .phone-card {
       /* Make cards take up equal width */
       flex-basis: 100%;
@@ -833,9 +838,14 @@ section#reviews {
 
   /* FAQ-Contact section */
   .faq-contact-container {
+    margin-bottom: 1.75rem;
     h2 {
       font-size: var(--fs-h2);
-      line-height: 100%;
+      line-height: 130%;
+    }
+
+    .headline-splitter {
+      display: inline;
     }
 
     .faq-accordion {
@@ -860,7 +870,7 @@ section#reviews {
       display: flex;
     }
     .contact {
-      margin: 2rem 0;
+      margin-top: 2rem;
     }
   }
 }
@@ -1011,6 +1021,35 @@ section#reviews {
       p {
         line-height: 26px;
       }
+    }
+  }
+
+  /* FAQ-contact section */
+  .faq-contact-container {
+    margin: 7rem auto;
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 8rem;
+    grid-template-areas:  "header faq-accordion"
+                          "contact faq-accordion";
+    align-items: start;
+
+    .header {
+      grid-area: header;
+      h2, p {
+        text-align: left;
+      }
+      p {
+        margin-top: 2rem;
+      }
+    }
+    .faq-accordion {
+      grid-area: faq-accordion;
+    }
+    .contact {
+      grid-area: contact;
+      margin-top: 3rem;
     }
   }
 }
