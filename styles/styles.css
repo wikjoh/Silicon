@@ -583,12 +583,13 @@ section#reviews {
       display: none;
     }
     
-    p {
-      margin-top: 1rem;
-      font-size: var(--fs-body-l);
-      line-height: 29px;
-      color: var(--color-paragraph);
-    }
+  }
+  
+  p {
+    margin-top: 1rem;
+    font-size: var(--fs-body-l);
+    line-height: 29px;
+    color: var(--color-paragraph);
   }
     
   .faq-accordion {
@@ -740,6 +741,9 @@ section#reviews {
       h2 {
         font-size: 22px;
         line-height: 30px;
+        &.desktop-text {
+          display: none;
+        }
       }
       
       img {
@@ -932,6 +936,9 @@ section#reviews {
       .cta {
         justify-content: center;
         margin-right: 3rem;
+        img {
+          margin-right: 2rem;
+        }
       }
     }
   }
@@ -1094,7 +1101,8 @@ section#reviews {
     grid-template-rows: auto 1fr;
     column-gap: 8rem;
     grid-template-areas:  "header faq-accordion"
-                          "contact faq-accordion";
+                          "contact faq-accordion"
+                          "subscribe subscribe";
     align-items: start;
 
     .header {
@@ -1102,9 +1110,9 @@ section#reviews {
       h2, p {
         text-align: left;
       }
-      p {
-        margin-top: 2rem;
-      }
+    }
+    p {
+      margin-top: 2rem;
     }
     .faq-accordion {
       grid-area: faq-accordion;
@@ -1112,6 +1120,19 @@ section#reviews {
     .contact {
       grid-area: contact;
       margin-top: 3rem;
+    }
+
+    .subscribe {
+      grid-area: subscribe;
+      margin-top: 6rem;
+      padding: 4rem 6rem;
+
+      h2 {
+        display: none;
+      }
+      .cta h2.desktop-text {
+        display: block;
+      }
     }
   }
 }
