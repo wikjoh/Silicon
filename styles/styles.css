@@ -557,6 +557,41 @@ section#how {
 
 section#payment {
   display: none;
+  height: 1000px; /* Temp */
+}
+
+.payment-container {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  margin-top: 8rem;
+
+  .top-area {
+    display: flex;
+  }
+
+  .bottom-area {
+    display: flex;
+    margin-top: 20rem;
+  }
+
+  .img-container {
+    position: relative;
+    flex-shrink: 0;
+  }
+  .img-payment, .img-transfer {
+    position: absolute;
+  }
+
+  .img-container.bottom {
+    width: 500px;
+  }
+
+  .cards {
+    display: flex;
+
+  }
 }
 
           /* Payment end */
@@ -1108,6 +1143,11 @@ section#reviews {
         line-height: 26px;
       }
     }
+  }
+
+  /* Payment section */
+  section#payment {
+    display: block;
   }
 
   /* FAQ-contact section */
