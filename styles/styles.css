@@ -572,7 +572,6 @@ section#reviews {
 .faq-contact-container {
   display: grid;
   grid-template-columns: 1fr;
-  margin-bottom: 2.5rem;
 
   .header {
     h2 {
@@ -781,9 +780,18 @@ section#reviews {
 }
   
           /* FAQ-contact end */
-          
-
           /* Footer start */
+
+  .footer {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-gray-600);
+    font-size: var(--fs-body-s);
+    line-height: 160%;
+  }
 
           /* Footer end */
 
@@ -894,7 +902,6 @@ section#reviews {
 
   /* FAQ-Contact section */
   .faq-contact-container {
-    margin-bottom: 1.75rem;
     .header {
       h2 {
         font-size: var(--fs-h2);
@@ -944,6 +951,12 @@ section#reviews {
           margin-right: 2rem;
         }
       }
+    }
+  }
+
+  .footer {
+    .footer-splitter {
+      display: none;
     }
   }
 }
@@ -1099,7 +1112,7 @@ section#reviews {
 
   /* FAQ-contact section */
   .faq-contact-container {
-    margin: 7rem auto;
+    margin-top: 7rem;
     display: grid;
     grid-template-columns: 0.6fr 1fr;
     grid-template-rows: auto 1fr;
@@ -1138,6 +1151,10 @@ section#reviews {
         display: block;
       }
     }
+  }
+
+  .footer {
+    padding: 3rem 0;
   }
 }
 
@@ -1259,6 +1276,13 @@ section#reviews {
             border: 1px solid #383A43;
           }
         }
+      }
+    }
+
+    @media (1400px <= width) {
+      .subscribe input {
+        background-color: #191D27;
+        border-color: #42464D;;
       }
     }
   }
