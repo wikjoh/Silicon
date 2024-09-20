@@ -924,7 +924,15 @@ section#reviews {
     }
 
     .subscribe {
-
+      padding: 3rem 1rem;
+      flex-direction: row;
+      .cta, .email-form {
+        flex-basis: 50%;
+      }
+      .cta {
+        justify-content: center;
+        margin-right: 3rem;
+      }
     }
   }
 }
