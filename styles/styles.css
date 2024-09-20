@@ -47,7 +47,9 @@
   --color-faqchevronbg-darkbg: #1E212B;
   --color-faqchevronarrow-whitebg: var(--color-gray-800);
   --color-faqchevronarrow-darkbg: var(--color-white);
-
+  --color-subscribebg-whitebg: var(--color-gray-100);
+  --color-subscribebg-darkbg: var(--color-faqbg-darkbg);
+  
   /* Default theme - white/light */
   --color-bg: var(--color-bg-white);
   --color-navlink: var(--color-navlink-whitebg);
@@ -64,6 +66,7 @@
   --color-faqoutline: var(--color-faqoutline-whitebg);
   --color-faqchevronbg: var(--color-faqchevronbg-whitebg);
   --color-faqchevronarrow: var(--color-faqchevronarrow-whitebg);
+  --color-subscribebg: var(--color-subscribebg-whitebg);
 
   /* Transitions */
   --transition-default: all .25s;
@@ -584,7 +587,7 @@ section#reviews {
     }
     
   }
-  
+
   p {
     margin-top: 1rem;
     font-size: var(--fs-body-l);
@@ -728,7 +731,7 @@ section#reviews {
   .subscribe {
     margin-top: 2.5rem;
     padding: 3rem 1rem 0;
-    background-color: var(--color-gray-100);
+    background-color: var(--color-subscribebg);
     border-radius: 8px;
   
     display: flex;
@@ -765,6 +768,7 @@ section#reviews {
         padding: 1rem;
         border-radius: 8px 0 0 8px;
         border: 1px solid var(--color-gray-400);
+        color: var(--color-gray-500);
       }
       .btn-subscribe {
         border-radius: 0 8px 8px 0;
@@ -1155,6 +1159,7 @@ section#reviews {
     --color-faqoutline: var(--color-faqoutline-darkbg);
     --color-faqchevronbg: var(--color-faqchevronbg-darkbg);
     --color-faqchevronarrow: var(--color-faqchevronarrow-darkbg);
+    --color-subscribebg: var(--color-subscribebg-darkbg);
     /* Change themeswitch-bg to active color */
     --color-switch-bg: var(--color-primary);
     /* Swap to light-texted logo */
@@ -1191,6 +1196,13 @@ section#reviews {
         }
       }
     }
+
+    @media (1400px <= width) {
+      .subscribe input {
+        background-color: #191D27;
+        border-color: #42464D;;
+      }
+    }
   }
 }
 
@@ -1211,6 +1223,7 @@ section#reviews {
     --color-faqoutline: var(--color-faqoutline-darkbg);
     --color-faqchevronbg: var(--color-faqchevronbg-darkbg);
     --color-faqchevronarrow: var(--color-faqchevronarrow-darkbg);
+    --color-subscribebg: var(--color-subscribebg-darkbg);
     /* Change themeswitch-bg to active color */
     --color-switch-bg: var(--color-primary);
 
