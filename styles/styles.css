@@ -117,13 +117,15 @@
 
           /* Set "default" formatting */
 
+/* Reset */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body {
+/* Apply universally instead of only body, to have it apply to forms etc */
+* {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-weight: var(--fw-reg);
@@ -938,18 +940,30 @@ section#reviews {
       margin-top: 2.5rem;
       margin-bottom: 2rem;
       display: flex;
+      position: relative;
+
       * {
         border: none;
       }
+
       input {
         flex-grow: 1;
         min-width: 0; /* prevent button from being pushed outside padding */
         font-size: 16px;
-        padding: 1rem;
+        padding-left: 2.25rem;
         border-radius: 8px 0 0 8px;
         border: 1px solid var(--color-gray-400);
         color: var(--color-gray-500);
       }
+
+      .mail-icon {
+        position: absolute;
+        top: 50%;
+        left: .75rem;
+
+        transform: translateY(-50%);
+      }
+
       .btn-subscribe {
         border-radius: 0 8px 8px 0;
         font-size: 16px;
