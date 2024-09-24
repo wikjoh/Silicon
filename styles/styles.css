@@ -124,13 +124,16 @@
   box-sizing: border-box;
 }
 
-/* Apply universally instead of only body, to have it apply to forms etc */
-* {
+body {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-weight: var(--fw-reg);
   font-style: normal;
   font-size: var(--fs-body-m);
+}
+
+input, button, textarea, select {
+  font: inherit;
 }
 
 h1, h2, h3 {
