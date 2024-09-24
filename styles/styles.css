@@ -84,24 +84,24 @@
   --transition-theme: all .5s ease;
 
   /* Font sizes */
-  --fs-d1: 80px;
-  --fs-d2: 72px;
-  --fs-d3: 64px;
-  --fs-d4: 56px;
-  --fs-d5: 48px;
-  --fs-d6: 42px;
-  --fs-h1: 40px;
-  --fs-h2: 32px;
-  --fs-h3: 28px;
-  --fs-h4: 24px;
-  --fs-h5: 20px;
-  --fs-h6: 16px;
-  --fs-body-l: 18px;
-  --fs-body-m: 16px;
-  --fs-body-s: 14px;
+  --fs-d1: 5rem;
+  --fs-d2: 4.5rem;
+  --fs-d3: 4rem;
+  --fs-d4: 3.5rem;
+  --fs-d5: 3rem;
+  --fs-d6: 2.625rem;
+  --fs-h1: 2.5rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.75rem;
+  --fs-h4: 1.5rem;
+  --fs-h5: 1.25rem;
+  --fs-h6: 1rem;
+  --fs-body-l: 1.125rem;
+  --fs-body-m: 1rem;
+  --fs-body-s: .875rem;
 
-  --fs-hero-headline-mobile: 34.1px;
-  --fs-hero-headline-tablet: 44.3px;
+  --fs-hero-headline-mobile: 2.125rem;
+  --fs-hero-headline-tablet: 2.75rem;
   --fs-hero-headline-desktop: var(--fs-d4);
 
   /* Font weights */
@@ -136,9 +136,10 @@ input, button, textarea, select {
   font: inherit;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--color-heading);
   font-weight: var(--fw-extra);
+  line-height: 1.3;
 }
 
 a {
@@ -241,7 +242,6 @@ a {
 #header-nav {
   .nav-link {
     color: var(--color-navlink);
-    font-size: 16px;
     font-weight: 600;
     opacity: var(--navlink-opacity);
     transition: var(--transition-default);
@@ -297,7 +297,7 @@ a {
 .btn-signin {
   width: 140px;
   height: 36px;
-  font-size: 14px;
+  font-size: var(--fs-body-s);
   font-weight: 600;
   padding: 0px;
   border-radius: 4px;
@@ -347,7 +347,7 @@ section#hero {
   .pitch {
     color: var(--color-paragraph);
     font-size: var(--fs-body-l);
-    line-height: 28.8px;
+    line-height: 1.6;
   }
   .dlbuttons {
     display: flex;
@@ -380,7 +380,7 @@ section#hero {
     justify-content: center;
     align-items: center;
     color: var(--color-paragraph);
-    font-size: 14px;
+    font-size: var(--fs-body-s);
     margin-top: 2.5rem;
     margin-bottom: 2rem;
     gap: 1rem;
@@ -391,7 +391,7 @@ section#hero {
     color: var(--color-chevronarrow);
     width: 44px;
     height: 44px;
-    font-size: 12px;
+    font-size: .75rem;
   }
 
   .hero-images {
@@ -467,13 +467,13 @@ section#hero {
 
   .headline {
     margin-top: 2.5rem;
-    font-size: 28px;
+    font-size: var(--fs-h3);
   }
 
   .paragraph {
     margin-top: 1rem;
     font-size: var(--fs-body-l);
-    line-height: 28.8px;
+    line-height: 1.6;
     color: var(--color-paragraph);
   }
 
@@ -516,7 +516,7 @@ section#hero {
         color: var(--color-paragraph);
       }
       h3 {
-        font-size: 20px;
+        font-size: var(--fs-h5);
       }
     }
   }
@@ -539,8 +539,7 @@ section#how {
   }
 
   h2 {
-    font-size: 28px;
-    line-height: 36.2px;
+    font-size: 1.75rem;
     margin-top: 4.5rem;
   }
 
@@ -556,8 +555,7 @@ section#how {
   .image-description {
     h3 {
       display: inline-block;
-      font-size: 22px;
-      line-height: 30px;
+      font-size: 1.375rem;
       margin-top: 2.5rem;
       width: 85%;
     }
@@ -589,7 +587,7 @@ section#payment {
 
   h2 {
     font-size: var(--fs-h2);
-    line-height: 130%;
+    line-height: 1.3;
   }
 
   li, p {
@@ -616,7 +614,7 @@ section#payment {
     margin-top: 3rem;
     font-size: var(--fs-body-s);
     font-weight: var(--fw-semi);
-    line-height: 160%;
+    line-height: 1.6;
     i {
       margin-left: 1rem;
     }
@@ -703,7 +701,7 @@ section#reviews {
   h2 {
     font-size: var(--fs-h1); /* 40px in figma */
     font-weight: var(--fw-extra);
-    line-height: 130%;
+    line-height: 1.3;
   }
 
   .review {
@@ -741,12 +739,12 @@ section#reviews {
     .author-name {
       font-size: var(--fs-body-m);
       font-weight: var(--fw-bold);
-      line-height: 160%;
+      line-height: 1.6;
       color: var(--color-heading);
     }
     .author-role {
       font-size: var(--fs-body-s);
-      line-height: 160%;
+      line-height: 1.6;
       color: var(--color-reviewrole);
     }
   }
@@ -763,7 +761,7 @@ section#reviews {
     h2 {
       color: var(--color-heading);
       margin-top: 3rem;
-      font-size: 25px;
+      font-size: var(--fs-h4);
       font-weight: var(--fw-extra);
     }
     
@@ -776,7 +774,7 @@ section#reviews {
   p {
     margin-top: 1rem;
     font-size: var(--fs-body-l);
-    line-height: 29px;
+    line-height: 1.6;
     color: var(--color-paragraph);
   }
     
@@ -807,7 +805,7 @@ section#reviews {
       color: var(--color-heading);
       font-size: var(--fs-body-m);
       font-weight: var(--fw-semi);
-      line-height: 21px;
+      line-height: 1.3;
       padding: 1rem;
       cursor: pointer;
       user-select: none;
@@ -824,7 +822,7 @@ section#reviews {
     p {
       padding-inline: 1rem;
       font-size: var(--fs-body-s);
-      line-height: 22px;
+      line-height: 1.6;
       &:last-child {
         padding-bottom: 1rem;
       }
@@ -835,7 +833,7 @@ section#reviews {
       color: var(--color-faqchevronarrow);
       width: 36px;
       height: 36px;
-      font-size: 10px;
+      font-size: .625rem;
       /* Set pointer-events none for click to pass through to summary element*/
       pointer-events: none;
       /* Prevent shrunk and skewed chevron buttons */
@@ -869,7 +867,7 @@ section#reviews {
     border-radius: 6px;
     font-size: var(--fs-body-s);
     font-weight: var(--fw-semi);
-    line-height: 22px;
+    line-height: 1.6;
     padding: 1em 2em;
   }
 
@@ -894,7 +892,7 @@ section#reviews {
     transform: scaleX(-1);
   }
   .cc-icon {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   .phone-color {
     color: var(--color-primary);
@@ -927,8 +925,8 @@ section#reviews {
       align-items: center;
   
       h2 {
-        font-size: 22px;
-        line-height: 30px;
+        font-size: 1.375rem;
+        line-height: 1.35;
         &.desktop-text {
           display: none;
         }
@@ -952,7 +950,7 @@ section#reviews {
       input {
         flex-grow: 1;
         min-width: 0; /* prevent button from being pushed outside padding */
-        font-size: 16px;
+        font-size: 1rem;
         padding-left: 2.25rem;
         border-radius: 8px 0 0 8px;
         border: 1px solid var(--color-gray-400);
@@ -969,8 +967,8 @@ section#reviews {
 
       .btn-subscribe {
         border-radius: 0 8px 8px 0;
-        font-size: 16px;
-        line-height: 26px;
+        font-size: 1rem;
+        line-height: 1.625;
         font-weight: var(--fw-semi);
       }
     }
@@ -988,7 +986,7 @@ section#reviews {
     text-align: center;
     color: var(--color-gray-600);
     font-size: var(--fs-body-s);
-    line-height: 160%;
+    line-height: 1.6;
   }
 
           /* Footer end */
@@ -1053,8 +1051,7 @@ section#reviews {
   /* How does it work-section */
   .how-container {
     h2 {
-      font-size: 34px;
-      line-height: 43.6px;
+      font-size: 2.125rem;
     }
 
     .mobile, .desktop {
@@ -1089,11 +1086,11 @@ section#reviews {
       max-width: 550px;
       h3 {
         width: 100%;
-        font-size: 23px;
-        line-height: 32px;   
+        font-size: 1.4rem;
+        line-height: 1.4;
       }
       p {
-        line-height: 26px;
+        line-height: 1.625;
       }
     }
   }
@@ -1103,7 +1100,7 @@ section#reviews {
     .header {
       h2 {
         font-size: var(--fs-h2);
-        line-height: 130%;
+        line-height: 1.3;
       }
       
       .headline-splitter {
@@ -1269,7 +1266,7 @@ section#reviews {
   .how-container {
     h2 {
       font-size: var(--fs-h1);
-      line-height: 130%;
+      line-height: 1.3;
     }
 
     .mobile, .tablet {
@@ -1299,11 +1296,11 @@ section#reviews {
       max-width: 550px;
       h3 {
         width: 100%;
-        font-size: 23px;
-        line-height: 32px;   
+        font-size: 1.44rem;
+        line-height: 1.4;  
       }
       p {
-        line-height: 26px;
+        line-height: 1.625;
       }
     }
   }
