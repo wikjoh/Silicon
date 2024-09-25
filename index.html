@@ -21,7 +21,6 @@
     
     <header>
       <div class="header-container wrapper">
-      
         <div class="header-left flex">
           <a class="logo" href="index.html">
             <img class="logo-img" src="/assets/logo-bglight.svg" alt="Silicon Logo">
@@ -51,10 +50,22 @@
           </a>
 
           <button class="btn-burger">
-            <i class="fa-solid fa-bars"></i>
+            <label for="burger-toggle">
+              <i class="fa-solid fa-bars"></i>
+            </label>
           </button>
+          <input type="checkbox" id="burger-toggle">
+          
+          <!-- Hidden in desktop -->
+          <div class="burger-menu">
+            <a id="burger-signin-button" class="burger-item btn-primary btn-signin" href="#">
+              <img class="usericon" src="/assets/icons/signupbuttonusericon.svg" alt="">
+              <span>Sign in / up</span>
+            </a>
+            <a class="burger-item nav-link" href="#">Features</a>
+          </div>
+
         </div>
-      
       </div>
     </header>
 
