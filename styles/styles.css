@@ -220,11 +220,28 @@ a {
           /* Darkmode end */
           /* Header start */
           /* Hide in mobile */
-#header-nav, .btn-signin {
+
+header {
+  background-color: var(--color-bg);
+  &:has(#burger-toggle:checked) {
+    .burger-menu {
+      transform: translateY(0);
+      box-shadow: 0 5px 5px #00000030;
+    }
+  }
+}
+
+.navbar-bg {
+  background-color: var(--color-bg);
+  position: relative;
+  z-index: 1000;
+}
+
+#navbar-links, .btn-signin {
   display: none;
 }
 
-.header-container {
+.main-navbar {
   justify-content: space-between;
   padding-top: var(--header-pt);
   /* Set Z-index to allow burger-menu to scroll up/down behind */
@@ -236,11 +253,14 @@ a {
     vertical-align: bottom;
   }
 
-  #header-nav {
+  .navbar-links {
     margin-left: 3rem;
+    ul {
+      list-style: none;
+    }
   }
 
-  .nav-link {
+  .navbar-link {
     color: var(--color-navlink);
     font-weight: 600;
     opacity: var(--navlink-opacity);
@@ -252,7 +272,7 @@ a {
     }
   }
 
-  .header-right {
+  .navbar-right {
     position: relative;
   }
 
@@ -269,40 +289,29 @@ a {
     display: none;
   }
 
-  .burger-menu {
-    /* Hidden in desktop */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 44px;
-    right: 0;
-    /* Set negative z-index to allow menu to scroll beneath navbar */
-    z-index: -1;
-    width: 100vw;
-    /* Remove margin on menu */
-    margin-inline: calc(var(--wrapper-pi) * -1);
-    background-color: var(--color-bg);
-    transition: var(--transition-theme);
-    transform: translateY(-200%);
-  }
-
-  .burger-item {
-    display: flex;
-    margin: 2rem;
-
-    /* Add some padding to make it easier to click on */
-    &.nav-link {
-      padding: 2rem;
-    }
-  }
-
+  
+}
+.burger-menu {
+  /* Hidden in desktop */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-bg);
+  transition: var(--transition-theme);
+  transform: translateY(-200%);
 }
 
-#burger-toggle:checked ~ .burger-menu {
-  transform: translateY(0);
-  box-shadow: 0 5px 5px #00000030;
+.burger-item {
+  display: flex;
+  margin: 2rem;
+
+  /* Add some padding to make it easier to click on */
+  &.navbar-link {
+    padding: 2rem;
+  }
 }
+
 /* Darkmode toggle-switch stuff */
 /* In preferred-color-scheme light, hide label-darkmode-switch-darkbg */
 #label-darkmode-switch-lightbg {display: flex;}
@@ -310,6 +319,7 @@ a {
 
 .dm-text {
   font-size: var(--fs-body-m);
+  font-weight: var(--fw-semi);
   color: var(--color-gray-700);
   margin-right: 1rem;
   /* Hide on mobile */
@@ -1213,8 +1223,8 @@ section#reviews {
     --header-pt: 1rem;
   }
 
-  .header-container {
-    #header-nav, .btn-signin {
+  .main-navbar {
+    #navbar-links, .btn-signin {
       display: flex;
     }
     .btn-burger,
