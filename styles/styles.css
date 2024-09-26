@@ -205,8 +205,10 @@ a {
 .tac {
   text-align: center;
 }
+
           /* Utility classes end */
           /* Darkmode start */
+
 /* Disable to show hidden checkboxes used for darkmode syncing. */
 .dm-chbox-hidden {
   display: none;
@@ -217,40 +219,21 @@ a {
   transition: var(--transition-theme);
 }
 
-          /* Darkmode end */
-          /* Header start */
-          /* Hide in mobile */
+/* Darkmode end */
+/* Header start */
 
 header {
   background-color: var(--color-bg);
   &:has(#burger-toggle:checked) {
     .burger-menu {
-      transform: translateY(0);
+      max-height: 12rem;
       box-shadow: 0 5px 5px #00000030;
     }
   }
-}
 
-.navbar-bg {
-  background-color: var(--color-bg);
-  position: relative;
-  z-index: 1000;
-}
-
-#navbar-links, .btn-signin {
-  display: none;
-}
-
-.main-navbar {
-  justify-content: space-between;
-  padding-top: var(--header-pt);
-  /* Set Z-index to allow burger-menu to scroll up/down behind */
-  position: relative;
-  z-index: 1000;
-
-  /* Remove extra pixels on bottom of logo image */
-  .logo-img {
-    vertical-align: bottom;
+  /* Hide in mobile */
+  #navbar-links, .btn-signin {
+    display: none;
   }
 
   .navbar-links {
@@ -271,43 +254,54 @@ header {
       text-decoration: none;
     }
   }
+}
+
+
+.main-navbar {
+  justify-content: space-between;
+  padding-top: var(--header-pt);
+
+  /* Remove extra pixels on bottom of logo image */
+  .logo-img {
+    vertical-align: bottom;
+  }
 
   .navbar-right {
     position: relative;
-  }
 
-  .btn-signin {
-    margin-left: 2rem;
+    .btn-signin {
+      margin-left: 2rem;
+    }
+    .btn-burger {
+      margin-left: 2rem;
+      margin-right: .5rem;
+    }
+    #burger-toggle {
+      display: none;
+    }
   }
-
-  .btn-burger {
-    margin-left: 2rem;
-    margin-right: .5rem;
-  }
-
-  #burger-toggle {
-    display: none;
-  }
-
-  
 }
+
 .burger-menu {
   /* Hidden in desktop */
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   background-color: var(--color-bg);
   transition: var(--transition-theme);
-  transform: translateY(-200%);
-}
 
-.burger-item {
-  display: flex;
-  margin: 2rem;
-
+  overflow: hidden;
+  max-height: 0;
+  
+  .burger-item {
+    display: flex;
+    margin: 2rem;
+    /* Prevent button getting squished when closing menu */
+    flex-shrink: 0;
+  }
+    
   /* Add some padding to make it easier to click on */
-  &.navbar-link {
+  .navbar-link {
     padding: 2rem;
   }
 }

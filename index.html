@@ -20,7 +20,6 @@
   <div class="themewrapper">
     
     <header>
-      <div class="navbar-bg">
         <div class="main-navbar wrapper">
           <div class="navbar-left flex">
             <a class="logo" href="index.html">
@@ -60,14 +59,18 @@
             <input type="checkbox" id="burger-toggle">
           </div>
         </div>
-      </div>
+
         <!-- Hidden in desktop -->
         <div class="burger-menu">
           <a id="burger-signin-button" class="burger-item btn-primary btn-signin" href="#">
             <img class="usericon" src="/assets/icons/signupbuttonusericon.svg" alt="">
             <span>Sign in / up</span>
           </a>
-          <a class="burger-item nav-link" href="#">Features</a>
+          <nav id="burger-links" class="burger-item navbar-links">
+            <ul>
+              <li><a class="navbar-link burger-link" href="#">Features</a></li>
+            </ul>
+          </nav>
         </div>
     </header>
 
