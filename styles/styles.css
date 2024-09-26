@@ -223,11 +223,24 @@ a {
 /* Header start */
 
 header {
-  background-color: var(--color-bg);
+  /* Bring header out of the flow in order for it to
+  ** be placed on top of hero section and share its gradient */
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /* Make sure burger-menu is above everything else */
+  z-index: 1000;
+
+  transition: .5s ease;
+
+
   &:has(#burger-toggle:checked) {
+    backdrop-filter: blur(20px);
+    background-color: var(--color-bg);
     .burger-menu {
-      max-height: 12rem;
-      box-shadow: 0 5px 5px #00000030;
+      max-height: 15rem;
+      box-shadow: 0 25px 15px var(--color-bg);
     }
   }
 
@@ -287,7 +300,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--color-bg);
+
   transition: var(--transition-theme);
 
   overflow: hidden;
@@ -298,6 +311,10 @@ header {
     margin: 2rem;
     /* Prevent button getting squished when closing menu */
     flex-shrink: 0;
+  }
+
+  #burger-links {
+    padding-bottom: 3rem;
   }
     
   /* Add some padding to make it easier to click on */
@@ -372,6 +389,8 @@ header {
           /* Header end */
           /* Hero start */
 section#hero {
+  /* Add padding to give room for navbar */
+  padding-top: 4rem;
   background: rgb(99,102,241);
   background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
 }
