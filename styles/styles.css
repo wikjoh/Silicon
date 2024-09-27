@@ -788,7 +788,7 @@ section#reviews {
 }
 
 .reviews-container {
-  padding: 5rem 1.5rem;
+  padding: 6rem 1.5rem 7rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
