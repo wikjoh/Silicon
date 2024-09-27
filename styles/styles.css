@@ -864,7 +864,6 @@ section#reviews {
     .headline-splitter {
       display: none;
     }
-    
   }
 
   p {
@@ -1044,10 +1043,10 @@ section#reviews {
       }
 
       input {
-        flex-grow: 1;
-        min-width: 0; /* prevent button from being pushed outside padding */
         font-size: 1rem;
         padding-left: 2.25rem;
+        /* Subtract padding from width, else it causes grid to overflow */
+        width: calc(100% - 2.25rem);
         border-radius: 8px 0 0 8px;
         border: 1px solid var(--color-gray-400);
         color: var(--color-gray-500);
