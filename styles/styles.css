@@ -859,10 +859,7 @@ section#reviews {
       margin-top: 3rem;
       font-size: var(--fs-h4);
       font-weight: var(--fw-extra);
-    }
-    
-    .headline-splitter {
-      display: none;
+      text-wrap: balance;
     }
   }
 
@@ -1213,10 +1210,6 @@ section#reviews {
       h2 {
         font-size: var(--fs-h2);
         line-height: 1.3;
-      }
-      
-      .headline-splitter {
-        display: inline;
       }
     }
       
