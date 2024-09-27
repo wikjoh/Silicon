@@ -1264,8 +1264,11 @@ section#reviews {
 
   /* Header/navbar */
 header#nav {
-  #burger-menu {
+  backdrop-filter: unset !important;
+  background-color: unset !important;
+  .burger-menu {
     grid-template-rows: 0fr !important;
+    box-shadow: unset !important;
   }
 }
 
