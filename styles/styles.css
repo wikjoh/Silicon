@@ -270,27 +270,29 @@ header#nav {
   }
   
   .burger-menu {
-    /* Hidden in desktop */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    /* Use template-rows to hide/reveal menu, instead of max-height */
+    grid-template-rows: 0fr;
+    justify-content: center;
     transition: var(--transition-theme);
-    max-height: 0;
-    /* Hide menu items when closed */
-    overflow: hidden;
-    
-    .burger-item {
+
+    .burger-nav {
+      text-align: center;
+      /* Make sure items are hidden when menu is closed */
+      overflow: hidden;
+    }
+    ul {
+      margin: 4rem 0;
       display: flex;
-      margin: 2rem;
-      /* Prevent button getting squished when closing menu */
-      flex-shrink: 0;
-    }
-    #burger-links {
-      padding-bottom: 3rem;
-    }
-    /* Add some padding to make it easier to click on */
-    .navbar-link {
-      padding: 2rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      list-style: none;
+
+      /* Apply padding to a-elements without imgs (i.e. no buttons) */
+      a:not(:has(img)) {
+        padding: 1rem;
+      }
     }
   }
   
@@ -298,7 +300,7 @@ header#nav {
     backdrop-filter: blur(20px);
     background-color: var(--color-bg);
     .burger-menu {
-      max-height: 15rem;
+      grid-template-rows: 1fr;
       box-shadow: 0 25px 15px var(--color-bg);
     }
   }
