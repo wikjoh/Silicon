@@ -19,59 +19,59 @@
   <!-- Put everything inside a container on the same DOM-level as the checkboxes in order for theme swapping to work-->
   <div class="themewrapper">
     
-    <header>
-        <div class="main-navbar wrapper">
-          <div class="navbar-left flex">
-            <a class="logo" href="index.html">
-              <img class="logo-img" src="/assets/logo-bglight.svg" alt="Silicon Logo">
-            </a>
-            
-            <nav id="navbar-links" class="navbar-links">
-              <ul>
-                <li><a class="navbar-link" href="#">Features</a></li>
-              </ul>
-            </nav>
-          </div>
-          
-          <div class="navbar-right flex">
-            <!-- Labels for toggling darkmode.
-            The label that doesn't correspond to users preffered scheme will be hidden.  -->
-            <div class="theme-toggle-switches flex">
-              <span class="dm-text">Dark mode</span>
-              <label id="label-darkmode-switch-whitebg" for="darkmode-switch-whitebg" class="toggle-switch">
-                <span class="dmswitchbg"></span>
-              </label>
-              <label id="label-darkmode-switch-darkbg" for="darkmode-switch-darkbg" class="toggle-switch">
-                <span class="dmswitchbg"></span>
-              </label>
-            </div>
-            
-            <a id="signin-button" class="btn-primary btn-signin" href="#">
-              <img class="usericon" src="/assets/icons/signupbuttonusericon.svg" alt="">
-              <span>Sign in / up</span>
-            </a>
-            
-            <button class="btn-burger">
-              <label for="burger-toggle">
-                <i class="fa-solid fa-bars"></i>
-              </label>
-            </button>
-            <input type="checkbox" id="burger-toggle">
-          </div>
-        </div>
-
-        <!-- Hidden in desktop -->
-        <div class="burger-menu">
-          <a id="burger-signin-button" class="burger-item btn-primary btn-signin" href="#">
-            <img class="usericon" src="/assets/icons/signupbuttonusericon.svg" alt="">
-            <span>Sign in / up</span>
+    <header id="nav">
+      <div class="main-navbar wrapper">
+        <div class="navbar-left flex">
+          <a class="logo" href="index.html">
+            <img class="logo-img" src="/assets/logo-bglight.svg" alt="Silicon Logo">
           </a>
-          <nav id="burger-links" class="burger-item navbar-links">
+          
+          <nav id="navbar-links" class="navbar-links">
             <ul>
-              <li><a class="navbar-link burger-link" href="#">Features</a></li>
+              <li><a class="navbar-link" href="#">Features</a></li>
             </ul>
           </nav>
         </div>
+        
+        <div class="navbar-right flex">
+          <!-- Labels for toggling darkmode.
+          The label that doesn't correspond to users preffered scheme will be hidden.  -->
+          <div class="theme-toggle-switches flex">
+            <span class="dm-text">Dark mode</span>
+            <label id="label-darkmode-switch-whitebg" for="darkmode-switch-whitebg" class="dm-toggle-switch">
+              <span class="dmswitchbg"></span>
+            </label>
+            <label id="label-darkmode-switch-darkbg" for="darkmode-switch-darkbg" class="dm-toggle-switch">
+              <span class="dmswitchbg"></span>
+            </label>
+          </div>
+          
+          <a id="signin-button" class="btn-primary btn-signin" href="#">
+            <img class="usericon" src="/assets/icons/signupbuttonusericon.svg" alt="">
+            <span>Sign in / up</span>
+          </a>
+          
+          <button class="btn-burger">
+            <label for="burger-toggle">
+              <i class="fa-solid fa-bars"></i>
+            </label>
+          </button>
+          <input type="checkbox" id="burger-toggle">
+        </div>
+      </div>
+      
+      <!-- Hidden in desktop -->
+      <div class="burger-menu">
+        <a id="burger-signin-button" class="burger-item btn-primary btn-signin" href="#">
+          <img class="usericon" src="/assets/icons/signupbuttonusericon.svg" alt="">
+          <span>Sign in / up</span>
+        </a>
+        <nav id="burger-links" class="burger-item navbar-links">
+          <ul>
+            <li><a class="navbar-link burger-link" href="#">Features</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>

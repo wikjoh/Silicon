@@ -115,9 +115,7 @@
   --header-pt: .75rem;
 }
 
-          /* Set "default" formatting */
-
-/* Reset */
+/* Set "default" formatting */
 * {
   padding: 0;
   margin: 0;
@@ -187,7 +185,7 @@ a {
   }
 }
 
-          /* Utility classes start */
+/* Utility classes */
 .wrapper {
   max-width: 1320px;
   margin-inline: auto;
@@ -206,13 +204,18 @@ a {
   text-align: center;
 }
 
-          /* Utility classes end */
-          /* Darkmode start */
+/* Utility classes end */
+/* Darkmode start */
 
 /* Disable to show hidden checkboxes used for darkmode syncing. */
 .dm-chbox-hidden {
   display: none;
 }
+
+/* Darkmode toggle-switch stuff */
+/* In preferred-color-scheme light, hide label-darkmode-switch-darkbg */
+#label-darkmode-switch-lightbg {display: flex;}
+#label-darkmode-switch-darkbg {display: none;}
 
 .themewrapper {
   background-color: var(--color-bg);
@@ -222,7 +225,7 @@ a {
 /* Darkmode end */
 /* Header start */
 
-header {
+header#nav {
   /* Bring header out of the flow in order for it to
   ** be placed on top of hero section and share its gradient */
   position: absolute;
@@ -231,34 +234,18 @@ header {
   left: 0;
   /* Make sure burger-menu is above everything else */
   z-index: 1000;
-
   transition: .5s ease;
-
-
-  &:has(#burger-toggle:checked) {
-    backdrop-filter: blur(20px);
-    background-color: var(--color-bg);
-    .burger-menu {
-      max-height: 15rem;
-      box-shadow: 0 25px 15px var(--color-bg);
-    }
-  }
-
-  /* Hide in mobile */
-  #navbar-links, .btn-signin {
-    display: none;
-  }
-
+  
   .navbar-links {
     margin-left: 3rem;
     ul {
       list-style: none;
     }
   }
-
+  
   .navbar-link {
     color: var(--color-navlink);
-    font-weight: 600;
+    font-weight: var(--fw-semi);
     opacity: var(--navlink-opacity);
     transition: var(--transition-default);
     
@@ -267,123 +254,127 @@ header {
       text-decoration: none;
     }
   }
+  
+  /* Sign-in button */
+  .btn-signin {
+    width: 140px;
+    height: 36px;
+    font-size: var(--fs-body-s);
+    font-weight: var(--fw-semi);
+    padding: 0px;
+    border-radius: 4px;
+    
+    .usericon {
+      margin-right: 0.5rem;
+    }
+  }
+  
+  .burger-menu {
+    /* Hidden in desktop */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: var(--transition-theme);
+    max-height: 0;
+    /* Hide menu items when closed */
+    overflow: hidden;
+    
+    .burger-item {
+      display: flex;
+      margin: 2rem;
+      /* Prevent button getting squished when closing menu */
+      flex-shrink: 0;
+    }
+    #burger-links {
+      padding-bottom: 3rem;
+    }
+    /* Add some padding to make it easier to click on */
+    .navbar-link {
+      padding: 2rem;
+    }
+  }
+  
+  &:has(#burger-toggle:checked) {
+    backdrop-filter: blur(20px);
+    background-color: var(--color-bg);
+    .burger-menu {
+      max-height: 15rem;
+      box-shadow: 0 25px 15px var(--color-bg);
+    }
+  }
 }
-
 
 .main-navbar {
   justify-content: space-between;
   padding-top: var(--header-pt);
+  
+  /* Hide in mobile */
+  #navbar-links, .btn-signin {
+    display: none;
+  }
 
   /* Remove extra pixels on bottom of logo image */
   .logo-img {
     vertical-align: bottom;
   }
-
+  
   .navbar-right {
     position: relative;
-
-    .btn-signin {
-      margin-left: 2rem;
-    }
-    .btn-burger {
-      margin-left: 2rem;
-      margin-right: .5rem;
-    }
-    #burger-toggle {
-      display: none;
-    }
   }
-}
-
-.burger-menu {
-  /* Hidden in desktop */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  transition: var(--transition-theme);
-
-  overflow: hidden;
-  max-height: 0;
   
-  .burger-item {
-    display: flex;
-    margin: 2rem;
-    /* Prevent button getting squished when closing menu */
-    flex-shrink: 0;
+  .dm-text {
+    font-size: var(--fs-body-m);
+    font-weight: var(--fw-semi);
+    color: var(--color-gray-700);
+    margin-right: 1rem;
+    /* Hide on mobile */
+    display: none;
   }
 
-  #burger-links {
-    padding-bottom: 3rem;
-  }
-    
-  /* Add some padding to make it easier to click on */
-  .navbar-link {
-    padding: 2rem;
-  }
-}
-
-/* Darkmode toggle-switch stuff */
-/* In preferred-color-scheme light, hide label-darkmode-switch-darkbg */
-#label-darkmode-switch-lightbg {display: flex;}
-#label-darkmode-switch-darkbg {display: none;}
-
-.dm-text {
-  font-size: var(--fs-body-m);
-  font-weight: var(--fw-semi);
-  color: var(--color-gray-700);
-  margin-right: 1rem;
-  /* Hide on mobile */
-  display: none;
-}
-
-.toggle-switch {
-  display: inline-block;
-  position: relative;
-  width: 46px;
-  height: 24px;
-
-  .dmswitchbg {
-    position: absolute;
-    cursor: pointer;
-    inset: 0;
-    border-radius: 46px;
-    background-color: var(--color-switch-bg);
-    transition: var(--transition-theme);
-  }    
-  .dmswitchbg::before {
-    position: absolute;
-    content: "";
-    height: 18px;
-    width: 18px;
-    left: 4px;
-    bottom: 3px;
-    border-radius: 50%;
-    background-color: var(--color-white);
-    transition: var(--transition-theme);
-  }
-}
-
-/* Sign-in button */
-.btn-signin {
-  width: 140px;
-  height: 36px;
-  font-size: var(--fs-body-s);
-  font-weight: 600;
-  padding: 0px;
-  border-radius: 4px;
+  .dm-toggle-switch {
+    display: inline-block;
+    position: relative;
+    width: 46px;
+    height: 24px;
   
-  .usericon {
-    margin-right: 0.5rem;
+    .dmswitchbg {
+      position: absolute;
+      cursor: pointer;
+      inset: 0;
+      border-radius: 46px;
+      background-color: var(--color-switch-bg);
+      transition: var(--transition-theme);
+    }    
+    .dmswitchbg::before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 4px;
+      bottom: 3px;
+      border-radius: 50%;
+      background-color: var(--color-white);
+      transition: var(--transition-theme);
+    }
   }
-}
 
-/* Hamburger/mobile menu */
-.btn-burger {
-  background-color: transparent;
-  border: none;
-  font-size: 2rem;
-  color: var(--color-burger);
+  .btn-signin {
+    margin-left: 2rem;
+  }
+
+  .btn-burger {
+    margin-left: 2rem;
+    margin-right: .5rem;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-burger);
+  }
+
+  /* Hide burger menu checkbox. Todo: for SRs, visually hide instead */
+  #burger-toggle {
+    display: none;
+  }
 }
 
           /* Header end */
@@ -1073,8 +1064,11 @@ section#reviews {
     --header-pt: 1.5rem;
   }
 
-  .dm-text {
-    display: block;
+  /* Header/navbar */
+  .main-navbar {
+    .dm-text {
+      display: block;
+    }
   }
 
   /* Hero section */
@@ -1236,6 +1230,7 @@ section#reviews {
     --header-pt: 1rem;
   }
 
+  /* Header/navbar */
   .main-navbar {
     #navbar-links, .btn-signin {
       display: flex;
