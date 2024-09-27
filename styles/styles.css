@@ -859,7 +859,6 @@ section#reviews {
       margin-top: 3rem;
       font-size: var(--fs-h4);
       font-weight: var(--fw-extra);
-      text-wrap: balance;
     }
   }
 
