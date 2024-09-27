@@ -1093,19 +1093,23 @@ section#reviews {
     .dm-text {
       display: block;
     }
+
+    .btn-burger {
+      margin-left: 5rem;
+    }
   }
 
   /* Hero section */
   .hero-container {
-    height: 618px;
     grid-template-columns: 2fr 3fr;
     grid-template-areas:  "hero-headline hero-headline"
                           "hero-content hero-images";
-    gap: 2.5rem;
+    gap: 2rem 0rem;
 
     
     .headline {
       font-size: var(--fs-hero-headline-tablet);
+      margin-top: 4.5rem;
     }
     .content {
       text-align: left;
