@@ -299,6 +299,12 @@ header#nav {
   &:has(#burger-toggle:checked) {
     backdrop-filter: blur(20px);
     background-color: var(--color-bg);
+    .burger-menu-open {
+      display: none;
+    }
+    .burger-menu-close {
+      display: block;
+    }
     .burger-menu {
       grid-template-rows: 1fr;
       box-shadow: 0 25px 15px var(--color-bg);
@@ -365,12 +371,20 @@ header#nav {
   }
 
   .btn-burger {
+    display: flex;
+    justify-content: center;
+    /* Set width to avoid div changing width when icon is changed */
+    width: 1.5rem;
     margin-left: 2rem;
     margin-right: .5rem;
     background-color: transparent;
     border: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--color-burger);
+
+    .burger-menu-close {
+      display: none;
+    }
   }
 
   /* Hide burger menu checkbox. Todo: for SRs, visually hide instead */
