@@ -1263,13 +1263,18 @@ section#reviews {
   }
 
   /* Header/navbar */
+header#nav {
+  #burger-menu {
+    grid-template-rows: 0fr !important;
+  }
+}
+
   .main-navbar {
     #navbar-links, .btn-signin {
       display: flex;
     }
-    .btn-burger,
-    .burger-menu,
-    .burger-item {
+
+    .btn-burger {
       display: none;
     }
   }
