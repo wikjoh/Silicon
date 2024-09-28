@@ -1311,6 +1311,7 @@ section#reviews {
     .burger-menu {
       grid-template-rows: 0fr !important;
       box-shadow: unset !important;
+      display: none !important;
     }
   }
 
