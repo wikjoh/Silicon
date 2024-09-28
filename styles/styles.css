@@ -1484,6 +1484,9 @@ section#reviews {
 
     .header {
       grid-area: header;
+      justify-self: left;
+      width: 100%;
+
       h2, p {
         text-align: left;
       }
