@@ -32,6 +32,7 @@
   --color-brandlogo-border-whitebg: var(--color-gray-300);
   --color-brandlogo-border-darkbg: hsl(0, 0%, 85%);
   --color-brandlogo-bg-darkbg-tablet: #131022;
+  --color-brandlogo-bg-darkbg-desktop: var(--color-gray-900);
   --color-features-body: hsl(0, 0%, 30%);
   --color-feature-cards-img-bg-bgwhite: var(--color-gray-100);
   --color-feature-cards-img-bg-bgdark: #171B25;
@@ -1601,6 +1602,10 @@ section#reviews {
     /* In width 768px+ and darkmode, remove shadow from FAQ
     **  and apply border on open details elements*/
     @media (768px <= width) {
+      .features-container .brandlogo {
+        background-color: var(--color-brandlogo-bg-darkbg-tablet);
+      }
+
       .faq-accordion {
         details {
           box-shadow: none;
@@ -1614,6 +1619,10 @@ section#reviews {
     }
 
     @media (1400px <= width) {
+      .features-container .brandlogo {
+        background-color: var(--color-brandlogo-bg-darkbg-desktop);
+      }
+      
       .subscribe input {
         background-color: #191D27;
         border-color: #42464D;;
@@ -1673,6 +1682,10 @@ section#reviews {
     /* In width 768px+ and darkmode, remove shadow from FAQ
     **  and apply border on open details elements*/
     @media (768px <= width) {
+      .features-container .brandlogo {
+        background-color: var(--color-brandlogo-bg-darkbg-tablet);
+      }
+
       .faq-accordion {
         details {
           box-shadow: none;
@@ -1686,6 +1699,9 @@ section#reviews {
     }
 
     @media (1400px <= width) {
+      .features-container .brandlogo {
+        background-color: var(--color-brandlogo-bg-darkbg-desktop);
+      }
       .subscribe input {
         background-color: #191D27;
         border-color: #42464D;;
