@@ -1619,10 +1619,15 @@ section#reviews {
     }
 
     @media (1400px <= width) {
-      .features-container .brandlogo {
-        background-color: var(--color-brandlogo-bg-darkbg-desktop);
+      .features-container { 
+        .brandlogo {
+          background-color: var(--color-brandlogo-bg-darkbg-desktop);
+        }
+        .card-img-container {
+          background-color: #12162A;
+        }
       }
-      
+
       .subscribe input {
         background-color: #191D27;
         border-color: #42464D;;
@@ -1699,8 +1704,13 @@ section#reviews {
     }
 
     @media (1400px <= width) {
-      .features-container .brandlogo {
-        background-color: var(--color-brandlogo-bg-darkbg-desktop);
+      .features-container { 
+        .brandlogo {
+          background-color: var(--color-brandlogo-bg-darkbg-desktop);
+        }
+        .card-img-container {
+          background-color: #12162A;
+        }
       }
       .subscribe input {
         background-color: #191D27;
