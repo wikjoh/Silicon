@@ -168,6 +168,10 @@ a {
   justify-content: center;
   align-items: center;
   transition: var(--transition-default);
+
+  span {
+    color: white;
+  }
   
   &:hover {
     background-color: var(--color-gray-600);
@@ -392,9 +396,6 @@ header#nav {
 
   .btn-signin {
     margin-left: 2rem;
-    span {
-      color: white;
-    }
   }
 
   .btn-burger {
