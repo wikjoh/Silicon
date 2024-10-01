@@ -1593,6 +1593,9 @@ section#reviews {
     .logo-img {
       content: url('/assets/logo-bgdark.svg');
     }
+    section#hero {
+      background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 50%, rgba(19,16,34,1) 100%);
+    }
     .hero-container .pitch {
       color: var(--color-white);
     }
@@ -1678,6 +1681,9 @@ section#reviews {
     /* Swap to light-texted logo */
     .logo-img {
       content: url('/assets/logo-bgdark.svg');
+    }
+    section#hero {
+      background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 50%, rgba(19,16,34,0.01) 100%);
     }
     .hero-container .pitch {
       color: var(--color-white);
