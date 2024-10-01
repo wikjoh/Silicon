@@ -30,7 +30,7 @@
   --color-chevronarrow-darkbg: var(--color-white);
 
   --color-brandlogo-border-whitebg: var(--color-gray-300);
-  --color-brandlogo-border-darkbg: hsl(0, 0%, 85%);
+  --color-brandlogo-border-darkbg: rgba(255, 255, 255, 15%);
   --color-brandlogo-bg-darkbg-tablet: #131022;
   --color-brandlogo-bg-darkbg-desktop: var(--color-gray-900);
   --color-features-body: hsl(0, 0%, 30%);
@@ -70,6 +70,7 @@
   --color-bg-dlbtn: var(--color-bg-dlbtn-whitebg);
   --color-chevronbg: var(--color-chevronbg-whitebg);
   --color-chevronarrow: var(--color-chevronarrow-whitebg);
+  --color-brandlogo-border: var(--color-brandlogo-border-whitebg);
   --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgwhite);
   --color-how-bg: var(--color-how-bg-white);
   --color-reviewsbg: var(--color-reviewsbg-whitebg);
@@ -565,10 +566,12 @@ section#hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid var(--color-brandlogo-border-whitebg);
+    border: 2px solid var(--color-brandlogo-border);
     border-radius: 8px;
     width: 160px;
     height: 100px;
+
+    transition: var(--transition-theme);
 
     /* Add some space between image and border */
     .brandlogo-img {
@@ -1563,6 +1566,7 @@ section#reviews {
     --color-bg-dlbtn: var(--color-bg-dlbtn-darkbg);
     --color-chevronbg: var(--color-chevronbg-darkbg);
     --color-chevronarrow: var(--color-chevronarrow-darkbg);
+    --color-brandlogo-border: var(--color-brandlogo-border-darkbg);
     --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgdark);
     --color-how-bg: var(--color-how-bg-dark);
     --color-reviewsbg: var(--color-reviewsbg-darkbg);
@@ -1647,6 +1651,7 @@ section#reviews {
     --color-bg-dlbtn: var(--color-bg-dlbtn-darkbg);
     --color-chevronbg: var(--color-chevronbg-darkbg);
     --color-chevronarrow: var(--color-chevronarrow-darkbg);
+    --color-brandlogo-border: var(--color-brandlogo-border-darkbg);
     --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgdark);
     --color-how-bg: var(--color-how-bg-dark);
     --color-reviewsbg: var(--color-reviewsbg-darkbg);
