@@ -544,7 +544,6 @@ section#hero {
   margin-bottom: 1rem;
 
   h2, h3 {
-    color: var(--color-heading);
     font-weight: var(--fw-extra);
   }
 
@@ -873,7 +872,6 @@ section#reviews {
 
   .header {
     h2 {
-      color: var(--color-heading);
       margin-top: 3rem;
       font-size: var(--fs-h4);
       font-weight: var(--fw-extra);
@@ -912,7 +910,6 @@ section#reviews {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: var(--color-heading);
       font-size: var(--fs-body-m);
       font-weight: var(--fw-semi);
       line-height: 1.3;
@@ -920,6 +917,10 @@ section#reviews {
       cursor: pointer;
       user-select: none;
       transition: var(--transition-default);
+
+      span {
+        color: var(--color-heading);
+      }
 
       &:hover {
         background-color: var(--color-faqchevronbg);
