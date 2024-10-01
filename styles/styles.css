@@ -37,7 +37,7 @@
   --color-feature-cards-img-bg-bgdark: #171B25;
 
   --color-how-bg-white: var(--color-gray-100);
-  --color-how-bg-dark: #1c2029; /* Doesn't match any of grayscale colors? */
+  --color-how-bg-dark: #151822; /* Doesn't match any of grayscale colors? */
 
   --color-reviewsbg-whitebg: var(--color-gray-100);
   --color-reviewsbg-darkbg: #151822;
@@ -48,6 +48,7 @@
 
   --color-faqbg-whitebg: var(--color-bg-white);
   --color-faqbg-darkbg: #151822; /* Doesn't match any of grayscale colors? */
+  --color-faqbg-darkbg-mobile: #131022;
   --color-faqoutline-whitebg: #e2e5f1;
   --color-faqoutline-darkbg: #363443;
   --color-faqchevronbg-whitebg: var(--color-gray-100);
@@ -678,6 +679,8 @@ section#how {
       font-size: var(--fs-body-m);
       margin-top: 1rem;
       margin-bottom: 4rem;
+      /* Poor contrast, but according to design */
+      color: var(--color-gray-700);
     }
   }
 }
@@ -875,6 +878,10 @@ section#reviews {
       margin-top: 3rem;
       font-size: var(--fs-h4);
       font-weight: var(--fw-extra);
+    }
+    p {
+      /* Poor contrast, but according to design */
+      color: var(--color-gray-700);
     }
   }
 
@@ -1101,9 +1108,12 @@ section#reviews {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--color-gray-600);
     font-size: var(--fs-body-s);
     line-height: 1.6;
+
+    span {
+      color: var(--color-gray-600);
+    }
   }
 
           /* Footer end */
@@ -1557,7 +1567,7 @@ section#reviews {
     --color-reviewsbg: var(--color-reviewsbg-darkbg);
     --color-reviewbg: var(--color-reviewbg-darkbg);
     --color-reviewrole: var(--color-reviewrole-darkbg);
-    --color-faqbg: var(--color-faqbg-darkbg);
+    --color-faqbg: var(--color-faqbg-darkbg-mobile);
     --color-faqoutline: var(--color-faqoutline-darkbg);
     --color-faqchevronbg: var(--color-faqchevronbg-darkbg);
     --color-faqchevronarrow: var(--color-faqchevronarrow-darkbg);
@@ -1594,6 +1604,7 @@ section#reviews {
       .faq-accordion {
         details {
           box-shadow: none;
+          background-color: var(--color-faqbg-darkbg);
 
           &[open] {
             border: 1px solid #383A43;
@@ -1627,7 +1638,7 @@ section#reviews {
     --color-reviewsbg: var(--color-reviewsbg-darkbg);
     --color-reviewbg: var(--color-reviewbg-darkbg);
     --color-reviewrole: var(--color-reviewrole-darkbg);
-    --color-faqbg: var(--color-faqbg-darkbg);
+    --color-faqbg: var(--color-faqbg-darkbg-mobile);
     --color-faqoutline: var(--color-faqoutline-darkbg);
     --color-faqchevronbg: var(--color-faqchevronbg-darkbg);
     --color-faqchevronarrow: var(--color-faqchevronarrow-darkbg);
@@ -1665,6 +1676,7 @@ section#reviews {
       .faq-accordion {
         details {
           box-shadow: none;
+          background-color: var(--color-faqbg-darkbg);
 
           &[open] {
             border: 1px solid #383A43;
