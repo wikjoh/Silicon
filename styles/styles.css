@@ -1402,6 +1402,7 @@ section#reviews {
 
   /* Features section */
   .features-container {
+    margin-bottom: 14rem;
     .content-container {
       display: grid;
       grid-template-columns: 1fr 2fr;
