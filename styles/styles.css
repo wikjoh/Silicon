@@ -904,6 +904,7 @@ section#reviews {
     details {
       background-color: var(--color-faqbg);
       border-bottom: var(--_faq-border);
+      overflow: hidden;
 
       /* No border on last details-element to prevent double border*/
       &:last-child {
