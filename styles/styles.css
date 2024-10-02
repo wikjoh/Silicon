@@ -114,7 +114,6 @@
   --fw-reg: 400;
 
   /* Padding, margins */
-  --wrapper-pi: .75rem;
   --header-pt: .75rem;
 }
 
@@ -198,11 +197,30 @@ a {
 
 /* Utility classes */
 .wrapper {
-  max-width: 1320px;
   margin-inline: auto;
   display: flex;
   align-items: center;
-  padding-inline: var(--wrapper-pi);
+  padding-inline: .75rem;
+
+  @media (576px <= width) {
+    max-width: 540px;
+  }
+  @media (768px <= width) {
+    max-width: 720px;
+    padding-inline: 1rem;
+  }
+  @media (992px <= width) {
+    max-width: 960px;
+    padding-inline: 2rem;
+  }
+  @media (1200px <= width) {
+    max-width: 1140px;
+    padding-inline: 4rem;
+  }
+  @media (1400px <= width) {
+    max-width: 1320px;
+    padding-inline: 0;
+  }
 }
 
 .flex {
@@ -1137,7 +1155,6 @@ section#reviews {
 @media (768px <= width) {
   /* Change margin & padding */
   :root {
-    --wrapper-pi: 2rem;
     --header-pt: 1.5rem;
   }
 
@@ -1180,7 +1197,6 @@ section#reviews {
 
     /* Features section */
   .features-container {
-    padding-inline: 1.5rem;
     margin-bottom: 7rem;
     .brandlogo-container {
       display: flex;
@@ -1325,7 +1341,6 @@ section#reviews {
 @media (1400px <= width) {
   /* Change margin & padding */
   :root {
-    --wrapper-pi: 2rem;
     --header-pt: 1rem;
   }
 
