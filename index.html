@@ -19,16 +19,8 @@
 </head>
 <body>
 
-  <!-- Inspired by CSS-only darkmode: https://codepen.io/kleinfreund/pen/bJwqpB
-  Insert themeswapping checkboxes for later use. One of the buttons is pre-checked.
-  In order to "sync" toggleswitch with pref colorscheme, the one corresponding to users preferred color scheme will be used. -->
-  <span class="dm-chbox-hidden">prefers-color-scheme-light-box</span>
-  <input id="darkmode-switch-whitebg" class="darkmode-checkboxes dm-chbox-hidden" type="checkbox">
-  <span class="dm-chbox-hidden">prefers-color-scheme-dark-box</span>
-  <input id="darkmode-switch-darkbg" class="darkmode-checkboxes dm-chbox-hidden" type="checkbox" checked>
-  <!-- Put everything inside a container on the same DOM-level as the checkboxes in order for theme swapping to work-->
   <div class="themewrapper">
-    
+
     <header id="nav">
       <a href="#main-content" class="jump-to-main">Jump to main content</a>
       <div class="main-navbar wrapper">
@@ -49,12 +41,18 @@
           The label that doesn't correspond to users preffered scheme will be hidden.  -->
           <div class="theme-toggle-switches flex">
             <span class="dm-text">Dark mode</span>
+            
             <label id="label-darkmode-switch-whitebg" for="darkmode-switch-whitebg" class="dm-toggle-switch">
               <span class="dmswitchbg"></span>
             </label>
             <label id="label-darkmode-switch-darkbg" for="darkmode-switch-darkbg" class="dm-toggle-switch">
               <span class="dmswitchbg"></span>
             </label>
+
+            <span class="dm-chbox-hidden">prefers-color-scheme-light-box</span>
+            <input id="darkmode-switch-whitebg" class="darkmode-checkboxes visually-hidden" type="checkbox">
+            <span class="dm-chbox-hidden">prefers-color-scheme-dark-box</span>
+            <input id="darkmode-switch-darkbg" class="darkmode-checkboxes visually-hidden" type="checkbox" checked>
           </div>
           
           <a id="signin-button" class="btn-primary btn-signin" href="#">

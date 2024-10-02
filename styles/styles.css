@@ -234,18 +234,31 @@ a {
   text-align: center;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0
+  }
+
 /* Utility classes end */
 /* Darkmode start */
 
-/* Disable to show hidden checkboxes used for darkmode syncing. */
+/* Disable to show debug text for dm checkbox labels */
 .dm-chbox-hidden {
   display: none;
 }
 
 /* Darkmode toggle-switch stuff */
-/* In preferred-color-scheme light, hide label-darkmode-switch-darkbg */
+/* In preferred-color-scheme light, hide darkbg label & box */
 #label-darkmode-switch-lightbg {display: flex;}
 #label-darkmode-switch-darkbg {display: none;}
+#darkmode-switch-whitebg {display: block;}
+#darkmode-switch-darkbg {display: none;}
 
 .themewrapper {
   background-color: var(--color-bg);
@@ -1582,9 +1595,16 @@ section#reviews {
 }
 
 
-/* Darkmode media queries */
+/* Darkmode media queries
+** Unfortunately these have to be repeated for each prefers-color-scheme
+** Would've liked to use something like below, but doesn't seem possible 
+** (@media (pcs:l) && :has(whitebg:checked)) ||
+** (@media (pcs:d) && :has(darkbg:checked)) {
+**    --DMstuff
+** } 
+** Should be possible with container style query, but no firefox support yet */
 @media (prefers-color-scheme: light) {
-  #darkmode-switch-whitebg:checked ~ .themewrapper {
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper {
     --color-bg: var(--color-bg-dark);
     --color-navlink: var(--color-navlink-darkbg);
     --color-burger: var(--color-white);
@@ -1673,7 +1693,7 @@ section#reviews {
 
 /* Auto-enable darkmode if user has prefers-color-scheme: dark */
 @media (prefers-color-scheme: dark) {
-  #darkmode-switch-darkbg:checked ~ .themewrapper {
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper {
     --color-bg: var(--color-bg-dark);
     --color-navlink: var(--color-navlink-darkbg);
     --color-burger: var(--color-white);
@@ -1758,10 +1778,12 @@ section#reviews {
       }
     }
   }
-  /* In preferred scheme dark, display pre-checked darkbg checkbox
+  /* In preferred scheme dark, display pre-checked darkbg checkbox and label
   and hide unchecked whitebg checkbox */
   #label-darkmode-switch-darkbg {display: flex;}
   #label-darkmode-switch-whitebg {display: none;}
+  #darkmode-switch-darkbg {display: block;}
+  #darkmode-switch-whitebg {display: none;}
 }
 
           /* Media queries end */
