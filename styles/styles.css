@@ -81,6 +81,7 @@
   --color-faqchevronbg: var(--color-faqchevronbg-whitebg);
   --color-faqchevronarrow: var(--color-faqchevronarrow-whitebg);
   --color-subscribebg: var(--color-subscribebg-whitebg);
+  --color-subscribetext: var(--color-paragraph-whitebg);
 
   /* Transitions */
   --transition-default: all .25s;
@@ -1102,7 +1103,7 @@ section#reviews {
         width: calc(100% - 2.75rem);
         border-radius: 8px 0 0 8px;
         border: 1px solid var(--color-gray-400);
-        color: var(--color-paragraph);
+        color: var(--color-subscribetext);
 
         &:focus {
           outline: none;
@@ -1663,6 +1664,7 @@ section#reviews {
 
       .subscribe input {
         background-color: #191D27;
+        color: var(--color-paragraph-darkbg);
         border-color: #42464D;;
       }
     }
@@ -1751,6 +1753,7 @@ section#reviews {
       }
       .subscribe input {
         background-color: #191D27;
+        color: var(--color-paragraph-darkbg);
         border-color: #42464D;;
       }
     }
