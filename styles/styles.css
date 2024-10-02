@@ -156,6 +156,14 @@ a {
   }
 }
 
+/* Increase focus visibility */
+*:focus {
+  outline-color: var(--color-primary);
+  outline-offset: .2em;
+  outline-width: .4em;
+  outline-style: solid;
+}
+
           /* Reusable buttons etc */
 
 .btn-primary {
@@ -1119,7 +1127,7 @@ section#reviews {
         color: var(--color-subscribetext);
 
         &:focus {
-          outline: none;
+          outline-offset: -.6em;
         }
 
         &::placeholder {
