@@ -357,6 +357,9 @@ header#nav {
       /* Make sure items are hidden when menu is closed */
       overflow: hidden;
     }
+    .burger-nav.reveal-aria {
+      display: none;
+    }
     ul {
       margin: 4rem 0;
       display: flex;
@@ -371,6 +374,14 @@ header#nav {
       }
     }
   }
+
+  /* Apply outline to burgermenubtn when checkbox is focused */
+  &:has(#burger-toggle:focus) .btn-burger {
+    outline-color: var(--color-primary);
+    outline-offset: .2em;
+    outline-width: .4em;
+    outline-style: solid;
+  }
   
   &:has(#burger-toggle:checked) {
     backdrop-filter: blur(20px);
@@ -378,13 +389,13 @@ header#nav {
     .burger-menu-open {
       display: none;
     }
-    .burger-menu-close {
-      display: block;
-    }
+    .burger-menu-close {display: block;}
     .burger-menu {
       grid-template-rows: 1fr;
       box-shadow: 0 25px 15px var(--color-bg);
     }
+    .burger-nav.reveal-aria {display: block;}
+    .burger-nav.hide-aria {display: none;}
   }
 }
 
@@ -469,11 +480,6 @@ header#nav {
     .burger-menu-close {
       display: none;
     }
-  }
-
-  /* Hide burger menu checkbox. Todo: for SRs, visually hide instead */
-  #burger-toggle {
-    display: none;
   }
 }
 
@@ -1390,7 +1396,8 @@ section#reviews {
       display: flex;
     }
 
-    .btn-burger {
+    /* In desktop, hide burgermenubtn and its checkbox */
+    .btn-burger, #burger-toggle {
       display: none;
     }
   }

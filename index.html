@@ -66,13 +66,29 @@
               <i class="fa-solid fa-xmark burger-menu-close"></i>
             </label>
           </div>
-          <input type="checkbox" id="burger-toggle">
+          <input type="checkbox" id="burger-toggle" class="visually-hidden">
         </div>
       </div>
       
       <!-- Hidden in desktop -->
       <div id="burger-menu" class="burger-menu">
-        <nav class="burger-nav">
+        <!-- Since I'm doing this without JS and can't delay applyning display:none until after transform,
+         **  in order to maintain proper animated closing of menu when putting display:none to hide elements from accessibility tree,
+         **  duplicate the nav-element and reveal the one with aria-hidden attributes when closing the menu. -->
+        <nav class="burger-nav hide-aria" aria-hidden="true">
+          <ul>
+            <li>
+              <a class="btn-primary btn-signin" href="#" tabindex="-1">
+                <img class="usericon" src="/assets/icons/signupbuttonusericon.svg" alt="">
+                <span>Sign in / up</span>
+              </a>
+            </li>
+            <li>
+              <a class="navbar-link" href="#" tabindex="-1">Features</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="burger-nav reveal-aria">
           <ul>
             <li>
               <a class="btn-primary btn-signin" href="#">
