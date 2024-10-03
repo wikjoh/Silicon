@@ -40,7 +40,7 @@
           <!-- Labels for toggling darkmode.
           The label that doesn't correspond to users preffered scheme will be hidden.  -->
           <div class="theme-toggle-switches flex">
-            <span class="dm-text">Dark mode</span>
+            <span class="dm-text" aria-hidden="true">Dark mode</span>
             
             <label id="label-darkmode-switch-whitebg" for="darkmode-switch-whitebg" class="dm-toggle-switch">
               <span class="dmswitchbg"></span>
@@ -49,10 +49,10 @@
               <span class="dmswitchbg"></span>
             </label>
 
-            <span class="dm-chbox-hidden">prefers-color-scheme-light-box</span>
-            <input id="darkmode-switch-whitebg" class="darkmode-checkboxes visually-hidden" type="checkbox">
-            <span class="dm-chbox-hidden">prefers-color-scheme-dark-box</span>
-            <input id="darkmode-switch-darkbg" class="darkmode-checkboxes visually-hidden" type="checkbox" checked>
+            <span class="dm-chbox-hidden debug">prefers-color-scheme-light-box</span>
+            <input id="darkmode-switch-whitebg" class="darkmode-checkboxes visually-hidden" type="checkbox" aria-label="Enable darkmode">
+            <span class="dm-chbox-hidden debug">prefers-color-scheme-dark-box</span>
+            <input id="darkmode-switch-darkbg" class="darkmode-checkboxes visually-hidden" type="checkbox" checked aria-label="Enable darkmode">
           </div>
           
           <a id="signin-button" class="btn-primary btn-signin" href="#">
@@ -139,29 +139,29 @@
       <section id="features">
         <div class="features-container wrapper">
           
-          <div class="brandlogo-container">
+          <div class="brandlogo-container" aria-label="Brands that endorse our app">
             <div class="brandlogo">
-              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-1.svg" alt="Partner logoipsum-1 logo">
+              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-1.svg" alt="Brand1">
             </div>
 
             <div class="brandlogo">
-              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-2.svg" alt="Partner logoipsum-2 logo">
+              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-2.svg" alt="Brand2">
             </div>
 
             <div class="brandlogo">
-              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-3.svg" alt="Partner logoipsum-3 logo">
+              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-3.svg" alt="Brand3">
             </div>
 
             <div class="brandlogo">
-              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-4.svg" alt="Partner logoipsum-4 logo">
+              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-4.svg" alt="Brand4">
             </div>
 
             <div class="brandlogo desktop-only">
-              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-5.svg" alt="Partner logoipsum-5 logo">
+              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-5.svg" alt="Brand5">
             </div>
 
             <div class="brandlogo desktop-only">
-              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-6.svg" alt="Partner logoipsum-6 logo">
+              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-6.svg" alt="Brand6">
             </div>
 
           </div>
