@@ -157,7 +157,7 @@ a {
 }
 
 /* Increase focus visibility */
-*:focus {
+*:focus-visible {
   outline-color: var(--color-primary);
   outline-offset: .2em;
   outline-width: .4em;
@@ -165,7 +165,7 @@ a {
 }
 
 /* On summary elements, put outline on inside */
-summary:focus {
+summary:focus-visible {
   outline-offset: -.4em;
 }
 
@@ -274,7 +274,7 @@ summary:focus {
 #darkmode-switch-darkbg {display: none;}
 
 /* When visually hidden checkbox is in focus, put outline on toggle switch */
-body:has(.darkmode-checkboxes:focus) .dm-toggle-switch {
+body:has(.darkmode-checkboxes:focus-visible) .dm-toggle-switch {
   outline-color: var(--color-primary);
   outline-offset: .2em;
   outline-width: .4em;
@@ -383,7 +383,7 @@ header#nav {
   }
 
   /* Apply outline to burgermenubtn when checkbox is focused */
-  &:has(#burger-toggle:focus) .btn-burger {
+  &:has(#burger-toggle:focus-visible) .btn-burger {
     outline-color: var(--color-primary);
     outline-offset: .2em;
     outline-width: .4em;
@@ -1148,7 +1148,7 @@ section#reviews {
         color: var(--color-subscribetext);
 
         &:focus {
-          outline-offset: -.6em;
+          outline-offset: -.4em;
         }
 
         &::placeholder {
