@@ -353,6 +353,8 @@ header#nav {
     transition: var(--transition-theme);
 
     .burger-nav {
+      /* Add some padding to make sure there's room for focus border/outline */
+      padding-inline: 1rem;
       text-align: center;
       /* Make sure items are hidden when menu is closed */
       overflow: hidden;
