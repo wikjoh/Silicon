@@ -164,6 +164,11 @@ a {
   outline-style: solid;
 }
 
+/* On summary elements, put outline on inside */
+summary:focus {
+  outline-offset: -.4em;
+}
+
           /* Reusable buttons etc */
 
 .btn-primary {
