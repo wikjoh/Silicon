@@ -268,6 +268,14 @@ a {
 #darkmode-switch-whitebg {display: block;}
 #darkmode-switch-darkbg {display: none;}
 
+/* When visually hidden checkbox is in focus, put outline on toggle switch */
+body:has(.darkmode-checkboxes:focus) .dm-toggle-switch {
+  outline-color: var(--color-primary);
+  outline-offset: .2em;
+  outline-width: .4em;
+  outline-style: solid;
+}
+
 .themewrapper {
   background-color: var(--color-bg);
   transition: var(--transition-theme);
