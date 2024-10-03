@@ -794,6 +794,8 @@ section#payment {
   }
 
   .btn-learn-more {
+    width: 160px;
+    border-radius: 6px;
     margin-top: 3rem;
     font-size: var(--fs-body-s);
     font-weight: var(--fw-semi);
