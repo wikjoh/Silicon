@@ -1,0 +1,8 @@
+// Continued use of @import is discouraged according to https://sass-lang.com/documentation/at-rules/import/.
+// I'll be using @use and @forward instead.
+@use './abstracts/' as abstracts;
+@use './themes/' as themes;
+@use './base/' as base;
+@use './components/' as components;
+@use './utilities/' as utilities;
+@use './sections/' as sections;
