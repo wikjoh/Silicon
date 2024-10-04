@@ -1,0 +1,56 @@
+$color-primary: hsl(239, 84%, 67%);   // #6366F1 
+$color-white: hsl(0, 0%, 100%);       // #FFFFFF 
+$color-gray-100: hsl(225, 100%, 98%); // #F3F6FF 
+$color-gray-200: hsl(226, 68%, 96%);  // #EFF2FC 
+$color-gray-300: hsl(228, 35%, 92%);  // #E2E5F1 
+$color-gray-400: hsl(229, 25%, 86%);  // #D4D7E5 
+$color-gray-500: hsl(231, 16%, 75%);  // #B4B7C9 
+$color-gray-600: hsl(231, 14%, 63%);  // #9397AD 
+$color-gray-700: hsl(234, 14%, 39%);  // #565973 
+$color-gray-800: hsl(235, 20%, 25%);  // #33354d 
+$color-gray-900: hsl(223, 39%, 7%);   // #0B0F19
+
+$color-bg-white: $color-white;
+$color-bg-dark: $color-gray-900;
+$color-paragraph-whitebg: $color-gray-700;
+$color-paragraph-darkbg: rgba(255, 255, 255, 70%);
+$color-heading-darkbg: $color-white;
+$color-heading-whitebg: $color-gray-900;
+$color-navlink-whitebg: $color-gray-800;
+$color-navlink-darkbg: hsl(from $color-white) h s calc(l - 15);
+$color-bg-dlbtn-whitebg: $color-gray-900;
+$color-bg-dlbtn-darkbg: $color-gray-200;
+$color-chevronbg-whitebg: $color-white;
+$color-chevronbg-darkbg: #222032;
+$color-chevronarrow-whitebg: $color-gray-800;
+$color-chevronarrow-darkbg: $color-white;
+
+$color-brandlogo-border-whitebg: $color-gray-300;
+$color-brandlogo-border-darkbg: rgba(255, 255, 255, 15%);
+$color-brandlogo-bg-darkbg-tablet: #131022;
+$color-brandlogo-bg-darkbg-desktop: $color-gray-900;
+$color-features-body: hsl(0, 0%, 30%);
+$color-feature-cards-img-bg-bgwhite: $color-gray-100;
+$color-feature-cards-img-bg-bgdark: #171B25;
+
+$color-how-bg-white: $color-gray-100;
+$color-how-bg-dark: #151822;
+
+$color-reviewsbg-whitebg: $color-gray-100;
+$color-reviewsbg-darkbg: #151822;
+$color-reviewbg-whitebg: $color-white;
+$color-reviewbg-darkbg: #1E212B;
+$color-reviewrole-whitebg: $color-gray-600;
+$color-reviewrole-darkbg: #8E9095;
+
+$color-faqbg-whitebg: $color-bg-white;
+$color-faqbg-darkbg: #151822;
+$color-faqbg-darkbg-mobile: #131022;
+$color-faqoutline-whitebg: #e2e5f1;
+$color-faqoutline-darkbg: #363443;
+$color-faqchevronbg-whitebg: $color-gray-100;
+$color-faqchevronbg-darkbg: #1E212B;
+$color-faqchevronarrow-whitebg: $color-gray-800;
+$color-faqchevronarrow-darkbg: $color-white;
+$color-subscribebg-whitebg: $color-gray-100;
+$color-subscribebg-darkbg: $color-faqbg-darkbg;
