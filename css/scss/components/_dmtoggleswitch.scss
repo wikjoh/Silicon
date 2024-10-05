@@ -1,0 +1,26 @@
+.dm-toggle-switch {
+  display: inline-block;
+  position: relative;
+  width: 46px;
+  height: 24px;
+
+  .dmswitchbg {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    border-radius: 46px;
+    background-color: var(--color-switch-bg);
+    transition: var(--transition-theme);
+  }    
+  .dmswitchbg::before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    transition: var(--transition-theme);
+  }
+}

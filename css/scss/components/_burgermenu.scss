@@ -1,0 +1,33 @@
+// No point in building this using mixin since mixin wouldn't be used for anything else
+
+.burger-menu {
+  display: grid;
+  /* Use template-rows to hide/reveal menu, instead of max-height */
+  grid-template-rows: 0fr;
+  justify-content: center;
+  transition: var(--transition-theme);
+
+  .burger-nav {
+    /* Add some padding to make sure there's room for focus border/outline */
+    padding-inline: 1rem;
+    text-align: center;
+    /* Make sure items are hidden when menu is closed */
+    overflow: hidden;
+  }
+  .burger-nav.reveal-aria {
+    display: none;
+  }
+  ul {
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+
+    /* Apply padding to a-elements without imgs (i.e. no buttons) */
+    a:not(:has(img)) {
+      padding: 1rem;
+    }
+  }
+}
