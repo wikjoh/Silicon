@@ -348,6 +348,17 @@ a:hover {
   color: var(--color-primary);
 }
 
+.navbar-link {
+  color: var(--color-navlink);
+  font-weight: var(--fw-semi);
+  opacity: var(--navlink-opacity);
+  transition: var(--transition-default);
+}
+.navbar-link:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
 .btn-primary, .btn-signin {
   border-radius: 8px;
   border: none;
