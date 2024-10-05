@@ -2,13 +2,13 @@
 // according to https://sass-lang.com/documentation/at-rules/import/.
 // I'll be using @use and @forward instead.
 @use './abstracts/' as abstracts;
-@use './themes/' as themes;
 @use './base/' as base;
-@use './components/' as components;
 @use './utilities/' as utilities;
 @use './sections/' as sections;
+@use './components/' as components;
+@use './themes/' as themes;
 
 // Add media queries manually instead of through @forward,
 // to ensure they get added last.
-// If refactoring, set MQs in section files instead.
+// If refactoring, set MQs on components/sections instead.
 @use './base/media-width' as media-width;

@@ -78,228 +78,6 @@
   --color-subscribebg-darkbg: var(--color-faqbg-darkbg);
 }
 
-:root {
-  --transition-default: all .25s;
-  --transition-theme: all .5s ease;
-  /* Default theme - white/light */
-  --color-bg: var(--color-bg-white);
-  --color-navlink: var(--color-navlink-whitebg);
-  --color-burger: var(--color-gray-800);
-  --color-heading: var(--color-heading-whitebg);
-  --color-paragraph: var(--color-paragraph-whitebg);
-  --color-switch-bg: var(--color-gray-600);
-  --color-bg-dlbtn: var(--color-bg-dlbtn-whitebg);
-  --color-chevronbg: var(--color-chevronbg-whitebg);
-  --color-chevronarrow: var(--color-chevronarrow-whitebg);
-  --color-brandlogo-border: var(--color-brandlogo-border-whitebg);
-  --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgwhite);
-  --color-how-bg: var(--color-how-bg-white);
-  --color-reviewsbg: var(--color-reviewsbg-whitebg);
-  --color-reviewbg: var(--color-reviewbg-whitebg);
-  --color-reviewrole: var(--color-reviewrole-whitebg);
-  --color-faqbg: var(--color-faqbg-whitebg);
-  --color-faqoutline: var(--color-faqoutline-whitebg);
-  --color-faqchevronbg: var(--color-faqchevronbg-whitebg);
-  --color-faqchevronarrow: var(--color-faqchevronarrow-whitebg);
-  --color-subscribebg: var(--color-subscribebg-whitebg);
-  --color-subscribetext: var(--color-paragraph-whitebg);
-}
-
-/* Darkmode toggle-switch stuff */
-/* In preferred-color-scheme light, hide darkbg label & box */
-#label-darkmode-switch-lightbg {
-  display: flex;
-}
-
-#label-darkmode-switch-darkbg {
-  display: none;
-}
-
-#darkmode-switch-whitebg {
-  display: block;
-}
-
-#darkmode-switch-darkbg {
-  display: none;
-}
-
-/* Disable to show debug text for dm checkbox labels */
-.dm-chbox-hidden {
-  display: none;
-}
-
-@media (prefers-color-scheme: light) {
-  body:has(#darkmode-switch-whitebg:checked) .themewrapper {
-    --color-bg: var(--color-bg-dark);
-    --color-navlink: var(--color-navlink-darkbg);
-    --color-burger: var(--color-white);
-    --color-heading: var(--color-heading-darkbg);
-    --color-paragraph: var(--color-paragraph-darkbg);
-    --color-bg-dlbtn: var(--color-bg-dlbtn-darkbg);
-    --color-chevronbg: var(--color-chevronbg-darkbg);
-    --color-chevronarrow: var(--color-chevronarrow-darkbg);
-    --color-brandlogo-border: var(--color-brandlogo-border-darkbg);
-    --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgdark);
-    --color-how-bg: var(--color-how-bg-dark);
-    --color-reviewsbg: var(--color-reviewsbg-darkbg);
-    --color-reviewbg: var(--color-reviewbg-darkbg);
-    --color-reviewrole: var(--color-reviewrole-darkbg);
-    --color-faqbg: var(--color-faqbg-darkbg-mobile);
-    --color-faqoutline: var(--color-faqoutline-darkbg);
-    --color-faqchevronbg: var(--color-faqchevronbg-darkbg);
-    --color-faqchevronarrow: var(--color-faqchevronarrow-darkbg);
-    --color-subscribebg: var(--color-subscribebg-darkbg);
-    /* Change themeswitch-bg to active color */
-    --color-switch-bg: var(--color-primary);
-    /* Swap to light-texted logo */
-    /* Set darkmode switch to active position */
-    /* In width 768px+ and darkmode, remove shadow from FAQ
-    **  and apply border on open details elements*/
-  }
-  body:has(#darkmode-switch-whitebg:checked) .themewrapper .logo-img {
-    content: url("/assets/logo-bgdark.svg");
-  }
-  body:has(#darkmode-switch-whitebg:checked) .themewrapper section#hero {
-    background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgb(19, 16, 34) 100%);
-  }
-  body:has(#darkmode-switch-whitebg:checked) .themewrapper .hero-container .pitch {
-    color: var(--color-white);
-  }
-  body:has(#darkmode-switch-whitebg:checked) .themewrapper .review {
-    box-shadow: unset;
-  }
-  body:has(#darkmode-switch-whitebg:checked) .themewrapper .chevron-dn-img {
-    content: url("/assets/icons/chevron-dn-dark.svg");
-  }
-  body:has(#darkmode-switch-whitebg:checked) .themewrapper .btn-apple-img {
-    content: url("/assets/appstorebadges/appstore-dark.svg");
-  }
-  body:has(#darkmode-switch-whitebg:checked) .themewrapper .btn-google-img {
-    content: url("/assets/appstorebadges/googleplay-dark.svg");
-  }
-  body:has(#darkmode-switch-whitebg:checked) .themewrapper .dmswitchbg::before {
-    transform: translateX(20px);
-  }
-}
-@media (prefers-color-scheme: light) and (768px <= width) {
-  body:has(#darkmode-switch-whitebg:checked) .themewrapper .features-container .brandlogo {
-    background-color: var(--color-brandlogo-bg-darkbg-tablet);
-  }
-  body:has(#darkmode-switch-whitebg:checked) .themewrapper .faq-accordion details {
-    box-shadow: none;
-    background-color: var(--color-faqbg-darkbg);
-  }
-  body:has(#darkmode-switch-whitebg:checked) .themewrapper .faq-accordion details[open] {
-    border: 1px solid #383A43;
-  }
-}
-@media (prefers-color-scheme: light) and (1400px <= width) {
-  body:has(#darkmode-switch-whitebg:checked) .themewrapper .features-container .brandlogo {
-    background-color: var(--color-brandlogo-bg-darkbg-desktop);
-  }
-  body:has(#darkmode-switch-whitebg:checked) .themewrapper .features-container .card-img-container {
-    background-color: #12162A;
-  }
-  body:has(#darkmode-switch-whitebg:checked) .themewrapper .subscribe input {
-    background-color: #191D27;
-    color: var(--color-paragraph-darkbg);
-    border-color: #42464D;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  body:has(#darkmode-switch-darkbg:checked) .themewrapper {
-    --color-bg: var(--color-bg-dark);
-    --color-navlink: var(--color-navlink-darkbg);
-    --color-burger: var(--color-white);
-    --color-heading: var(--color-heading-darkbg);
-    --color-paragraph: var(--color-paragraph-darkbg);
-    --color-bg-dlbtn: var(--color-bg-dlbtn-darkbg);
-    --color-chevronbg: var(--color-chevronbg-darkbg);
-    --color-chevronarrow: var(--color-chevronarrow-darkbg);
-    --color-brandlogo-border: var(--color-brandlogo-border-darkbg);
-    --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgdark);
-    --color-how-bg: var(--color-how-bg-dark);
-    --color-reviewsbg: var(--color-reviewsbg-darkbg);
-    --color-reviewbg: var(--color-reviewbg-darkbg);
-    --color-reviewrole: var(--color-reviewrole-darkbg);
-    --color-faqbg: var(--color-faqbg-darkbg-mobile);
-    --color-faqoutline: var(--color-faqoutline-darkbg);
-    --color-faqchevronbg: var(--color-faqchevronbg-darkbg);
-    --color-faqchevronarrow: var(--color-faqchevronarrow-darkbg);
-    --color-subscribebg: var(--color-subscribebg-darkbg);
-    /* Change themeswitch-bg to active color */
-    --color-switch-bg: var(--color-primary);
-    /* Swap to light-texted logo */
-    /* Set darkmode switch to active position */
-    /* In width 768px+ and darkmode, remove shadow from FAQ
-    **  and apply border on open details elements*/
-  }
-  body:has(#darkmode-switch-darkbg:checked) .themewrapper .logo-img {
-    content: url("/assets/logo-bgdark.svg");
-  }
-  body:has(#darkmode-switch-darkbg:checked) .themewrapper section#hero {
-    background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgb(19, 16, 34) 100%);
-  }
-  body:has(#darkmode-switch-darkbg:checked) .themewrapper .hero-container .pitch {
-    color: var(--color-white);
-  }
-  body:has(#darkmode-switch-darkbg:checked) .themewrapper .review {
-    box-shadow: unset;
-  }
-  body:has(#darkmode-switch-darkbg:checked) .themewrapper .chevron-dn-img {
-    content: url("/assets/icons/chevron-dn-dark.svg");
-  }
-  body:has(#darkmode-switch-darkbg:checked) .themewrapper .btn-apple-img {
-    content: url("/assets/appstorebadges/appstore-dark.svg");
-  }
-  body:has(#darkmode-switch-darkbg:checked) .themewrapper .btn-google-img {
-    content: url("/assets/appstorebadges/googleplay-dark.svg");
-  }
-  body:has(#darkmode-switch-darkbg:checked) .themewrapper .dmswitchbg::before {
-    transform: translateX(20px);
-  }
-  /* In preferred scheme dark, display pre-checked darkbg checkbox and label
-  and hide unchecked whitebg checkbox */
-}
-@media (prefers-color-scheme: dark) and (768px <= width) {
-  body:has(#darkmode-switch-darkbg:checked) .themewrapper .features-container .brandlogo {
-    background-color: var(--color-brandlogo-bg-darkbg-tablet);
-  }
-  body:has(#darkmode-switch-darkbg:checked) .themewrapper .faq-accordion details {
-    box-shadow: none;
-    background-color: var(--color-faqbg-darkbg);
-  }
-  body:has(#darkmode-switch-darkbg:checked) .themewrapper .faq-accordion details[open] {
-    border: 1px solid #383A43;
-  }
-}
-@media (prefers-color-scheme: dark) and (1400px <= width) {
-  body:has(#darkmode-switch-darkbg:checked) .themewrapper .features-container .brandlogo {
-    background-color: var(--color-brandlogo-bg-darkbg-desktop);
-  }
-  body:has(#darkmode-switch-darkbg:checked) .themewrapper .features-container .card-img-container {
-    background-color: #12162A;
-  }
-  body:has(#darkmode-switch-darkbg:checked) .themewrapper .subscribe input {
-    background-color: #191D27;
-    color: var(--color-paragraph-darkbg);
-    border-color: #42464D;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  #label-darkmode-switch-darkbg {
-    display: flex;
-  }
-  #label-darkmode-switch-whitebg {
-    display: none;
-  }
-  #darkmode-switch-darkbg {
-    display: block;
-  }
-  #darkmode-switch-whitebg {
-    display: none;
-  }
-}
 * {
   padding: 0;
   margin: 0;
@@ -338,425 +116,6 @@ p, span {
 /* On summary elements, put outline on inside */
 summary:focus-visible {
   outline-offset: -0.4em;
-}
-
-a {
-  color: var(--color-primary);
-  text-decoration: none;
-}
-a:hover {
-  color: var(--color-primary);
-}
-
-.navbar-link {
-  color: var(--color-navlink);
-  font-weight: var(--fw-semi);
-  opacity: var(--navlink-opacity);
-  transition: var(--transition-default);
-}
-.navbar-link:hover {
-  color: var(--color-primary);
-  text-decoration: none;
-}
-
-.btn-primary, .btn-contact, .btn-learn-more, .btn-signin {
-  border-radius: 8px;
-  border: none;
-  padding: 11px 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: var(--transition-default);
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
-.btn-primary span, .btn-contact span, .btn-learn-more span, .btn-signin span {
-  color: white;
-}
-.btn-primary:hover, .btn-contact:hover, .btn-learn-more:hover, .btn-signin:hover {
-  background-color: var(--color-gray-600);
-  color: var(--color-white);
-  text-decoration: none;
-}
-
-.btn-signin {
-  width: 140px;
-  height: 36px;
-  font-size: var(--fs-body-s);
-  font-weight: var(--fw-semi);
-  padding: 0px;
-  border-radius: 4px;
-}
-.btn-signin .usericon {
-  margin-right: 0.5rem;
-}
-
-.btn-learn-more {
-  width: 160px;
-  border-radius: 6px;
-  margin-top: 3rem;
-  font-size: var(--fs-body-s);
-  font-weight: var(--fw-semi);
-  line-height: 1.6;
-}
-.btn-learn-more i {
-  margin-left: 1rem;
-}
-
-.btn-contact {
-  border-style: none;
-  border-radius: 6px;
-  font-size: var(--fs-body-s);
-  font-weight: var(--fw-semi);
-  line-height: 1.6;
-  padding: 1em 2em;
-}
-
-.btn-dl {
-  /* Give buttons a higher z-index to make sure they aren't covered
-  ** by overflow from position: absolute images */
-  z-index: 50;
-  background-color: var(--color-bg-dlbtn);
-  border-radius: 8px;
-  padding: 8px 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: var(--transition-default);
-}
-.btn-dl:hover {
-  background-color: var(--color-gray-600);
-  color: var(--color-white);
-  text-decoration: none;
-}
-
-.btn-chevron, .chevron-discovermore {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.btn-chevron::before, .chevron-discovermore::before {
-  display: block;
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  content: "\f078";
-  text-align: center;
-}
-
-.chevron-discovermore {
-  background-color: var(--color-chevronbg);
-  color: var(--color-chevronarrow);
-  width: 44px;
-  height: 44px;
-  font-size: 0.75rem;
-}
-
-.burger-menu {
-  display: grid;
-  /* Use template-rows to hide/reveal menu, instead of max-height */
-  grid-template-rows: 0fr;
-  justify-content: center;
-  transition: var(--transition-theme);
-}
-.burger-menu .burger-nav {
-  /* Add some padding to make sure there's room for focus border/outline */
-  padding-inline: 1rem;
-  text-align: center;
-  /* Make sure items are hidden when menu is closed */
-  overflow: hidden;
-}
-.burger-menu .burger-nav.reveal-aria {
-  display: none;
-}
-.burger-menu ul {
-  margin: 4rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-  list-style: none;
-  /* Apply padding to a-elements without imgs (i.e. no buttons) */
-}
-.burger-menu ul a:not(:has(img)) {
-  padding: 1rem;
-}
-
-.btn-burger {
-  display: flex;
-  justify-content: center;
-  /* Set width to avoid div changing width when icon is changed */
-  width: 1.5rem;
-  margin-left: 2rem;
-  margin-right: 0.5rem;
-  background-color: transparent;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--color-burger);
-}
-.btn-burger label {
-  /* Add some padding to make it easier to click on touch devices */
-  padding: 0.3rem;
-}
-.btn-burger label:hover {
-  cursor: pointer;
-}
-.btn-burger .burger-menu-close {
-  display: none;
-}
-
-.jump-to-main {
-  display: inline-block;
-  padding: 1rem;
-  background-color: var(--color-bg);
-  border: 1px solid var(--color-primary);
-  border-radius: 0 1rem 1rem 0;
-  position: absolute;
-  left: -100vw;
-  top: 5rem;
-  transition: var(--transition-default);
-}
-.jump-to-main:focus {
-  left: 0;
-}
-
-.dm-toggle-switch {
-  display: inline-block;
-  position: relative;
-  width: 46px;
-  height: 24px;
-}
-.dm-toggle-switch .dmswitchbg {
-  position: absolute;
-  cursor: pointer;
-  inset: 0;
-  border-radius: 46px;
-  background-color: var(--color-switch-bg);
-  transition: var(--transition-theme);
-}
-.dm-toggle-switch .dmswitchbg::before {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  left: 4px;
-  bottom: 3px;
-  border-radius: 50%;
-  background-color: var(--color-white);
-  transition: var(--transition-theme);
-}
-
-.brandlogo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid var(--color-brandlogo-border);
-  border-radius: 8px;
-  width: 160px;
-  height: 100px;
-  transition: var(--transition-theme);
-  /* Add some space between image and border */
-}
-.brandlogo .brandlogo-img {
-  max-width: 85%;
-}
-
-.card {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2.25rem;
-}
-.card .card-img-container {
-  flex-shrink: 0; /*Prevent flex container from shrinking box below 60x60*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 60px;
-  background-color: var(--color-feature-cards-img-bg);
-  border-radius: 8px;
-}
-.card .cardtext p {
-  margin-top: 1rem;
-}
-.card .cardtext h3 {
-  font-size: var(--fs-h5);
-}
-
-.review {
-  padding: 3rem 1.5rem 1.5rem;
-  background-color: var(--color-reviewbg);
-  border-radius: 8px;
-  box-shadow: 0px 2px 5px var(--color-gray-300);
-  position: relative;
-}
-.review .img-quote-icon {
-  position: absolute;
-  top: -22px;
-  left: 16px;
-}
-.review blockquote img {
-  margin-bottom: 1rem;
-}
-.review blockquote p {
-  font-size: var(--fs-body-l);
-}
-.review .author {
-  margin-top: 1.5rem;
-  display: flex;
-}
-.review .author-details {
-  margin-left: 1rem;
-}
-.review .author-details .author-name {
-  font-size: var(--fs-body-m);
-  font-weight: var(--fw-bold);
-  line-height: 1.6;
-  color: var(--color-heading);
-}
-.review .author-details .author-role {
-  font-size: var(--fs-body-s);
-  line-height: 1.6;
-  color: var(--color-reviewrole);
-}
-
-.faq-accordion {
-  --_faq-border: 1px solid var(--color-faqoutline);
-  margin-top: 3.5rem;
-  border: var(--_faq-border);
-  border-radius: 8px;
-}
-.faq-accordion details {
-  background-color: var(--color-faqbg);
-  border-bottom: var(--_faq-border);
-  overflow: hidden;
-  /* No border on last details-element to prevent double border*/
-}
-.faq-accordion details:last-child {
-  border-bottom: unset;
-}
-.faq-accordion details[open] {
-  padding-bottom: 1rem;
-}
-.faq-accordion details[open] .answer {
-  border-top: var(--_faq-border);
-}
-.faq-accordion summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: var(--fs-body-m);
-  font-weight: var(--fw-semi);
-  line-height: 1.3;
-  padding: 1rem 1.5rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  transition: var(--transition-default);
-  /* Hide marker */
-  list-style: none;
-}
-.faq-accordion summary span {
-  color: var(--color-heading);
-}
-.faq-accordion summary:hover {
-  background-color: var(--color-faqchevronbg);
-}
-.faq-accordion p {
-  padding-inline: 1.5rem;
-  font-size: var(--fs-body-s);
-  line-height: 1.6;
-}
-.faq-accordion p:last-child {
-  padding-bottom: 1rem;
-}
-.faq-accordion .chevron-faq {
-  background-color: var(--color-faqchevronbg);
-  color: var(--color-faqchevronarrow);
-  width: 36px;
-  height: 36px;
-  font-size: 0.625rem;
-  /* Set pointer-events none for click to pass through to summary element*/
-  pointer-events: none;
-  /* Prevent shrunk and skewed chevron buttons */
-  flex-shrink: 0;
-  /* Add margin to the left of the button equal to parent padding-right */
-  margin-left: 1rem;
-  /* Transition to smooth out color change and rotation */
-  transition: all 0.5s ease;
-  /* Add some slight outlining around the chevrons */
-  box-shadow: 0 0 4px 0px var(--color-faqoutline);
-}
-.faq-accordion details[open] .btn-chevron {
-  transform: rotate(180deg);
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  /* Change outline color to give it a glowing appearance */
-  box-shadow: 0 0 4px 0px var(--color-primary);
-}
-
-.subscribe {
-  margin-top: 2.5rem;
-  padding: 3rem 1rem 0;
-  background-color: var(--color-subscribebg);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-}
-.subscribe .cta {
-  display: flex;
-  align-items: center;
-}
-.subscribe .cta h2 {
-  font-size: 1.375rem;
-  line-height: 1.35;
-}
-.subscribe .cta h2.desktop-text {
-  display: none;
-}
-.subscribe .cta img {
-  margin-right: 1rem;
-}
-.subscribe .input-container {
-  margin-top: 2.5rem;
-  margin-bottom: 2rem;
-  display: flex;
-  position: relative;
-}
-.subscribe .input-container * {
-  border: none;
-}
-.subscribe .input-container input {
-  font-size: 1rem;
-  padding: 0 1rem 0 2.75rem;
-  /* Subtract padding from width, else it causes grid to overflow */
-  width: calc(100% - 2.75rem);
-  border-radius: 8px 0 0 8px;
-  border: 1px solid var(--color-gray-400);
-  color: var(--color-subscribetext);
-}
-.subscribe .input-container input:focus {
-  outline-offset: -0.4em;
-}
-.subscribe .input-container input::-moz-placeholder {
-  color: var(--color-gray-500);
-}
-.subscribe .input-container input::placeholder {
-  color: var(--color-gray-500);
-}
-.subscribe .input-container .mail-icon {
-  position: absolute;
-  top: 50%;
-  left: 0.75rem;
-  transform: translateY(-50%);
-}
-.subscribe .input-container .btn-subscribe {
-  border-radius: 0 8px 8px 0;
-  font-size: 1rem;
-  line-height: 1.625;
-  font-weight: var(--fw-semi);
 }
 
 .visually-hidden {
@@ -1265,6 +624,647 @@ section#reviews {
   color: var(--color-gray-600);
 }
 
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-primary);
+}
+
+.navbar-link {
+  color: var(--color-navlink);
+  font-weight: var(--fw-semi);
+  opacity: var(--navlink-opacity);
+  transition: var(--transition-default);
+}
+.navbar-link:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.btn-primary, .btn-contact, .btn-learn-more, .btn-signin {
+  border-radius: 8px;
+  border: none;
+  padding: 11px 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-default);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.btn-primary span, .btn-contact span, .btn-learn-more span, .btn-signin span {
+  color: white;
+}
+.btn-primary:hover, .btn-contact:hover, .btn-learn-more:hover, .btn-signin:hover {
+  background-color: var(--color-gray-600);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.btn-signin {
+  width: 140px;
+  height: 36px;
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-semi);
+  padding: 0px;
+  border-radius: 4px;
+}
+.btn-signin .usericon {
+  margin-right: 0.5rem;
+}
+
+.btn-learn-more {
+  width: 160px;
+  border-radius: 6px;
+  margin-top: 3rem;
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-semi);
+  line-height: 1.6;
+}
+.btn-learn-more i {
+  margin-left: 1rem;
+}
+
+.btn-contact {
+  border-style: none;
+  border-radius: 6px;
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-semi);
+  line-height: 1.6;
+  padding: 1em 2em;
+}
+
+.btn-dl {
+  /* Give buttons a higher z-index to make sure they aren't covered
+  ** by overflow from position: absolute images */
+  z-index: 50;
+  background-color: var(--color-bg-dlbtn);
+  border-radius: 8px;
+  padding: 8px 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-default);
+}
+.btn-dl:hover {
+  background-color: var(--color-gray-600);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.btn-chevron, .chevron-discovermore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.btn-chevron::before, .chevron-discovermore::before {
+  display: block;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f078";
+  text-align: center;
+}
+
+.chevron-discovermore {
+  background-color: var(--color-chevronbg);
+  color: var(--color-chevronarrow);
+  width: 44px;
+  height: 44px;
+  font-size: 0.75rem;
+}
+
+.burger-menu {
+  display: grid;
+  /* Use template-rows to hide/reveal menu, instead of max-height */
+  grid-template-rows: 0fr;
+  justify-content: center;
+  transition: var(--transition-theme);
+}
+.burger-menu .burger-nav {
+  /* Add some padding to make sure there's room for focus border/outline */
+  padding-inline: 1rem;
+  text-align: center;
+  /* Make sure items are hidden when menu is closed */
+  overflow: hidden;
+}
+.burger-menu .burger-nav.reveal-aria {
+  display: none;
+}
+.burger-menu ul {
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  list-style: none;
+  /* Apply padding to a-elements without imgs (i.e. no buttons) */
+}
+.burger-menu ul a:not(:has(img)) {
+  padding: 1rem;
+}
+
+.btn-burger {
+  display: flex;
+  justify-content: center;
+  /* Set width to avoid div changing width when icon is changed */
+  width: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 0.5rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-burger);
+}
+.btn-burger label {
+  /* Add some padding to make it easier to click on touch devices */
+  padding: 0.3rem;
+}
+.btn-burger label:hover {
+  cursor: pointer;
+}
+.btn-burger .burger-menu-close {
+  display: none;
+}
+
+.jump-to-main {
+  display: inline-block;
+  padding: 1rem;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-primary);
+  border-radius: 0 1rem 1rem 0;
+  position: absolute;
+  left: -100vw;
+  top: 5rem;
+  transition: var(--transition-default);
+}
+.jump-to-main:focus {
+  left: 0;
+}
+
+.dm-toggle-switch {
+  display: inline-block;
+  position: relative;
+  width: 46px;
+  height: 24px;
+}
+.dm-toggle-switch .dmswitchbg {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  border-radius: 46px;
+  background-color: var(--color-switch-bg);
+  transition: var(--transition-theme);
+}
+.dm-toggle-switch .dmswitchbg::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  transition: var(--transition-theme);
+}
+
+.brandlogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--color-brandlogo-border);
+  border-radius: 8px;
+  width: 160px;
+  height: 100px;
+  transition: var(--transition-theme);
+  /* Add some space between image and border */
+}
+.brandlogo .brandlogo-img {
+  max-width: 85%;
+}
+
+.card {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.25rem;
+}
+.card .card-img-container {
+  flex-shrink: 0; /*Prevent flex container from shrinking box below 60x60*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-feature-cards-img-bg);
+  border-radius: 8px;
+}
+.card .cardtext p {
+  margin-top: 1rem;
+}
+.card .cardtext h3 {
+  font-size: var(--fs-h5);
+}
+
+.review {
+  padding: 3rem 1.5rem 1.5rem;
+  background-color: var(--color-reviewbg);
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px var(--color-gray-300);
+  position: relative;
+}
+.review .img-quote-icon {
+  position: absolute;
+  top: -22px;
+  left: 16px;
+}
+.review blockquote img {
+  margin-bottom: 1rem;
+}
+.review blockquote p {
+  font-size: var(--fs-body-l);
+}
+.review .author {
+  margin-top: 1.5rem;
+  display: flex;
+}
+.review .author-details {
+  margin-left: 1rem;
+}
+.review .author-details .author-name {
+  font-size: var(--fs-body-m);
+  font-weight: var(--fw-bold);
+  line-height: 1.6;
+  color: var(--color-heading);
+}
+.review .author-details .author-role {
+  font-size: var(--fs-body-s);
+  line-height: 1.6;
+  color: var(--color-reviewrole);
+}
+
+.faq-accordion {
+  --_faq-border: 1px solid var(--color-faqoutline);
+  margin-top: 3.5rem;
+  border: var(--_faq-border);
+  border-radius: 8px;
+}
+.faq-accordion details {
+  background-color: var(--color-faqbg);
+  border-bottom: var(--_faq-border);
+  overflow: hidden;
+  /* No border on last details-element to prevent double border*/
+}
+.faq-accordion details:last-child {
+  border-bottom: unset;
+}
+.faq-accordion details[open] {
+  padding-bottom: 1rem;
+}
+.faq-accordion details[open] .answer {
+  border-top: var(--_faq-border);
+}
+.faq-accordion summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-body-m);
+  font-weight: var(--fw-semi);
+  line-height: 1.3;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: var(--transition-default);
+  /* Hide marker */
+  list-style: none;
+}
+.faq-accordion summary span {
+  color: var(--color-heading);
+}
+.faq-accordion summary:hover {
+  background-color: var(--color-faqchevronbg);
+}
+.faq-accordion p {
+  padding-inline: 1.5rem;
+  font-size: var(--fs-body-s);
+  line-height: 1.6;
+}
+.faq-accordion p:last-child {
+  padding-bottom: 1rem;
+}
+.faq-accordion .chevron-faq {
+  background-color: var(--color-faqchevronbg);
+  color: var(--color-faqchevronarrow);
+  width: 36px;
+  height: 36px;
+  font-size: 0.625rem;
+  /* Set pointer-events none for click to pass through to summary element*/
+  pointer-events: none;
+  /* Prevent shrunk and skewed chevron buttons */
+  flex-shrink: 0;
+  /* Add margin to the left of the button equal to parent padding-right */
+  margin-left: 1rem;
+  /* Transition to smooth out color change and rotation */
+  transition: all 0.5s ease;
+  /* Add some slight outlining around the chevrons */
+  box-shadow: 0 0 4px 0px var(--color-faqoutline);
+}
+.faq-accordion details[open] .btn-chevron {
+  transform: rotate(180deg);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  /* Change outline color to give it a glowing appearance */
+  box-shadow: 0 0 4px 0px var(--color-primary);
+}
+
+.subscribe {
+  margin-top: 2.5rem;
+  padding: 3rem 1rem 0;
+  background-color: var(--color-subscribebg);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.subscribe .cta {
+  display: flex;
+  align-items: center;
+}
+.subscribe .cta h2 {
+  font-size: 1.375rem;
+  line-height: 1.35;
+}
+.subscribe .cta h2.desktop-text {
+  display: none;
+}
+.subscribe .cta img {
+  margin-right: 1rem;
+}
+.subscribe .input-container {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  position: relative;
+}
+.subscribe .input-container * {
+  border: none;
+}
+.subscribe .input-container input {
+  font-size: 1rem;
+  padding: 0 1rem 0 2.75rem;
+  /* Subtract padding from width, else it causes grid to overflow */
+  width: calc(100% - 2.75rem);
+  border-radius: 8px 0 0 8px;
+  border: 1px solid var(--color-gray-400);
+  color: var(--color-subscribetext);
+}
+.subscribe .input-container input:focus {
+  outline-offset: -0.4em;
+}
+.subscribe .input-container input::-moz-placeholder {
+  color: var(--color-gray-500);
+}
+.subscribe .input-container input::placeholder {
+  color: var(--color-gray-500);
+}
+.subscribe .input-container .mail-icon {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+}
+.subscribe .input-container .btn-subscribe {
+  border-radius: 0 8px 8px 0;
+  font-size: 1rem;
+  line-height: 1.625;
+  font-weight: var(--fw-semi);
+}
+
+:root {
+  --transition-default: all .25s;
+  --transition-theme: all .5s ease;
+  /* Default theme - white/light */
+  --color-bg: var(--color-bg-white);
+  --color-navlink: var(--color-navlink-whitebg);
+  --color-burger: var(--color-gray-800);
+  --color-heading: var(--color-heading-whitebg);
+  --color-paragraph: var(--color-paragraph-whitebg);
+  --color-switch-bg: var(--color-gray-600);
+  --color-bg-dlbtn: var(--color-bg-dlbtn-whitebg);
+  --color-chevronbg: var(--color-chevronbg-whitebg);
+  --color-chevronarrow: var(--color-chevronarrow-whitebg);
+  --color-brandlogo-border: var(--color-brandlogo-border-whitebg);
+  --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgwhite);
+  --color-how-bg: var(--color-how-bg-white);
+  --color-reviewsbg: var(--color-reviewsbg-whitebg);
+  --color-reviewbg: var(--color-reviewbg-whitebg);
+  --color-reviewrole: var(--color-reviewrole-whitebg);
+  --color-faqbg: var(--color-faqbg-whitebg);
+  --color-faqoutline: var(--color-faqoutline-whitebg);
+  --color-faqchevronbg: var(--color-faqchevronbg-whitebg);
+  --color-faqchevronarrow: var(--color-faqchevronarrow-whitebg);
+  --color-subscribebg: var(--color-subscribebg-whitebg);
+  --color-subscribetext: var(--color-paragraph-whitebg);
+}
+
+/* Darkmode toggle-switch stuff */
+/* In preferred-color-scheme light, hide darkbg label & box */
+#label-darkmode-switch-lightbg {
+  display: flex;
+}
+
+#label-darkmode-switch-darkbg {
+  display: none;
+}
+
+#darkmode-switch-whitebg {
+  display: block;
+}
+
+#darkmode-switch-darkbg {
+  display: none;
+}
+
+/* Disable to show debug text for dm checkbox labels */
+.dm-chbox-hidden {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper {
+    --color-bg: var(--color-bg-dark);
+    --color-navlink: var(--color-navlink-darkbg);
+    --color-burger: var(--color-white);
+    --color-heading: var(--color-heading-darkbg);
+    --color-paragraph: var(--color-paragraph-darkbg);
+    --color-bg-dlbtn: var(--color-bg-dlbtn-darkbg);
+    --color-chevronbg: var(--color-chevronbg-darkbg);
+    --color-chevronarrow: var(--color-chevronarrow-darkbg);
+    --color-brandlogo-border: var(--color-brandlogo-border-darkbg);
+    --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgdark);
+    --color-how-bg: var(--color-how-bg-dark);
+    --color-reviewsbg: var(--color-reviewsbg-darkbg);
+    --color-reviewbg: var(--color-reviewbg-darkbg);
+    --color-reviewrole: var(--color-reviewrole-darkbg);
+    --color-faqbg: var(--color-faqbg-darkbg-mobile);
+    --color-faqoutline: var(--color-faqoutline-darkbg);
+    --color-faqchevronbg: var(--color-faqchevronbg-darkbg);
+    --color-faqchevronarrow: var(--color-faqchevronarrow-darkbg);
+    --color-subscribebg: var(--color-subscribebg-darkbg);
+    /* Change themeswitch-bg to active color */
+    --color-switch-bg: var(--color-primary);
+    /* Swap to light-texted logo */
+    /* Set darkmode switch to active position */
+    /* In width 768px+ and darkmode, remove shadow from FAQ
+    **  and apply border on open details elements*/
+  }
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper .logo-img {
+    content: url("/assets/logo-bgdark.svg");
+  }
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper section#hero {
+    background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgb(19, 16, 34) 100%);
+  }
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper .hero-container .pitch {
+    color: var(--color-white);
+  }
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper .review {
+    box-shadow: unset;
+  }
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper .chevron-dn-img {
+    content: url("/assets/icons/chevron-dn-dark.svg");
+  }
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper .btn-apple-img {
+    content: url("/assets/appstorebadges/appstore-dark.svg");
+  }
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper .btn-google-img {
+    content: url("/assets/appstorebadges/googleplay-dark.svg");
+  }
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper .dmswitchbg::before {
+    transform: translateX(20px);
+  }
+}
+@media (prefers-color-scheme: light) and (768px <= width) {
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper .features-container .brandlogo {
+    background-color: var(--color-brandlogo-bg-darkbg-tablet);
+  }
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper .faq-accordion details {
+    box-shadow: none;
+    background-color: var(--color-faqbg-darkbg);
+  }
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper .faq-accordion details[open] {
+    border: 1px solid #383A43;
+  }
+}
+@media (prefers-color-scheme: light) and (1400px <= width) {
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper .features-container .brandlogo {
+    background-color: var(--color-brandlogo-bg-darkbg-desktop);
+  }
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper .features-container .card-img-container {
+    background-color: #12162A;
+  }
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper .subscribe input {
+    background-color: #191D27;
+    color: var(--color-paragraph-darkbg);
+    border-color: #42464D;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper {
+    --color-bg: var(--color-bg-dark);
+    --color-navlink: var(--color-navlink-darkbg);
+    --color-burger: var(--color-white);
+    --color-heading: var(--color-heading-darkbg);
+    --color-paragraph: var(--color-paragraph-darkbg);
+    --color-bg-dlbtn: var(--color-bg-dlbtn-darkbg);
+    --color-chevronbg: var(--color-chevronbg-darkbg);
+    --color-chevronarrow: var(--color-chevronarrow-darkbg);
+    --color-brandlogo-border: var(--color-brandlogo-border-darkbg);
+    --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgdark);
+    --color-how-bg: var(--color-how-bg-dark);
+    --color-reviewsbg: var(--color-reviewsbg-darkbg);
+    --color-reviewbg: var(--color-reviewbg-darkbg);
+    --color-reviewrole: var(--color-reviewrole-darkbg);
+    --color-faqbg: var(--color-faqbg-darkbg-mobile);
+    --color-faqoutline: var(--color-faqoutline-darkbg);
+    --color-faqchevronbg: var(--color-faqchevronbg-darkbg);
+    --color-faqchevronarrow: var(--color-faqchevronarrow-darkbg);
+    --color-subscribebg: var(--color-subscribebg-darkbg);
+    /* Change themeswitch-bg to active color */
+    --color-switch-bg: var(--color-primary);
+    /* Swap to light-texted logo */
+    /* Set darkmode switch to active position */
+    /* In width 768px+ and darkmode, remove shadow from FAQ
+    **  and apply border on open details elements*/
+  }
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper .logo-img {
+    content: url("/assets/logo-bgdark.svg");
+  }
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper section#hero {
+    background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgb(19, 16, 34) 100%);
+  }
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper .hero-container .pitch {
+    color: var(--color-white);
+  }
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper .review {
+    box-shadow: unset;
+  }
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper .chevron-dn-img {
+    content: url("/assets/icons/chevron-dn-dark.svg");
+  }
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper .btn-apple-img {
+    content: url("/assets/appstorebadges/appstore-dark.svg");
+  }
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper .btn-google-img {
+    content: url("/assets/appstorebadges/googleplay-dark.svg");
+  }
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper .dmswitchbg::before {
+    transform: translateX(20px);
+  }
+  /* In preferred scheme dark, display pre-checked darkbg checkbox and label
+  and hide unchecked whitebg checkbox */
+}
+@media (prefers-color-scheme: dark) and (768px <= width) {
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper .features-container .brandlogo {
+    background-color: var(--color-brandlogo-bg-darkbg-tablet);
+  }
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper .faq-accordion details {
+    box-shadow: none;
+    background-color: var(--color-faqbg-darkbg);
+  }
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper .faq-accordion details[open] {
+    border: 1px solid #383A43;
+  }
+}
+@media (prefers-color-scheme: dark) and (1400px <= width) {
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper .features-container .brandlogo {
+    background-color: var(--color-brandlogo-bg-darkbg-desktop);
+  }
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper .features-container .card-img-container {
+    background-color: #12162A;
+  }
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper .subscribe input {
+    background-color: #191D27;
+    color: var(--color-paragraph-darkbg);
+    border-color: #42464D;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  #label-darkmode-switch-darkbg {
+    display: flex;
+  }
+  #label-darkmode-switch-whitebg {
+    display: none;
+  }
+  #darkmode-switch-darkbg {
+    display: block;
+  }
+  #darkmode-switch-whitebg {
+    display: none;
+  }
+}
 @media (768px <= width) {
   /* Change margin & padding */
   :root {
