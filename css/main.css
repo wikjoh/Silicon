@@ -575,6 +575,43 @@ a:hover {
   font-size: var(--fs-h5);
 }
 
+.review {
+  padding: 3rem 1.5rem 1.5rem;
+  background-color: var(--color-reviewbg);
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px var(--color-gray-300);
+  position: relative;
+}
+.review .img-quote-icon {
+  position: absolute;
+  top: -22px;
+  left: 16px;
+}
+.review blockquote img {
+  margin-bottom: 1rem;
+}
+.review blockquote p {
+  font-size: var(--fs-body-l);
+}
+.review .author {
+  margin-top: 1.5rem;
+  display: flex;
+}
+.review .author-details {
+  margin-left: 1rem;
+}
+.review .author-details .author-name {
+  font-size: var(--fs-body-m);
+  font-weight: var(--fw-bold);
+  line-height: 1.6;
+  color: var(--color-heading);
+}
+.review .author-details .author-role {
+  font-size: var(--fs-body-s);
+  line-height: 1.6;
+  color: var(--color-reviewrole);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -996,42 +1033,6 @@ section#reviews {
   font-size: var(--fs-h1); /* 40px in figma */
   font-weight: var(--fw-extra);
   line-height: 1.3;
-}
-.reviews-container .review {
-  padding: 3rem 1.5rem 1.5rem;
-  background-color: var(--color-reviewbg);
-  border-radius: 8px;
-  box-shadow: 0px 2px 5px var(--color-gray-300);
-  position: relative;
-}
-.reviews-container .img-quote-icon {
-  position: absolute;
-  top: -22px;
-  left: 16px;
-}
-.reviews-container blockquote img {
-  margin-bottom: 1rem;
-}
-.reviews-container blockquote p {
-  font-size: var(--fs-body-l);
-}
-.reviews-container .author {
-  margin-top: 1.5rem;
-  display: flex;
-}
-.reviews-container .author-details {
-  margin-left: 1rem;
-}
-.reviews-container .author-details .author-name {
-  font-size: var(--fs-body-m);
-  font-weight: var(--fw-bold);
-  line-height: 1.6;
-  color: var(--color-heading);
-}
-.reviews-container .author-details .author-role {
-  font-size: var(--fs-body-s);
-  line-height: 1.6;
-  color: var(--color-reviewrole);
 }
 
 @media (768px <= width) {
