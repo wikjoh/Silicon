@@ -80,6 +80,29 @@
   --color-subscribetext: var(--color-paragraph-whitebg);
 }
 
+/* Disable to show debug text for dm checkbox labels */
+.dm-chbox-hidden {
+  display: none;
+}
+
+/* Darkmode toggle-switch stuff */
+/* In preferred-color-scheme light, hide darkbg label & box */
+#label-darkmode-switch-lightbg {
+  display: flex;
+}
+
+#label-darkmode-switch-darkbg {
+  display: none;
+}
+
+#darkmode-switch-whitebg {
+  display: block;
+}
+
+#darkmode-switch-darkbg {
+  display: none;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -120,6 +143,14 @@ summary:focus-visible {
   outline-offset: -0.4em;
 }
 
+/* When visually hidden checkbox is in focus, put outline on toggle switch */
+body:has(.darkmode-checkboxes:focus-visible) .dm-toggle-switch {
+  outline-color: var(--color-primary);
+  outline-offset: 0.2em;
+  outline-width: 0.4em;
+  outline-style: solid;
+}
+
 a {
   color: var(--color-primary);
   text-decoration: none;
@@ -128,7 +159,7 @@ a:hover {
   color: var(--color-primary);
 }
 
-.btn-primary {
+.btn-primary, .btn-signin {
   border-radius: 8px;
   border: none;
   padding: 11px 22px;
@@ -139,13 +170,25 @@ a:hover {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
-.btn-primary span {
+.btn-primary span, .btn-signin span {
   color: white;
 }
-.btn-primary:hover {
+.btn-primary:hover, .btn-signin:hover {
   background-color: var(--color-gray-600);
   color: var(--color-white);
   text-decoration: none;
+}
+
+.btn-signin {
+  width: 140px;
+  height: 36px;
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-semi);
+  padding: 0px;
+  border-radius: 4px;
+}
+.btn-signin .usericon {
+  margin-right: 0.5rem;
 }
 
 .btn-chevron, .chevron-discovermore {
@@ -169,6 +212,21 @@ a:hover {
   width: 44px;
   height: 44px;
   font-size: 0.75rem;
+}
+
+.jump-to-main {
+  display: inline-block;
+  padding: 1rem;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-primary);
+  border-radius: 0 1rem 1rem 0;
+  position: absolute;
+  left: -100vw;
+  top: 5rem;
+  transition: var(--transition-default);
+}
+.jump-to-main:focus {
+  left: 0;
 }
 
 .visually-hidden {
@@ -218,6 +276,11 @@ a:hover {
   }
 }
 
+.themewrapper {
+  background-color: var(--color-bg);
+  transition: var(--transition-theme);
+}
+
 .flex {
   display: flex;
   justify-content: center;
@@ -226,4 +289,8 @@ a:hover {
 
 .tac {
   text-align: center;
+}
+
+:root {
+  --header-pt: .75rem;
 }

@@ -18,3 +18,11 @@ p, span {
 summary:focus-visible {
   outline-offset: -.4em;
 }
+
+/* When visually hidden checkbox is in focus, put outline on toggle switch */
+body:has(.darkmode-checkboxes:focus-visible) .dm-toggle-switch {
+  outline-color: var(--color-primary);
+  outline-offset: .2em;
+  outline-width: .4em;
+  outline-style: solid;
+}

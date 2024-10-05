@@ -1,0 +1,11 @@
+/* Disable to show debug text for dm checkbox labels */
+.dm-chbox-hidden {
+  display: none;
+}
+
+/* Darkmode toggle-switch stuff */
+/* In preferred-color-scheme light, hide darkbg label & box */
+#label-darkmode-switch-lightbg {display: flex;}
+#label-darkmode-switch-darkbg {display: none;}
+#darkmode-switch-whitebg {display: block;}
+#darkmode-switch-darkbg {display: none;}
