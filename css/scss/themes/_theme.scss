@@ -27,3 +27,10 @@
   --color-subscribebg: var(--color-subscribebg-whitebg);
   --color-subscribetext: var(--color-paragraph-whitebg);
 }
+
+/* Darkmode toggle-switch stuff */
+/* In preferred-color-scheme light, hide darkbg label & box */
+#label-darkmode-switch-lightbg {display: flex;}
+#label-darkmode-switch-darkbg {display: none;}
+#darkmode-switch-whitebg {display: block;}
+#darkmode-switch-darkbg {display: none;}

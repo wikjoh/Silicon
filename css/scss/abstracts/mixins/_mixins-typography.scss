@@ -3,9 +3,9 @@
 @mixin text {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
-  font-weight: var(fw-reg);
+  font-weight: var(--fw-reg);
   font-style: normal;
-  font-size: var(fs-body-m);
+  font-size: var(--fs-body-m);
 }
 
 @mixin heading {

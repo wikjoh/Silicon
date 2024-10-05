@@ -105,19 +105,29 @@
   --color-subscribetext: var(--color-paragraph-whitebg);
 }
 
+/* Darkmode toggle-switch stuff */
+/* In preferred-color-scheme light, hide darkbg label & box */
+#label-darkmode-switch-lightbg {
+  display: flex;
+}
+
+#label-darkmode-switch-darkbg {
+  display: none;
+}
+
+#darkmode-switch-whitebg {
+  display: block;
+}
+
+#darkmode-switch-darkbg {
+  display: none;
+}
+
 /* Disable to show debug text for dm checkbox labels */
 .dm-chbox-hidden {
   display: none;
 }
 
-/* Darkmode media queries
-** Unfortunately these have to be repeated for each prefers-color-scheme
-** Would've liked to use something like below, but doesn't seem possible 
-** (@media (pcs:l) && :has(whitebg:checked)) ||
-** (@media (pcs:d) && :has(darkbg:checked)) {
-**    --DMstuff
-** } 
-** Should be possible with container style query, but no firefox support yet */
 @media (prefers-color-scheme: light) {
   body:has(#darkmode-switch-whitebg:checked) .themewrapper {
     --color-bg: var(--color-bg-dark);
@@ -196,7 +206,6 @@
     border-color: #42464D;
   }
 }
-/* Auto-enable darkmode if user has prefers-color-scheme: dark */
 @media (prefers-color-scheme: dark) {
   body:has(#darkmode-switch-darkbg:checked) .themewrapper {
     --color-bg: var(--color-bg-dark);
@@ -229,7 +238,7 @@
     content: url("/assets/logo-bgdark.svg");
   }
   body:has(#darkmode-switch-darkbg:checked) .themewrapper section#hero {
-    background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgba(19, 16, 34, 0.01) 100%);
+    background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgb(19, 16, 34) 100%);
   }
   body:has(#darkmode-switch-darkbg:checked) .themewrapper .hero-container .pitch {
     color: var(--color-white);
@@ -300,9 +309,9 @@
 body, input, button, textarea, select {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
-  font-weight: var(fw-reg);
+  font-weight: var(--fw-reg);
   font-style: normal;
-  font-size: var(fs-body-m);
+  font-size: var(--fs-body-m);
 }
 
 h1, h2, h3, h4, h5, h6 {
