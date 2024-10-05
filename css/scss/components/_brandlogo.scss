@@ -1,0 +1,16 @@
+.brandlogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--color-brandlogo-border);
+  border-radius: 8px;
+  width: 160px;
+  height: 100px;
+
+  transition: var(--transition-theme);
+
+  /* Add some space between image and border */
+  .brandlogo-img {
+    max-width: 85%;
+  }
+}

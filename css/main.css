@@ -526,6 +526,43 @@ a:hover {
   transition: var(--transition-theme);
 }
 
+.brandlogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--color-brandlogo-border);
+  border-radius: 8px;
+  width: 160px;
+  height: 100px;
+  transition: var(--transition-theme);
+  /* Add some space between image and border */
+}
+.brandlogo .brandlogo-img {
+  max-width: 85%;
+}
+
+.card {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.25rem;
+}
+.card .card-img-container {
+  flex-shrink: 0; /*Prevent flex container from shrinking box below 60x60*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-feature-cards-img-bg);
+  border-radius: 8px;
+}
+.card .cardtext p {
+  margin-top: 1rem;
+}
+.card .cardtext h3 {
+  font-size: var(--fs-h5);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -748,4 +785,50 @@ section#hero {
   right: 0;
   bottom: 0;
   z-index: 15;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 1rem;
+  /* Hide on mobile */
+}
+.features-container h2, .features-container h3 {
+  font-weight: var(--fw-extra);
+}
+.features-container .brandlogo-container {
+  /* Hide on mobile */
+  display: none;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 3rem;
+}
+.features-container .brandlogo-container .desktop-only {
+  display: none;
+}
+.features-container .headline, .features-container .paragraph {
+  text-align: center;
+}
+.features-container .headline {
+  margin-top: 2.5rem;
+  font-size: var(--fs-h3);
+  line-height: 1.3;
+}
+.features-container .paragraph {
+  margin-top: 1.5rem;
+  font-size: var(--fs-body-l);
+  line-height: 1.6;
+}
+.features-container .left-content {
+  display: none;
+  /* Set height equal to height of image,
+  ** to prevent overflow due to position: absolute */
+  height: 683px;
+}
+.features-container .right-content {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.features-container .feature-cards {
+  margin-top: 2rem;
 }
