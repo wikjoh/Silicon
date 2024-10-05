@@ -1,11 +1,27 @@
+@use '../abstracts/' as *;
+
 /* Disable to show debug text for dm checkbox labels */
 .dm-chbox-hidden {
   display: none;
 }
 
-/* Darkmode toggle-switch stuff */
-/* In preferred-color-scheme light, hide darkbg label & box */
-#label-darkmode-switch-lightbg {display: flex;}
-#label-darkmode-switch-darkbg {display: none;}
-#darkmode-switch-whitebg {display: block;}
-#darkmode-switch-darkbg {display: none;}
+
+// If prefers-light && dmswitch-whitebg:checked > apply darkmode
+@media (prefers-color-scheme: light) {
+  body:has(#darkmode-switch-whitebg:checked) .themewrapper {
+    @include applydm;
+  }
+}
+
+// If prefers-dark && dmswitch-darkbg:checked > apply darkmode
+@media (prefers-color-scheme: dark) {
+  body:has(#darkmode-switch-darkbg:checked) .themewrapper {
+    @include applydm;
+  }
+  /* In preferred scheme dark, display pre-checked darkbg checkbox and label
+  and hide unchecked whitebg checkbox */
+  #label-darkmode-switch-darkbg {display: flex;}
+  #label-darkmode-switch-whitebg {display: none;}
+  #darkmode-switch-darkbg {display: block;}
+  #darkmode-switch-whitebg {display: none;}
+}
