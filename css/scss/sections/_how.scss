@@ -1,0 +1,46 @@
+section#how {
+  background-color: var(--color-how-bg);
+}
+
+.how-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .tablet, .desktop {
+    display: none;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin-top: 4rem;
+  }
+
+  .images-container {
+    display: flex;
+    margin-top: 2rem;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .image-description {
+    margin-top: 1.5rem;
+
+    h3 {
+      display: inline-block;
+      font-size: 1.375rem;
+      font-weight: var(--fw-extra);
+      line-height: 1.4;
+      width: 85%;
+    }
+    p {
+      font-size: var(--fs-body-m);
+      margin-top: 1rem;
+      margin-bottom: 4rem;
+      /* Poor contrast, but according to design */
+      color: var(--color-gray-700);
+    }
+  }
+}
