@@ -1,7 +1,4 @@
-// Header padding-top
-:root {
-  --header-pt: .75rem;
-}
+@use '../abstracts/' as *;
 
 header#nav {
   /* Bring header out of the flow in order for it to
@@ -13,6 +10,12 @@ header#nav {
   /* Make sure burger-menu is above everything else */
   z-index: 1000;
   transition: .5s ease;
+
+  // In desktop, remove burgermenu stuff
+  @include desktop {
+    backdrop-filter: unset !important;
+    background-color: unset !important;
+  }
 }
 
 .navbar-links {
@@ -24,11 +27,23 @@ header#nav {
 
 .main-navbar {
   justify-content: space-between;
-  padding-top: var(--header-pt);
+  padding-top: .75rem;
+
+  @include tablet {
+    padding-top: 1.5rem;
+  }
+  @include desktop {
+    padding-top: 1rem;
+  }
+
   
   /* Hide in mobile */
   #navbar-links, .btn-signin {
     display: none;
+
+    @include desktop {
+      display: flex;
+    }
   }
   
   /* Remove extra pixels on bottom of logo image */
@@ -47,10 +62,20 @@ header#nav {
     margin-right: 1rem;
     /* Hide on mobile */
     display: none;
+
+    @include tablet {
+      display: block;
+    }
   }
   
   .btn-signin {
     margin-left: 2rem;
+  }
+
+  #burger-toggle {
+    @include desktop {
+      display: none;
+    }
   }
 }
 

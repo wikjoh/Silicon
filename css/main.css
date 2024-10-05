@@ -180,10 +180,6 @@ summary:focus-visible {
   text-align: center;
 }
 
-:root {
-  --header-pt: .75rem;
-}
-
 header#nav {
   /* Bring header out of the flow in order for it to
   ** be placed on top of hero section and share its gradient */
@@ -195,6 +191,13 @@ header#nav {
   z-index: 1000;
   transition: 0.5s ease;
 }
+@media (width >= 1400px) {
+  header#nav {
+    -webkit-backdrop-filter: unset !important;
+            backdrop-filter: unset !important;
+    background-color: unset !important;
+  }
+}
 
 .navbar-links {
   margin-left: 3rem;
@@ -205,12 +208,27 @@ header#nav {
 
 .main-navbar {
   justify-content: space-between;
-  padding-top: var(--header-pt);
+  padding-top: 0.75rem;
   /* Hide in mobile */
   /* Remove extra pixels on bottom of logo image */
 }
+@media (width >= 768px) {
+  .main-navbar {
+    padding-top: 1.5rem;
+  }
+}
+@media (width >= 1400px) {
+  .main-navbar {
+    padding-top: 1rem;
+  }
+}
 .main-navbar #navbar-links, .main-navbar .btn-signin {
   display: none;
+}
+@media (width >= 1400px) {
+  .main-navbar #navbar-links, .main-navbar .btn-signin {
+    display: flex;
+  }
 }
 .main-navbar .logo-img {
   vertical-align: bottom;
@@ -226,8 +244,18 @@ header#nav {
   /* Hide on mobile */
   display: none;
 }
+@media (width >= 768px) {
+  .main-navbar .dm-text {
+    display: block;
+  }
+}
 .main-navbar .btn-signin {
   margin-left: 2rem;
+}
+@media (width >= 1400px) {
+  .main-navbar #burger-toggle {
+    display: none;
+  }
 }
 
 /* When visually hidden checkbox is in focus, put outline on toggle switch */
@@ -744,6 +772,13 @@ a:hover {
   justify-content: center;
   transition: var(--transition-theme);
 }
+@media (width >= 1400px) {
+  .burger-menu {
+    grid-template-rows: 0fr !important;
+    box-shadow: unset !important;
+    display: none !important;
+  }
+}
 .burger-menu .burger-nav {
   /* Add some padding to make sure there's room for focus border/outline */
   padding-inline: 1rem;
@@ -778,6 +813,16 @@ a:hover {
   border: none;
   font-size: 1.5rem;
   color: var(--color-burger);
+}
+@media (width >= 768px) {
+  .btn-burger {
+    margin-left: 5rem;
+  }
+}
+@media (width >= 1400px) {
+  .btn-burger {
+    display: none;
+  }
 }
 .btn-burger label {
   /* Add some padding to make it easier to click on touch devices */
