@@ -3,12 +3,12 @@
 @mixin text {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
-  font-weight: $fw-reg;
+  font-weight: var(fw-reg);
   font-style: normal;
-  font-size: $fs-body-m;
+  font-size: var(fs-body-m);
 }
 
 @mixin heading {
-  font-weight: $fw-extra;
+  font-weight: var(--fw-extra);
   line-height: 1.3;
 }
