@@ -41,30 +41,30 @@
   //   // }
   // }
 
-    /* Features section */
-  .features-container {
-    margin-bottom: 7rem;
-    .brandlogo-container {
-      display: flex;
-    }
+  //   /* Features section */
+  // .features-container {
+  //   // margin-bottom: 7rem;
+  //   // .brandlogo-container {
+  //   //   display: flex;
+  //   // }
 
-    .headline {
-      margin-top: 4rem;
-      font-size: var(--fs-h2);
-      line-height: 1.3;
-    }
+  //   // .headline {
+  //   //   margin-top: 4rem;
+  //   //   font-size: var(--fs-h2);
+  //   //   line-height: 1.3;
+  //   // }
 
-    .feature-cards {
-      margin-top: 2.5rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.5rem 2rem;
+  //   .feature-cards {
+  //     // margin-top: 2.5rem;
+  //     // display: grid;
+  //     // grid-template-columns: 1fr 1fr;
+  //     // gap: 2.5rem 2rem;
       
-      .card {
-        margin-bottom: 0;
-      }
-    }
-  }
+  //     .card {
+  //       margin-bottom: 0;
+  //     }
+  //   }
+  // }
 
   /* How does it work-section */
   .how-container {
@@ -263,63 +263,63 @@
   //   }
   // }
 
-  /* Features section */
-  .features-container {
-    margin-bottom: 14rem;
-    .content-container {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      margin-top: 7rem;
-      gap: 8rem;
+  // /* Features section */
+  // .features-container {
+  //   // margin-bottom: 14rem;
+  //   .content-container {
+  //     display: grid;
+  //     grid-template-columns: 1fr 2fr;
+  //     margin-top: 7rem;
+  //     gap: 8rem;
 
-      .headline {
-        margin-top: 0;
-      }
-      .feature-cards {
-        gap: 3rem;
-      }
-    }
+  //     // .headline {
+  //     //   margin-top: 0;
+  //     // }
+  //     // .feature-cards {
+  //     //   gap: 3rem;
+  //     // }
+  //   }
 
 
-    .brandlogo-container {
-      margin-top: 6rem;
-      .desktop-only {
-        display: flex;
-      }
-    }
+  //   // .brandlogo-container {
+  //   //   margin-top: 6rem;
+  //   //   .desktop-only {
+  //   //     display: flex;
+  //   //   }
+  //   // }
 
-    .left-content {
-      display: block;
-      position: relative;
+  //   // .left-content {
+  //   //   display: block;
+  //   //   position: relative;
 
-      .phone-img {
-        position: absolute;
-      }
-      .card-img {
-        position: absolute;
-        top: 90px;
-        left: 25px;
-      }
-    }
+  //   //   .phone-img {
+  //   //     position: absolute;
+  //   //   }
+  //   //   .card-img {
+  //   //     position: absolute;
+  //   //     top: 90px;
+  //   //     left: 25px;
+  //   //   }
+  //   // }
 
-    .right-content {
-      grid-template-rows: min-content min-content auto;
-      .headline, .paragraph {
-        text-align: left;
-      }
-      .headline {
-        font-size: var(--fs-h1);
-        line-height: 1.3;
-      }
-      .paragraph {
-        margin-top: .75rem;
-      }
+  //   .right-content {
+  //     // grid-template-rows: min-content min-content auto;
+  //     // .headline, .paragraph {
+  //     //   text-align: left;
+  //     // }
+  //     .headline {
+  //       // font-size: var(--fs-h1);
+  //       // line-height: 1.3;
+  //     }
+  //     .paragraph {
+  //       // margin-top: .75rem;
+  //     }
       
-      .feature-cards {
-        margin-top: 4.5rem;
-      }
-    }
-  }
+  //     // .feature-cards {
+  //     //   margin-top: 4.5rem;
+  //     // }
+  //   }
+  // }
 
   /* How does it work-section */
   .how-container {
