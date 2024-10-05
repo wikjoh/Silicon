@@ -127,3 +127,23 @@ a {
 a:hover {
   color: var(--color-primary);
 }
+
+.btn-primary {
+  border-radius: 8px;
+  border: none;
+  padding: 11px 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-default);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.btn-primary span {
+  color: white;
+}
+.btn-primary:hover {
+  background-color: var(--color-gray-600);
+  color: var(--color-white);
+  text-decoration: none;
+}

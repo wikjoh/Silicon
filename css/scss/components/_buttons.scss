@@ -1,0 +1,7 @@
+@use '../abstracts/' as *;
+
+.btn-primary {
+  @include btn;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
