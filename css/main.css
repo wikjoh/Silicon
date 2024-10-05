@@ -183,6 +183,24 @@ a:hover {
   margin-right: 0.5rem;
 }
 
+.btn-dl {
+  /* Give buttons a higher z-index to make sure they aren't covered
+  ** by overflow from position: absolute images */
+  z-index: 50;
+  background-color: var(--color-bg-dlbtn);
+  border-radius: 8px;
+  padding: 8px 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-default);
+}
+.btn-dl:hover {
+  background-color: var(--color-gray-600);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
 .btn-chevron, .chevron-discovermore {
   display: flex;
   justify-content: center;
@@ -467,23 +485,6 @@ section#hero {
   flex-direction: column;
   margin-top: 2rem;
   gap: 1rem;
-}
-.hero-container .btn-dl {
-  /* Give buttons a higher z-index to make sure they aren't covered
-  ** by overflow from position: absolute images */
-  z-index: 50;
-  background-color: var(--color-bg-dlbtn);
-  border-radius: 8px;
-  padding: 8px 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: var(--transition-default);
-}
-.hero-container .btn-dl:hover {
-  background-color: var(--color-gray-600);
-  color: var(--color-white);
-  text-decoration: none;
 }
 .hero-container .discover-more-container {
   display: flex;

@@ -38,25 +38,6 @@ section#hero {
     gap: 1rem;
   }
 
-  .btn-dl {
-    /* Give buttons a higher z-index to make sure they aren't covered
-    ** by overflow from position: absolute images */
-    z-index: 50;
-    background-color: var(--color-bg-dlbtn);
-    border-radius: 8px;
-    padding: 8px 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: var(--transition-default);
-    
-    &:hover {
-      background-color: var(--color-gray-600);
-      color: var(--color-white);
-      text-decoration: none;
-    }
-  }
-
   .discover-more-container {
     display: flex;
     justify-content: center;
