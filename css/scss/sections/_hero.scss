@@ -1,3 +1,5 @@
+@use '../abstracts/' as *;
+
 section#hero {
   /* Add padding to give room for navbar */
   padding-top: 4rem;
@@ -19,7 +21,7 @@ section#hero {
   .headline {
     grid-area: hero-headline;
     text-align: center;
-    font-size: var(--fs-hero-headline-mobile);
+    font-size: $fs-hero-headline-mobile;
     margin-top: 1.5rem;    
   }
   .content {

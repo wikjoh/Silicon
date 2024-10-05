@@ -384,6 +384,18 @@ a:hover {
   --header-pt: .75rem;
 }
 
+header#nav {
+  /* Bring header out of the flow in order for it to
+  ** be placed on top of hero section and share its gradient */
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /* Make sure burger-menu is above everything else */
+  z-index: 1000;
+  transition: 0.5s ease;
+}
+
 /* When visually hidden checkbox is in focus, put outline on toggle switch */
 body:has(.darkmode-checkboxes:focus-visible) .dm-toggle-switch {
   outline-color: var(--color-primary);
@@ -468,7 +480,7 @@ section#hero {
 .hero-container .headline {
   grid-area: hero-headline;
   text-align: center;
-  font-size: var(--fs-hero-headline-mobile);
+  font-size: 2.125rem;
   margin-top: 1.5rem;
 }
 .hero-container .content {
