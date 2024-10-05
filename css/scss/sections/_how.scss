@@ -1,3 +1,5 @@
+@use '../abstracts/' as *;
+
 section#how {
   background-color: var(--color-how-bg);
 }
@@ -11,9 +13,35 @@ section#how {
     display: none;
   }
 
+  @include tablet {
+    .mobile, .desktop {
+      display: none;
+    }
+    .tablet {
+      display: block;
+    }
+  }
+  @include desktop {
+    .mobile, .tablet {
+      display: none;
+    }
+    .desktop {
+      display: block;
+    }
+  }
+
   h2 {
     font-size: 1.75rem;
     margin-top: 4rem;
+
+    @include tablet {
+      font-size: 2.125rem;
+    }
+    @include desktop {
+      margin-top: 5rem;
+      font-size: var(--fs-h1);
+      line-height: 1.3;
+    }
   }
 
   .images-container {
@@ -23,10 +51,58 @@ section#how {
     img {
       max-width: 100%;
     }
+
+    @include tablet {
+      margin-top: 3rem;
+      /* Increase spacing between images as container grows in width */
+      width: 100%;
+      max-width: 900px;
+
+      .mobile.img, .desktop.img {
+        display: none;
+      }
+      .tablet.img {
+        display: block;
+        flex-shrink: 0;
+        flex-grow: 1;
+      }
+      .img.left {
+        text-align: right;
+      }
+      .img.right {
+        text-align: left;
+      }
+    }
+    @include desktop {
+      /* Increase spacing between images as container grows in width */
+      max-width: unset;
+
+      .mobile.img, .tablet.img {
+        display: none;
+      }
+      .desktop.img {
+        display: block;
+        flex-grow: 1;
+      }
+      .img.left, .img.right {
+        text-align: center;
+      }
+    }
+
   }
 
   .image-description {
     margin-top: 1.5rem;
+
+    @include tablet {
+      margin-top: 2.5rem;
+      width: 65%;
+      max-width: 550px;
+    }
+    @include desktop {
+      width: 65%;
+      max-width: 550px;
+    }
 
     h3 {
       display: inline-block;
@@ -34,6 +110,17 @@ section#how {
       font-weight: var(--fw-extra);
       line-height: 1.4;
       width: 85%;
+
+      @include tablet {
+        width: 100%;
+        font-size: 1.4rem;
+        line-height: 1.4;
+      }
+      @include desktop {
+        width: 100%;
+        font-size: 1.44rem;
+        line-height: 1.4;  
+      }
     }
     p {
       font-size: var(--fs-body-m);
@@ -41,6 +128,16 @@ section#how {
       margin-bottom: 4rem;
       /* Poor contrast, but according to design */
       color: var(--color-gray-700);
+
+      @include tablet {
+        line-height: 1.625;
+      }
+      @include desktop {
+        p {
+          margin-bottom: 6rem;
+          line-height: 1.625;
+        }
+      }
     }
   }
 }

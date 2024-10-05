@@ -67,53 +67,53 @@
   // }
 
   /* How does it work-section */
-  .how-container {
-    h2 {
-      font-size: 2.125rem;
-    }
+  // .how-container {
+  //   // h2 {
+  //   //   font-size: 2.125rem;
+  //   // }
 
-    .mobile, .desktop {
-      display: none;
-    }
-    .tablet {
-      display: block;
-    }
+  //   // .mobile, .desktop {
+  //   //   display: none;
+  //   // }
+  //   // .tablet {
+  //   //   display: block;
+  //   // }
 
-    .images-container {
-      margin-top: 3rem;
-      /* Increase spacing between images as container grows in width */
-      width: 100%;
-      max-width: 900px;
-      .mobile.img, .desktop.img {
-        display: none;
-      }
-      .tablet.img {
-        display: block;
-        flex-shrink: 0;
-        flex-grow: 1;
-      }
-      .img.left {
-        text-align: right;
-      }
-      .img.right {
-        text-align: left;
-      }
-    }
+  //   .images-container {
+  //     // margin-top: 3rem;
+  //     // /* Increase spacing between images as container grows in width */
+  //     // width: 100%;
+  //     // max-width: 900px;
+  //     // .mobile.img, .desktop.img {
+  //     //   display: none;
+  //     // }
+  //     // .tablet.img {
+  //     //   display: block;
+  //     //   flex-shrink: 0;
+  //     //   flex-grow: 1;
+  //     // }
+  //     // .img.left {
+  //     //   text-align: right;
+  //     // }
+  //     // .img.right {
+  //     //   text-align: left;
+  //     // }
+  //   }
 
-    .image-description {
-      margin-top: 2.5rem;
-      width: 65%;
-      max-width: 550px;
-      h3 {
-        width: 100%;
-        font-size: 1.4rem;
-        line-height: 1.4;
-      }
-      p {
-        line-height: 1.625;
-      }
-    }
-  }
+  //   .image-description {
+  //     // margin-top: 2.5rem;
+  //     // width: 65%;
+  //     // max-width: 550px;
+  //     // h3 {
+  //     //   width: 100%;
+  //     //   font-size: 1.4rem;
+  //     //   line-height: 1.4;
+  //     // }
+  //     p {
+  //       line-height: 1.625;
+  //     }
+  //   }
+  // }
 
   /* FAQ-Contact section */
   .faq-contact-container {
@@ -322,49 +322,49 @@
   // }
 
   /* How does it work-section */
-  .how-container {
-    h2 {
-      margin-top: 5rem;
-      font-size: var(--fs-h1);
-      line-height: 1.3;
-    }
+  // .how-container {
+  //   // h2 {
+  //   //   margin-top: 5rem;
+  //   //   font-size: var(--fs-h1);
+  //   //   line-height: 1.3;
+  //   // }
 
-    .mobile, .tablet {
-      display: none;
-    }
-    .desktop {
-      display: block;
-    }
+  //   // .mobile, .tablet {
+  //   //   display: none;
+  //   // }
+  //   // .desktop {
+  //   //   display: block;
+  //   // }
 
-    .images-container {
-      /* Increase spacing between images as container grows in width */
-      max-width: unset;
-      .mobile.img, .tablet.img {
-        display: none;
-      }
-      .desktop.img {
-        display: block;
-        flex-grow: 1;
-      }
-      .img.left, .img.right {
-        text-align: center;
-      }
-    }
+  //   // .images-container {
+  //   //   // /* Increase spacing between images as container grows in width */
+  //   //   // max-width: unset;
+  //   //   .mobile.img, .tablet.img {
+  //   //     display: none;
+  //   //   }
+  //   //   .desktop.img {
+  //   //     display: block;
+  //   //     flex-grow: 1;
+  //   //   }
+  //   //   .img.left, .img.right {
+  //   //     text-align: center;
+  //   //   }
+  //   // }
 
-    .image-description {
-      width: 65%;
-      max-width: 550px;
-      h3 {
-        width: 100%;
-        font-size: 1.44rem;
-        line-height: 1.4;  
-      }
-      p {
-        margin-bottom: 6rem;
-        line-height: 1.625;
-      }
-    }
-  }
+  //   .image-description {
+  //     // width: 65%;
+  //     // max-width: 550px;
+  //     // h3 {
+  //     //   width: 100%;
+  //     //   font-size: 1.44rem;
+  //     //   line-height: 1.4;  
+  //     // }
+  //     p {
+  //       margin-bottom: 6rem;
+  //       line-height: 1.625;
+  //     }
+  //   }
+  // }
 
   /* Payment section */
   section#payment {
