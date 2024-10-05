@@ -1249,6 +1249,19 @@ section#reviews {
   margin-left: 1rem;
 }
 
+.footer {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: var(--fs-body-s);
+  line-height: 1.6;
+}
+.footer span {
+  color: var(--color-gray-600);
+}
+
 @media (768px <= width) {
   /* Change margin & padding */
   :root {
