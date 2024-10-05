@@ -147,3 +147,39 @@ a:hover {
   color: var(--color-white);
   text-decoration: none;
 }
+
+.wrapper {
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  padding-inline: 0.75rem;
+}
+@media (576px <= width) {
+  .wrapper {
+    max-width: 540px;
+  }
+}
+@media (768px <= width) {
+  .wrapper {
+    max-width: 720px;
+    padding-inline: 1rem;
+  }
+}
+@media (992px <= width) {
+  .wrapper {
+    max-width: 960px;
+    padding-inline: 2rem;
+  }
+}
+@media (1200px <= width) {
+  .wrapper {
+    max-width: 1140px;
+    padding-inline: 4rem;
+  }
+}
+@media (1400px <= width) {
+  .wrapper {
+    max-width: 1320px;
+    padding-inline: 0;
+  }
+}
