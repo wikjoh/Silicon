@@ -756,6 +756,11 @@ section#how {
 section#payment {
   display: none;
 }
+@media (width >= 1400px) {
+  section#payment {
+    display: block;
+  }
+}
 
 .payment-container {
   margin-top: 8rem;
@@ -843,6 +848,11 @@ section#payment {
 section#reviews {
   display: none;
   background-color: var(--color-reviewsbg);
+}
+@media (width >= 1400px) {
+  section#reviews {
+    display: block;
+  }
 }
 
 .reviews-container {
@@ -1659,14 +1669,6 @@ a:hover {
 }
 @media (1400px <= width) {
   /* How does it work-section */
-  /* Payment section */
-  section#payment {
-    display: block;
-  }
-  /* Reviews section */
-  section#reviews {
-    display: block;
-  }
   /* FAQ-contact section */
   .faq-contact-container {
     margin-top: 7rem;

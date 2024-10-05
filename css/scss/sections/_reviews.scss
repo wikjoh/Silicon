@@ -1,6 +1,12 @@
+@use '../abstracts/' as *;
+
 section#reviews {
   display: none;
   background-color: var(--color-reviewsbg);
+
+  @include desktop {
+    display: block;
+  }
 }
 
 .reviews-container {

@@ -1,5 +1,11 @@
+@use '../abstracts/' as *;
+
 section#payment {
   display: none;
+
+  @include desktop {
+    display: block;
+  }
 }
 
 .payment-container {
