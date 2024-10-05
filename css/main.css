@@ -641,6 +641,40 @@ header#nav {
   transition: 0.5s ease;
 }
 
+.navbar-links {
+  margin-left: 3rem;
+}
+.navbar-links ul {
+  list-style: none;
+}
+
+.main-navbar {
+  justify-content: space-between;
+  padding-top: var(--header-pt);
+  /* Hide in mobile */
+  /* Remove extra pixels on bottom of logo image */
+}
+.main-navbar #navbar-links, .main-navbar .btn-signin {
+  display: none;
+}
+.main-navbar .logo-img {
+  vertical-align: bottom;
+}
+.main-navbar .navbar-right {
+  position: relative;
+}
+.main-navbar .dm-text {
+  font-size: var(--fs-body-m);
+  font-weight: var(--fw-semi);
+  color: var(--color-gray-700);
+  margin-right: 1rem;
+  /* Hide on mobile */
+  display: none;
+}
+.main-navbar .btn-signin {
+  margin-left: 2rem;
+}
+
 /* When visually hidden checkbox is in focus, put outline on toggle switch */
 body:has(.darkmode-checkboxes:focus-visible) .dm-toggle-switch {
   outline-color: var(--color-primary);
@@ -677,33 +711,6 @@ header#nav:has(#burger-toggle:checked) .burger-nav.reveal-aria {
 }
 header#nav:has(#burger-toggle:checked) .burger-nav.hide-aria {
   display: none;
-}
-
-.main-navbar {
-  justify-content: space-between;
-  padding-top: var(--header-pt);
-  /* Hide in mobile */
-  /* Remove extra pixels on bottom of logo image */
-}
-.main-navbar #navbar-links, .main-navbar .btn-signin {
-  display: none;
-}
-.main-navbar .logo-img {
-  vertical-align: bottom;
-}
-.main-navbar .navbar-right {
-  position: relative;
-}
-.main-navbar .dm-text {
-  font-size: var(--fs-body-m);
-  font-weight: var(--fw-semi);
-  color: var(--color-gray-700);
-  margin-right: 1rem;
-  /* Hide on mobile */
-  display: none;
-}
-.main-navbar .btn-signin {
-  margin-left: 2rem;
 }
 
 section#hero {
