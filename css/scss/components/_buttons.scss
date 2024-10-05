@@ -5,3 +5,16 @@
   background-color: var(--color-primary);
   color: var(--color-white);
 }
+
+.btn-chevron {
+  @include btn-chevron;
+}
+
+.chevron-discovermore {
+  @extend .btn-chevron;
+  background-color: var(--color-chevronbg);
+  color: var(--color-chevronarrow);
+  width: 44px;
+  height: 44px;
+  font-size: .75rem;
+}

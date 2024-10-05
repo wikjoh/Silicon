@@ -148,6 +148,29 @@ a:hover {
   text-decoration: none;
 }
 
+.btn-chevron, .chevron-discovermore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.btn-chevron::before, .chevron-discovermore::before {
+  display: block;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f078";
+  text-align: center;
+}
+
+.chevron-discovermore {
+  background-color: var(--color-chevronbg);
+  color: var(--color-chevronarrow);
+  width: 44px;
+  height: 44px;
+  font-size: 0.75rem;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

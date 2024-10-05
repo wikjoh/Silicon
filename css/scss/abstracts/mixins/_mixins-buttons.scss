@@ -17,3 +17,19 @@
     text-decoration: none;
   }
 }
+
+@mixin btn-chevron {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::before {
+    display: block;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f078";
+    text-align: center;
+  }
+}
