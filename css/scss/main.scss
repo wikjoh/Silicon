@@ -1,4 +1,5 @@
-// Continued use of @import is discouraged according to https://sass-lang.com/documentation/at-rules/import/.
+// Continued use of @import is discouraged
+// according to https://sass-lang.com/documentation/at-rules/import/.
 // I'll be using @use and @forward instead.
 @use './abstracts/' as abstracts;
 @use './themes/' as themes;
@@ -7,3 +8,7 @@
 @use './utilities/' as utilities;
 @use './sections/' as sections;
 
+// Add media queries manually instead of through @forward,
+// to ensure they get added last.
+// If refactoring, set MQs in section files instead.
+@use './base/media-width' as media-width;

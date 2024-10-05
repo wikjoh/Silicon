@@ -832,3 +832,366 @@ section#hero {
 .features-container .feature-cards {
   margin-top: 2rem;
 }
+
+@media (768px <= width) {
+  /* Change margin & padding */
+  :root {
+    --header-pt: 1.5rem;
+  }
+  /* Header/navbar */
+  .main-navbar .dm-text {
+    display: block;
+  }
+  .main-navbar .btn-burger {
+    margin-left: 5rem;
+  }
+  /* Hero section */
+  .hero-container {
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: "hero-headline hero-headline" "hero-content hero-images";
+    gap: 2rem 0rem;
+  }
+  .hero-container .headline {
+    font-size: var(--fs-hero-headline-tablet);
+    margin-top: 4.5rem;
+  }
+  .hero-container .content {
+    text-align: left;
+  }
+  .hero-container .dlbuttons {
+    margin-top: 3rem;
+  }
+  .hero-container .discover-more-container {
+    justify-content: left;
+  }
+  .hero-container .paragraph-splitter, .hero-container .hero-images {
+    display: block;
+  }
+  /* Features section */
+  .features-container {
+    margin-bottom: 7rem;
+  }
+  .features-container .brandlogo-container {
+    display: flex;
+  }
+  .features-container .headline {
+    margin-top: 4rem;
+    font-size: var(--fs-h2);
+    line-height: 1.3;
+  }
+  .features-container .feature-cards {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 2rem;
+  }
+  .features-container .feature-cards .card {
+    margin-bottom: 0;
+  }
+  /* How does it work-section */
+  .how-container h2 {
+    font-size: 2.125rem;
+  }
+  .how-container .mobile, .how-container .desktop {
+    display: none;
+  }
+  .how-container .tablet {
+    display: block;
+  }
+  .how-container .images-container {
+    margin-top: 3rem;
+    /* Increase spacing between images as container grows in width */
+    width: 100%;
+    max-width: 900px;
+  }
+  .how-container .images-container .mobile.img, .how-container .images-container .desktop.img {
+    display: none;
+  }
+  .how-container .images-container .tablet.img {
+    display: block;
+    flex-shrink: 0;
+    flex-grow: 1;
+  }
+  .how-container .images-container .img.left {
+    text-align: right;
+  }
+  .how-container .images-container .img.right {
+    text-align: left;
+  }
+  .how-container .image-description {
+    margin-top: 2.5rem;
+    width: 65%;
+    max-width: 550px;
+  }
+  .how-container .image-description h3 {
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+  .how-container .image-description p {
+    line-height: 1.625;
+  }
+  /* FAQ-Contact section */
+  .faq-contact-container .header {
+    justify-self: center;
+    width: 60%;
+  }
+  .faq-contact-container .header h2 {
+    font-size: var(--fs-h2);
+    line-height: 1.3;
+  }
+  .faq-contact-container .header p {
+    margin-top: 2rem;
+  }
+  .faq-contact-container .faq-accordion {
+    /* Start by removing FAQ borders */
+    --_faq-border: unset;
+  }
+  .faq-contact-container .faq-accordion details {
+    box-shadow: 0px 2px 5px var(--color-faqoutline);
+    border-radius: 8px;
+    /* Apply margin-top to all details-elements except first one */
+  }
+  .faq-contact-container .faq-accordion details p {
+    margin-top: 0;
+  }
+  .faq-contact-container .faq-accordion details:not(:first-child) {
+    margin-top: 1rem;
+  }
+  .faq-contact-container .btn-contact {
+    /* Hide contact button and show contact cards */
+    display: none;
+  }
+  .faq-contact-container .contact-cards {
+    display: flex;
+  }
+  .faq-contact-container .contact {
+    margin-top: 2rem;
+  }
+  .faq-contact-container .subscribe {
+    margin-top: 2rem;
+    padding: 3rem 1rem;
+    flex-direction: row;
+  }
+  .faq-contact-container .subscribe .cta, .faq-contact-container .subscribe .email-form {
+    flex-basis: 50%;
+  }
+  .faq-contact-container .subscribe .cta {
+    justify-content: center;
+    margin-right: 3rem;
+  }
+  .faq-contact-container .subscribe .cta img {
+    margin-right: 2rem;
+  }
+  .footer .footer-splitter {
+    display: none;
+  }
+}
+@media (1400px <= width) {
+  /* Change margin & padding */
+  :root {
+    --header-pt: 1rem;
+  }
+  /* Header/navbar */
+  header#nav {
+    -webkit-backdrop-filter: unset !important;
+            backdrop-filter: unset !important;
+    background-color: unset !important;
+  }
+  header#nav .burger-menu {
+    grid-template-rows: 0fr !important;
+    box-shadow: unset !important;
+    display: none !important;
+  }
+  .main-navbar #navbar-links, .main-navbar .btn-signin {
+    display: flex;
+  }
+  .main-navbar .btn-burger, .main-navbar #burger-toggle {
+    /* In desktop, hide burgermenubtn and its checkbox */
+    display: none;
+  }
+  /* Hero section */
+  .hero-container {
+    align-items: start;
+    height: 800px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "hero-headline hero-images" "hero-content hero-images";
+    gap: 0rem;
+    /* Replace images with desktop versions */
+  }
+  .hero-container .headline {
+    font-size: var(--fs-hero-headline-desktop);
+    margin-top: 9rem;
+    text-align: left;
+  }
+  .hero-container .content {
+    margin-top: 0;
+  }
+  .hero-container .dlbuttons {
+    flex-direction: row;
+  }
+  .hero-container .discover-more {
+    margin-top: 15rem;
+  }
+  .hero-container .hero-images .hero-img-shadow {
+    bottom: 0;
+    right: 425px;
+  }
+  .hero-container .hero-images .hero-img-back {
+    bottom: 0;
+    right: 235px;
+  }
+  .hero-container .hero-images .hero-img-front {
+    right: 0;
+    bottom: 0;
+  }
+  .hero-container .hero-img-shadow {
+    content: url("/assets/images/desktop/hero-shadow.png");
+  }
+  .hero-container .hero-img-back {
+    content: url("/assets/images/desktop/hero-back.png");
+  }
+  .hero-container .hero-img-front {
+    content: url("/assets/images/desktop/hero-front.png");
+  }
+  /* Features section */
+  .features-container {
+    margin-bottom: 14rem;
+  }
+  .features-container .content-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 7rem;
+    gap: 8rem;
+  }
+  .features-container .content-container .headline {
+    margin-top: 0;
+  }
+  .features-container .content-container .feature-cards {
+    gap: 3rem;
+  }
+  .features-container .brandlogo-container {
+    margin-top: 6rem;
+  }
+  .features-container .brandlogo-container .desktop-only {
+    display: flex;
+  }
+  .features-container .left-content {
+    display: block;
+    position: relative;
+  }
+  .features-container .left-content .phone-img {
+    position: absolute;
+  }
+  .features-container .left-content .card-img {
+    position: absolute;
+    top: 90px;
+    left: 25px;
+  }
+  .features-container .right-content {
+    grid-template-rows: min-content min-content auto;
+  }
+  .features-container .right-content .headline, .features-container .right-content .paragraph {
+    text-align: left;
+  }
+  .features-container .right-content .headline {
+    font-size: var(--fs-h1);
+    line-height: 1.3;
+  }
+  .features-container .right-content .paragraph {
+    margin-top: 0.75rem;
+  }
+  .features-container .right-content .feature-cards {
+    margin-top: 4.5rem;
+  }
+  /* How does it work-section */
+  .how-container h2 {
+    margin-top: 5rem;
+    font-size: var(--fs-h1);
+    line-height: 1.3;
+  }
+  .how-container .mobile, .how-container .tablet {
+    display: none;
+  }
+  .how-container .desktop {
+    display: block;
+  }
+  .how-container .images-container {
+    /* Increase spacing between images as container grows in width */
+    max-width: unset;
+  }
+  .how-container .images-container .mobile.img, .how-container .images-container .tablet.img {
+    display: none;
+  }
+  .how-container .images-container .desktop.img {
+    display: block;
+    flex-grow: 1;
+  }
+  .how-container .images-container .img.left, .how-container .images-container .img.right {
+    text-align: center;
+  }
+  .how-container .image-description {
+    width: 65%;
+    max-width: 550px;
+  }
+  .how-container .image-description h3 {
+    width: 100%;
+    font-size: 1.44rem;
+    line-height: 1.4;
+  }
+  .how-container .image-description p {
+    margin-bottom: 6rem;
+    line-height: 1.625;
+  }
+  /* Payment section */
+  section#payment {
+    display: block;
+  }
+  /* Reviews section */
+  section#reviews {
+    display: block;
+  }
+  /* FAQ-contact section */
+  .faq-contact-container {
+    margin-top: 7rem;
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+    grid-template-rows: auto 1fr;
+    -moz-column-gap: 8rem;
+         column-gap: 8rem;
+    grid-template-areas: "header faq-accordion" "contact faq-accordion" "subscribe subscribe";
+    align-items: start;
+  }
+  .faq-contact-container .header {
+    grid-area: header;
+    justify-self: left;
+    width: 100%;
+  }
+  .faq-contact-container .header h2, .faq-contact-container .header p {
+    text-align: left;
+  }
+  .faq-contact-container p {
+    margin-top: 2rem;
+  }
+  .faq-contact-container .faq-accordion {
+    grid-area: faq-accordion;
+  }
+  .faq-contact-container .contact {
+    grid-area: contact;
+    margin-top: 3rem;
+  }
+  .faq-contact-container .subscribe {
+    grid-area: subscribe;
+    margin-top: 6rem;
+    padding: 4rem 6rem;
+  }
+  .faq-contact-container .subscribe h2 {
+    display: none;
+  }
+  .faq-contact-container .subscribe .cta h2.desktop-text {
+    display: block;
+  }
+  .footer {
+    padding: 3rem 0;
+  }
+}
