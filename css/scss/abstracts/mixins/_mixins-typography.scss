@@ -9,7 +9,6 @@
 }
 
 @mixin heading {
-  color: var(--color-heading);
   font-weight: $fw-extra;
   line-height: 1.3;
 }

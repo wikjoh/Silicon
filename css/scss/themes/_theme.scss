@@ -1,6 +1,9 @@
 @use '../abstracts/' as *;
 
 :root {
+  --transition-default: all .25s;
+  --transition-theme: all .5s ease;
+
   /* Default theme - white/light */
   --color-bg: var(--color-bg-white);
   --color-navlink: var(--color-navlink-whitebg);

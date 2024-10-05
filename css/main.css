@@ -54,6 +54,8 @@
 }
 
 :root {
+  --transition-default: all .25s;
+  --transition-theme: all .5s ease;
   /* Default theme - white/light */
   --color-bg: var(--color-bg-white);
   --color-navlink: var(--color-navlink-whitebg);
@@ -93,7 +95,35 @@ body, input, button, textarea, select {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--color-heading);
   font-weight: 800;
   line-height: 1.3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading);
+}
+
+p, span {
+  color: var(--color-paragraph);
+}
+
+/* Increase focus visibility */
+*:focus-visible {
+  outline-color: var(--color-primary);
+  outline-offset: 0.2em;
+  outline-width: 0.4em;
+  outline-style: solid;
+}
+
+/* On summary elements, put outline on inside */
+summary:focus-visible {
+  outline-offset: -0.4em;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-primary);
 }

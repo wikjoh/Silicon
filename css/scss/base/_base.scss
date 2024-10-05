@@ -1,0 +1,20 @@
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading);
+}
+
+p, span {
+  color: var(--color-paragraph);
+}
+
+/* Increase focus visibility */
+*:focus-visible {
+  outline-color: var(--color-primary);
+  outline-offset: .2em;
+  outline-width: .4em;
+  outline-style: solid;
+}
+
+/* On summary elements, put outline on inside */
+summary:focus-visible {
+  outline-offset: -.4em;
+}
