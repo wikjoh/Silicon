@@ -1384,7 +1384,7 @@ section#reviews {
     border-radius: 8px;
     /* Apply margin-top to all details-elements except first one */
   }
-  .faq-contact-container .faq-accordion details p {
+  .faq-contact-container .faq-accordion details p:first-child {
     margin-top: 0;
   }
   .faq-contact-container .faq-accordion details:not(:first-child) {
