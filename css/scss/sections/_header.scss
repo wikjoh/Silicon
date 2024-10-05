@@ -2,3 +2,66 @@
 :root {
   --header-pt: .75rem;
 }
+
+/* When visually hidden checkbox is in focus, put outline on toggle switch */
+body:has(.darkmode-checkboxes:focus-visible) .dm-toggle-switch {
+  outline-color: var(--color-primary);
+  outline-offset: .2em;
+  outline-width: .4em;
+  outline-style: solid;
+}
+
+/* Apply outline to burgermenubtn when checkbox is focused */
+header#nav:has(#burger-toggle:focus-visible) .btn-burger {
+  outline-color: var(--color-primary);
+  outline-offset: .2em;
+  outline-width: .4em;
+  outline-style: solid;
+}
+
+header#nav:has(#burger-toggle:checked) {
+  backdrop-filter: blur(20px);
+  background-color: var(--color-bg);
+  .burger-menu-open {
+    display: none;
+  }
+  .burger-menu-close {display: block;}
+  .burger-menu {
+    grid-template-rows: 1fr;
+    box-shadow: 0 25px 15px var(--color-bg);
+  }
+  .burger-nav.reveal-aria {display: block;}
+  .burger-nav.hide-aria {display: none;}
+}
+
+.main-navbar {
+  justify-content: space-between;
+  padding-top: var(--header-pt);
+  
+  /* Hide in mobile */
+  #navbar-links, .btn-signin {
+    display: none;
+  }
+
+  /* Remove extra pixels on bottom of logo image */
+  .logo-img {
+    vertical-align: bottom;
+  }
+  
+  .navbar-right {
+    position: relative;
+  }
+  
+  .dm-text {
+    font-size: var(--fs-body-m);
+    font-weight: var(--fw-semi);
+    color: var(--color-gray-700);
+    margin-right: 1rem;
+    /* Hide on mobile */
+    display: none;
+  }
+
+  .btn-signin {
+    margin-left: 2rem;
+  }
+}
