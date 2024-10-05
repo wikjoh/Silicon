@@ -20,6 +20,19 @@
   }
 }
 
+.btn-learn-more {
+  @extend .btn-primary;
+  width: 160px;
+  border-radius: 6px;
+  margin-top: 3rem;
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-semi);
+  line-height: 1.6;
+  i {
+    margin-left: 1rem;
+  }
+}
+
 .btn-dl {
   /* Give buttons a higher z-index to make sure they aren't covered
   ** by overflow from position: absolute images */

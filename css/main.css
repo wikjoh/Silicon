@@ -359,7 +359,7 @@ a:hover {
   text-decoration: none;
 }
 
-.btn-primary, .btn-signin {
+.btn-primary, .btn-learn-more, .btn-signin {
   border-radius: 8px;
   border: none;
   padding: 11px 22px;
@@ -370,10 +370,10 @@ a:hover {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
-.btn-primary span, .btn-signin span {
+.btn-primary span, .btn-learn-more span, .btn-signin span {
   color: white;
 }
-.btn-primary:hover, .btn-signin:hover {
+.btn-primary:hover, .btn-learn-more:hover, .btn-signin:hover {
   background-color: var(--color-gray-600);
   color: var(--color-white);
   text-decoration: none;
@@ -389,6 +389,18 @@ a:hover {
 }
 .btn-signin .usericon {
   margin-right: 0.5rem;
+}
+
+.btn-learn-more {
+  width: 160px;
+  border-radius: 6px;
+  margin-top: 3rem;
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-semi);
+  line-height: 1.6;
+}
+.btn-learn-more i {
+  margin-left: 1rem;
 }
 
 .btn-dl {
@@ -914,17 +926,6 @@ section#payment {
 }
 .payment-container li:not(:first-child) {
   margin-top: 1rem;
-}
-.payment-container .btn-learn-more {
-  width: 160px;
-  border-radius: 6px;
-  margin-top: 3rem;
-  font-size: var(--fs-body-s);
-  font-weight: var(--fw-semi);
-  line-height: 1.6;
-}
-.payment-container .btn-learn-more i {
-  margin-left: 1rem;
 }
 .payment-container .cards {
   display: flex;
