@@ -1,0 +1,15 @@
+@use '../typovars' as *;
+
+@mixin text {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $fw-reg;
+  font-style: normal;
+  font-size: $fs-body-m;
+}
+
+@mixin heading {
+  color: var(--color-heading);
+  font-weight: $fw-extra;
+  line-height: 1.3;
+}

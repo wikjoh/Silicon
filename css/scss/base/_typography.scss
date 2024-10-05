@@ -1,1 +1,12 @@
+@use '../abstracts/' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+// Set font
+body, input, button, textarea, select {
+  @include text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include heading;
+}
