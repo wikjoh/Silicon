@@ -359,7 +359,7 @@ a:hover {
   text-decoration: none;
 }
 
-.btn-primary, .btn-learn-more, .btn-signin {
+.btn-primary, .btn-contact, .btn-learn-more, .btn-signin {
   border-radius: 8px;
   border: none;
   padding: 11px 22px;
@@ -370,10 +370,10 @@ a:hover {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
-.btn-primary span, .btn-learn-more span, .btn-signin span {
+.btn-primary span, .btn-contact span, .btn-learn-more span, .btn-signin span {
   color: white;
 }
-.btn-primary:hover, .btn-learn-more:hover, .btn-signin:hover {
+.btn-primary:hover, .btn-contact:hover, .btn-learn-more:hover, .btn-signin:hover {
   background-color: var(--color-gray-600);
   color: var(--color-white);
   text-decoration: none;
@@ -401,6 +401,15 @@ a:hover {
 }
 .btn-learn-more i {
   margin-left: 1rem;
+}
+
+.btn-contact {
+  border-style: none;
+  border-radius: 6px;
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-semi);
+  line-height: 1.6;
+  padding: 1em 2em;
 }
 
 .btn-dl {
@@ -1134,14 +1143,6 @@ section#reviews {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.faq-contact-container .btn-contact {
-  border-style: none;
-  border-radius: 6px;
-  font-size: var(--fs-body-s);
-  font-weight: var(--fw-semi);
-  line-height: 1.6;
-  padding: 1em 2em;
 }
 .faq-contact-container .contact-cards {
   display: none;

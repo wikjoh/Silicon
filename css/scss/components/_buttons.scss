@@ -33,6 +33,16 @@
   }
 }
 
+.btn-contact {
+  @extend .btn-primary;
+  border-style: none;
+  border-radius: 6px;
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-semi);
+  line-height: 1.6;
+  padding: 1em 2em;
+}
+
 .btn-dl {
   /* Give buttons a higher z-index to make sure they aren't covered
   ** by overflow from position: absolute images */
