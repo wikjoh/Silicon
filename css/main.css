@@ -697,6 +697,68 @@ a:hover {
   box-shadow: 0 0 4px 0px var(--color-primary);
 }
 
+.subscribe {
+  margin-top: 2.5rem;
+  padding: 3rem 1rem 0;
+  background-color: var(--color-subscribebg);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.subscribe .cta {
+  display: flex;
+  align-items: center;
+}
+.subscribe .cta h2 {
+  font-size: 1.375rem;
+  line-height: 1.35;
+}
+.subscribe .cta h2.desktop-text {
+  display: none;
+}
+.subscribe .cta img {
+  margin-right: 1rem;
+}
+.subscribe .input-container {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  position: relative;
+}
+.subscribe .input-container * {
+  border: none;
+}
+.subscribe .input-container input {
+  font-size: 1rem;
+  padding: 0 1rem 0 2.75rem;
+  /* Subtract padding from width, else it causes grid to overflow */
+  width: calc(100% - 2.75rem);
+  border-radius: 8px 0 0 8px;
+  border: 1px solid var(--color-gray-400);
+  color: var(--color-subscribetext);
+}
+.subscribe .input-container input:focus {
+  outline-offset: -0.4em;
+}
+.subscribe .input-container input::-moz-placeholder {
+  color: var(--color-gray-500);
+}
+.subscribe .input-container input::placeholder {
+  color: var(--color-gray-500);
+}
+.subscribe .input-container .mail-icon {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+}
+.subscribe .input-container .btn-subscribe {
+  border-radius: 0 8px 8px 0;
+  font-size: 1rem;
+  line-height: 1.625;
+  font-weight: var(--fw-semi);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1185,67 +1247,6 @@ section#reviews {
 }
 .faq-contact-container a i {
   margin-left: 1rem;
-}
-.faq-contact-container .subscribe {
-  margin-top: 2.5rem;
-  padding: 3rem 1rem 0;
-  background-color: var(--color-subscribebg);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-}
-.faq-contact-container .subscribe .cta {
-  display: flex;
-  align-items: center;
-}
-.faq-contact-container .subscribe .cta h2 {
-  font-size: 1.375rem;
-  line-height: 1.35;
-}
-.faq-contact-container .subscribe .cta h2.desktop-text {
-  display: none;
-}
-.faq-contact-container .subscribe .cta img {
-  margin-right: 1rem;
-}
-.faq-contact-container .subscribe .input-container {
-  margin-top: 2.5rem;
-  margin-bottom: 2rem;
-  display: flex;
-  position: relative;
-}
-.faq-contact-container .subscribe .input-container * {
-  border: none;
-}
-.faq-contact-container .subscribe .input-container input {
-  font-size: 1rem;
-  padding: 0 1rem 0 2.75rem;
-  /* Subtract padding from width, else it causes grid to overflow */
-  width: calc(100% - 2.75rem);
-  border-radius: 8px 0 0 8px;
-  border: 1px solid var(--color-gray-400);
-  color: var(--color-subscribetext);
-}
-.faq-contact-container .subscribe .input-container input:focus {
-  outline-offset: -0.4em;
-}
-.faq-contact-container .subscribe .input-container input::-moz-placeholder {
-  color: var(--color-gray-500);
-}
-.faq-contact-container .subscribe .input-container input::placeholder {
-  color: var(--color-gray-500);
-}
-.faq-contact-container .subscribe .input-container .mail-icon {
-  position: absolute;
-  top: 50%;
-  left: 0.75rem;
-  transform: translateY(-50%);
-}
-.faq-contact-container .subscribe .input-container .btn-subscribe {
-  border-radius: 0 8px 8px 0;
-  font-size: 1rem;
-  line-height: 1.625;
-  font-weight: var(--fw-semi);
 }
 
 @media (768px <= width) {
