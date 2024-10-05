@@ -148,6 +148,17 @@ a:hover {
   text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .wrapper {
   margin-inline: auto;
   display: flex;
@@ -182,4 +193,14 @@ a:hover {
     max-width: 1320px;
     padding-inline: 0;
   }
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tac {
+  text-align: center;
 }
