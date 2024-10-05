@@ -14,6 +14,21 @@ section#hero {
   "hero-headline"
   "hero-content";
 
+  @include tablet {
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas:  "hero-headline hero-headline"
+                          "hero-content hero-images";
+    gap: 2rem 0rem;
+  }
+  @include desktop {
+    align-items: start;
+    height: 800px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:  "hero-headline hero-images"
+                          "hero-content hero-images";
+    gap: 0rem;
+  }
+
   /* Hide in mobile */
   .paragraph-splitter, .hero-images {
     display: none;
@@ -22,27 +37,61 @@ section#hero {
     grid-area: hero-headline;
     text-align: center;
     font-size: var(--fs-hero-headline-mobile);
-    margin-top: 1.5rem;    
+    margin-top: 1.5rem;
+
+    @include tablet {
+      font-size: var(--fs-hero-headline-tablet);
+      margin-top: 4.5rem;
+    }
+    @include desktop {
+      font-size: var(--fs-hero-headline-desktop);
+      margin-top: 9rem;
+      text-align: left;
+    }
   }
   .content {
     grid-area: hero-content;
     text-align: center;
     margin-top: 2rem;
+
+    @include tablet {
+      text-align: left;
+    }
+    @include desktop {
+      margin-top: 0;
+    }
   }
   .pitch {
     font-size: var(--fs-body-l);
     line-height: 1.6;
+
+    .paragraph-splitter {
+      @include tablet {
+        display: block;
+      }
+    }
   }
   .dlbuttons {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
     gap: 1rem;
+
+    @include tablet {
+      margin-top: 3rem;
+    }
+    @include desktop {
+      flex-direction: row;
+    }
   }
 
   .discover-more-container {
     display: flex;
     justify-content: center;
+
+    @include tablet {
+      justify-content: left;
+    }
   }
 
   .discover-more {
@@ -52,6 +101,10 @@ section#hero {
     margin-top: 2.5rem;
     margin-bottom: 2rem;
     gap: 1rem;
+
+    @include desktop {
+      margin-top: 15rem;
+    }
   }
 
   .chevron-discovermore {
@@ -68,23 +121,45 @@ section#hero {
     justify-self: right;
     position: relative;
 
+    @include tablet {
+      display: block;
+    }
+
     .hero-img-shadow {
       position: absolute;
       bottom: 0;
       right: 200px;
       z-index: 5;
+
+      @include desktop {
+        content: url('/assets/images/desktop/hero-shadow.png');
+        bottom: 0;
+        right: 425px;
+      }
     }
     .hero-img-back {
       position: absolute;
       bottom: 0;
       right: 142px;
       z-index: 10;
+
+      @include desktop {
+        content: url('/assets/images/desktop/hero-back.png');
+        bottom: 0;
+        right: 235px;
+      }
     }
     .hero-img-front {
       position: absolute;
       right: 0;
       bottom: 0;
       z-index: 15;
+
+      @include desktop {
+        content: url('/assets/images/desktop/hero-front.png');
+        right: 0;
+        bottom: 0;
+      }
     }
   }
 }

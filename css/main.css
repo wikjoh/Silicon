@@ -309,6 +309,22 @@ section#hero {
   grid-template-areas: "hero-headline" "hero-content";
   /* Hide in mobile */
 }
+@media (width >= 768px) {
+  .hero-container {
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: "hero-headline hero-headline" "hero-content hero-images";
+    gap: 2rem 0rem;
+  }
+}
+@media (width >= 1400px) {
+  .hero-container {
+    align-items: start;
+    height: 800px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "hero-headline hero-images" "hero-content hero-images";
+    gap: 0rem;
+  }
+}
 .hero-container .paragraph-splitter, .hero-container .hero-images {
   display: none;
 }
@@ -318,14 +334,42 @@ section#hero {
   font-size: var(--fs-hero-headline-mobile);
   margin-top: 1.5rem;
 }
+@media (width >= 768px) {
+  .hero-container .headline {
+    font-size: var(--fs-hero-headline-tablet);
+    margin-top: 4.5rem;
+  }
+}
+@media (width >= 1400px) {
+  .hero-container .headline {
+    font-size: var(--fs-hero-headline-desktop);
+    margin-top: 9rem;
+    text-align: left;
+  }
+}
 .hero-container .content {
   grid-area: hero-content;
   text-align: center;
   margin-top: 2rem;
 }
+@media (width >= 768px) {
+  .hero-container .content {
+    text-align: left;
+  }
+}
+@media (width >= 1400px) {
+  .hero-container .content {
+    margin-top: 0;
+  }
+}
 .hero-container .pitch {
   font-size: var(--fs-body-l);
   line-height: 1.6;
+}
+@media (width >= 768px) {
+  .hero-container .pitch .paragraph-splitter {
+    display: block;
+  }
 }
 .hero-container .dlbuttons {
   display: flex;
@@ -333,9 +377,24 @@ section#hero {
   margin-top: 2rem;
   gap: 1rem;
 }
+@media (width >= 768px) {
+  .hero-container .dlbuttons {
+    margin-top: 3rem;
+  }
+}
+@media (width >= 1400px) {
+  .hero-container .dlbuttons {
+    flex-direction: row;
+  }
+}
 .hero-container .discover-more-container {
   display: flex;
   justify-content: center;
+}
+@media (width >= 768px) {
+  .hero-container .discover-more-container {
+    justify-content: left;
+  }
 }
 .hero-container .discover-more {
   display: flex;
@@ -344,6 +403,11 @@ section#hero {
   margin-top: 2.5rem;
   margin-bottom: 2rem;
   gap: 1rem;
+}
+@media (width >= 1400px) {
+  .hero-container .discover-more {
+    margin-top: 15rem;
+  }
 }
 .hero-container .chevron-discovermore {
   background-color: var(--color-chevronbg);
@@ -358,11 +422,23 @@ section#hero {
   justify-self: right;
   position: relative;
 }
+@media (width >= 768px) {
+  .hero-container .hero-images {
+    display: block;
+  }
+}
 .hero-container .hero-images .hero-img-shadow {
   position: absolute;
   bottom: 0;
   right: 200px;
   z-index: 5;
+}
+@media (width >= 1400px) {
+  .hero-container .hero-images .hero-img-shadow {
+    content: url("/assets/images/desktop/hero-shadow.png");
+    bottom: 0;
+    right: 425px;
+  }
 }
 .hero-container .hero-images .hero-img-back {
   position: absolute;
@@ -370,11 +446,25 @@ section#hero {
   right: 142px;
   z-index: 10;
 }
+@media (width >= 1400px) {
+  .hero-container .hero-images .hero-img-back {
+    content: url("/assets/images/desktop/hero-back.png");
+    bottom: 0;
+    right: 235px;
+  }
+}
 .hero-container .hero-images .hero-img-front {
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: 15;
+}
+@media (width >= 1400px) {
+  .hero-container .hero-images .hero-img-front {
+    content: url("/assets/images/desktop/hero-front.png");
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .features-container {
@@ -1311,39 +1401,6 @@ a:hover {
   }
 }
 @media (768px <= width) {
-  /* Change margin & padding */
-  :root {
-    --header-pt: 1.5rem;
-  }
-  /* Header/navbar */
-  .main-navbar .dm-text {
-    display: block;
-  }
-  .main-navbar .btn-burger {
-    margin-left: 5rem;
-  }
-  /* Hero section */
-  .hero-container {
-    grid-template-columns: 2fr 3fr;
-    grid-template-areas: "hero-headline hero-headline" "hero-content hero-images";
-    gap: 2rem 0rem;
-  }
-  .hero-container .headline {
-    font-size: var(--fs-hero-headline-tablet);
-    margin-top: 4.5rem;
-  }
-  .hero-container .content {
-    text-align: left;
-  }
-  .hero-container .dlbuttons {
-    margin-top: 3rem;
-  }
-  .hero-container .discover-more-container {
-    justify-content: left;
-  }
-  .hero-container .paragraph-splitter, .hero-container .hero-images {
-    display: block;
-  }
   /* Features section */
   .features-container {
     margin-bottom: 7rem;
@@ -1465,72 +1522,6 @@ a:hover {
   }
 }
 @media (1400px <= width) {
-  /* Change margin & padding */
-  :root {
-    --header-pt: 1rem;
-  }
-  /* Header/navbar */
-  header#nav {
-    -webkit-backdrop-filter: unset !important;
-            backdrop-filter: unset !important;
-    background-color: unset !important;
-  }
-  header#nav .burger-menu {
-    grid-template-rows: 0fr !important;
-    box-shadow: unset !important;
-    display: none !important;
-  }
-  .main-navbar #navbar-links, .main-navbar .btn-signin {
-    display: flex;
-  }
-  .main-navbar .btn-burger, .main-navbar #burger-toggle {
-    /* In desktop, hide burgermenubtn and its checkbox */
-    display: none;
-  }
-  /* Hero section */
-  .hero-container {
-    align-items: start;
-    height: 800px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "hero-headline hero-images" "hero-content hero-images";
-    gap: 0rem;
-    /* Replace images with desktop versions */
-  }
-  .hero-container .headline {
-    font-size: var(--fs-hero-headline-desktop);
-    margin-top: 9rem;
-    text-align: left;
-  }
-  .hero-container .content {
-    margin-top: 0;
-  }
-  .hero-container .dlbuttons {
-    flex-direction: row;
-  }
-  .hero-container .discover-more {
-    margin-top: 15rem;
-  }
-  .hero-container .hero-images .hero-img-shadow {
-    bottom: 0;
-    right: 425px;
-  }
-  .hero-container .hero-images .hero-img-back {
-    bottom: 0;
-    right: 235px;
-  }
-  .hero-container .hero-images .hero-img-front {
-    right: 0;
-    bottom: 0;
-  }
-  .hero-container .hero-img-shadow {
-    content: url("/assets/images/desktop/hero-shadow.png");
-  }
-  .hero-container .hero-img-back {
-    content: url("/assets/images/desktop/hero-back.png");
-  }
-  .hero-container .hero-img-front {
-    content: url("/assets/images/desktop/hero-front.png");
-  }
   /* Features section */
   .features-container {
     margin-bottom: 14rem;

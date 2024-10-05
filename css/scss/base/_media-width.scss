@@ -1,45 +1,45 @@
 @media (768px <= width) {
-  /* Change margin & padding */
-  :root {
-    --header-pt: 1.5rem;
-  }
+  // /* Change margin & padding */
+  // :root {
+  //   --header-pt: 1.5rem;
+  // }
 
-  /* Header/navbar */
-  .main-navbar {
-    .dm-text {
-      display: block;
-    }
+  // /* Header/navbar */
+  // .main-navbar {
+  //   .dm-text {
+  //     display: block;
+  //   }
 
-    .btn-burger {
-      margin-left: 5rem;
-    }
-  }
+  //   .btn-burger {
+  //     margin-left: 5rem;
+  //   }
+  // }
 
-  /* Hero section */
-  .hero-container {
-    grid-template-columns: 2fr 3fr;
-    grid-template-areas:  "hero-headline hero-headline"
-                          "hero-content hero-images";
-    gap: 2rem 0rem;
+  // /* Hero section */
+  // .hero-container {
+  //   // grid-template-columns: 2fr 3fr;
+  //   // grid-template-areas:  "hero-headline hero-headline"
+  //   //                       "hero-content hero-images";
+  //   // gap: 2rem 0rem;
 
     
-    .headline {
-      font-size: var(--fs-hero-headline-tablet);
-      margin-top: 4.5rem;
-    }
-    .content {
-      text-align: left;
-    }
-    .dlbuttons {
-      margin-top: 3rem;
-    }
-    .discover-more-container {
-      justify-content: left;
-    }
-    .paragraph-splitter, .hero-images {
-      display: block;
-    }
-  }
+  //   // .headline {
+  //   //   font-size: var(--fs-hero-headline-tablet);
+  //   //   margin-top: 4.5rem;
+  //   // }
+  //   // .content {
+  //   //   text-align: left;
+  //   // }
+  //   // .dlbuttons {
+  //   //   margin-top: 3rem;
+  //   // }
+  //   // .discover-more-container {
+  //   //   justify-content: left;
+  //   // }
+  //   // .paragraph-splitter, .hero-images {
+  //   //   display: block;
+  //   // }
+  // }
 
     /* Features section */
   .features-container {
@@ -185,83 +185,83 @@
 }
 
 @media (1400px <= width) {
-  /* Change margin & padding */
-  :root {
-    --header-pt: 1rem;
-  }
+  // /* Change margin & padding */
+  // :root {
+  //   --header-pt: 1rem;
+  // }
 
-  /* Header/navbar */
-  header#nav {
-    backdrop-filter: unset !important;
-    background-color: unset !important;
-    .burger-menu {
-      grid-template-rows: 0fr !important;
-      box-shadow: unset !important;
-      display: none !important;
-    }
-  }
+  // /* Header/navbar */
+  // header#nav {
+  //   backdrop-filter: unset !important;
+  //   background-color: unset !important;
+  //   .burger-menu {
+  //     grid-template-rows: 0fr !important;
+  //     box-shadow: unset !important;
+  //     display: none !important;
+  //   }
+  // }
 
-  .main-navbar {
-    #navbar-links, .btn-signin {
-      display: flex;
-    }
+  // .main-navbar {
+  //   #navbar-links, .btn-signin {
+  //     display: flex;
+  //   }
 
-    .btn-burger, #burger-toggle {
-      /* In desktop, hide burgermenubtn and its checkbox */
-      display: none;
-    }
-  }
+  //   .btn-burger, #burger-toggle {
+  //     /* In desktop, hide burgermenubtn and its checkbox */
+  //     display: none;
+  //   }
+  // }
 
-  /* Hero section */
-  .hero-container {
-    align-items: start;
-    height: 800px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:  "hero-headline hero-images"
-                          "hero-content hero-images";
-    gap: 0rem;
+  // /* Hero section */
+  // .hero-container {
+  //   // align-items: start;
+  //   // height: 800px;
+  //   // grid-template-columns: 1fr 1fr;
+  //   // grid-template-areas:  "hero-headline hero-images"
+  //   //                       "hero-content hero-images";
+  //   // gap: 0rem;
 
-    .headline {
-      font-size: var(--fs-hero-headline-desktop);
-      margin-top: 9rem;
-      text-align: left;
-    }
-    .content {
-      margin-top: 0;
-    }
-    .dlbuttons {
-      flex-direction: row;
-    }
-    .discover-more {
-      margin-top: 15rem;
-    }
+  //   // .headline {
+  //   //   // font-size: var(--fs-hero-headline-desktop);
+  //   //   // margin-top: 9rem;
+  //   //   // text-align: left;
+  //   // }
+  //   // .content {
+  //   //   margin-top: 0;
+  //   // }
+  //   // .dlbuttons {
+  //   //   flex-direction: row;
+  //   // }
+  //   // .discover-more {
+  //   //   margin-top: 15rem;
+  //   // }
 
-    .hero-images {
-      .hero-img-shadow {
-        bottom: 0;
-        right: 425px;
-      }
-      .hero-img-back {
-        bottom: 0;
-        right: 235px;
-      }
-      .hero-img-front {
-        right: 0;
-        bottom: 0;
-      }
-    }
+  //   .hero-images {
+  //     .hero-img-shadow {
+  //       bottom: 0;
+  //       right: 425px;
+  //     }
+  //     .hero-img-back {
+  //       bottom: 0;
+  //       right: 235px;
+  //     }
+  //     .hero-img-front {
+  //       right: 0;
+  //       bottom: 0;
+  //     }
+  //   }
     
-    /* Replace images with desktop versions */
-    .hero-img-shadow {
-      content: url('/assets/images/desktop/hero-shadow.png');
-    }
-    .hero-img-back {
-      content: url('/assets/images/desktop/hero-back.png');
-    }
-    .hero-img-front {
-      content: url('/assets/images/desktop/hero-front.png');
-    }
-  }
+  //   /* Replace images with desktop versions */
+  //   .hero-img-shadow {
+  //     content: url('/assets/images/desktop/hero-shadow.png');
+  //   }
+  //   .hero-img-back {
+  //     content: url('/assets/images/desktop/hero-back.png');
+  //   }
+  //   .hero-img-front {
+  //     content: url('/assets/images/desktop/hero-front.png');
+  //   }
+  // }
 
   /* Features section */
   .features-container {
