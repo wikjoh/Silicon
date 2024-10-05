@@ -612,6 +612,82 @@ a:hover {
   color: var(--color-reviewrole);
 }
 
+.faq-accordion {
+  --_faq-border: 1px solid var(--color-faqoutline);
+  margin-top: 3.5rem;
+  border: var(--_faq-border);
+  border-radius: 8px;
+}
+.faq-accordion details {
+  background-color: var(--color-faqbg);
+  border-bottom: var(--_faq-border);
+  overflow: hidden;
+  /* No border on last details-element to prevent double border*/
+}
+.faq-accordion details:last-child {
+  border-bottom: unset;
+}
+.faq-accordion details[open] {
+  padding-bottom: 1rem;
+}
+.faq-accordion details[open] .answer {
+  border-top: var(--_faq-border);
+}
+.faq-accordion summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-body-m);
+  font-weight: var(--fw-semi);
+  line-height: 1.3;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: var(--transition-default);
+  /* Hide marker */
+  list-style: none;
+}
+.faq-accordion summary span {
+  color: var(--color-heading);
+}
+.faq-accordion summary:hover {
+  background-color: var(--color-faqchevronbg);
+}
+.faq-accordion p {
+  padding-inline: 1.5rem;
+  font-size: var(--fs-body-s);
+  line-height: 1.6;
+}
+.faq-accordion p:last-child {
+  padding-bottom: 1rem;
+}
+.faq-accordion .chevron-faq {
+  background-color: var(--color-faqchevronbg);
+  color: var(--color-faqchevronarrow);
+  width: 36px;
+  height: 36px;
+  font-size: 0.625rem;
+  /* Set pointer-events none for click to pass through to summary element*/
+  pointer-events: none;
+  /* Prevent shrunk and skewed chevron buttons */
+  flex-shrink: 0;
+  /* Add margin to the left of the button equal to parent padding-right */
+  margin-left: 1rem;
+  /* Transition to smooth out color change and rotation */
+  transition: all 0.5s ease;
+  /* Add some slight outlining around the chevrons */
+  box-shadow: 0 0 4px 0px var(--color-faqoutline);
+}
+.faq-accordion details[open] .btn-chevron {
+  transform: rotate(180deg);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  /* Change outline color to give it a glowing appearance */
+  box-shadow: 0 0 4px 0px var(--color-primary);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1052,81 +1128,6 @@ section#reviews {
   margin-top: 1rem;
   font-size: var(--fs-body-l);
   line-height: 1.6;
-}
-.faq-contact-container .faq-accordion {
-  --_faq-border: 1px solid var(--color-faqoutline);
-  margin-top: 3.5rem;
-  border: var(--_faq-border);
-  border-radius: 8px;
-}
-.faq-contact-container .faq-accordion details {
-  background-color: var(--color-faqbg);
-  border-bottom: var(--_faq-border);
-  overflow: hidden;
-  /* No border on last details-element to prevent double border*/
-}
-.faq-contact-container .faq-accordion details:last-child {
-  border-bottom: unset;
-}
-.faq-contact-container .faq-accordion details[open] {
-  padding-bottom: 1rem;
-}
-.faq-contact-container .faq-accordion details[open] .answer {
-  border-top: var(--_faq-border);
-}
-.faq-contact-container .faq-accordion summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: var(--fs-body-m);
-  font-weight: var(--fw-semi);
-  line-height: 1.3;
-  padding: 1rem 1.5rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  transition: var(--transition-default);
-  /* Hide marker */
-  list-style: none;
-}
-.faq-contact-container .faq-accordion summary span {
-  color: var(--color-heading);
-}
-.faq-contact-container .faq-accordion summary:hover {
-  background-color: var(--color-faqchevronbg);
-}
-.faq-contact-container .faq-accordion p {
-  padding-inline: 1.5rem;
-  font-size: var(--fs-body-s);
-  line-height: 1.6;
-}
-.faq-contact-container .faq-accordion p:last-child {
-  padding-bottom: 1rem;
-}
-.faq-contact-container .faq-accordion .chevron-faq {
-  background-color: var(--color-faqchevronbg);
-  color: var(--color-faqchevronarrow);
-  width: 36px;
-  height: 36px;
-  font-size: 0.625rem;
-  /* Set pointer-events none for click to pass through to summary element*/
-  pointer-events: none;
-  /* Prevent shrunk and skewed chevron buttons */
-  flex-shrink: 0;
-  /* Add margin to the left of the button equal to parent padding-right */
-  margin-left: 1rem;
-  /* Transition to smooth out color change and rotation */
-  transition: all 0.5s ease;
-  /* Add some slight outlining around the chevrons */
-  box-shadow: 0 0 4px 0px var(--color-faqoutline);
-}
-.faq-contact-container .faq-accordion details[open] .btn-chevron {
-  transform: rotate(180deg);
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  /* Change outline color to give it a glowing appearance */
-  box-shadow: 0 0 4px 0px var(--color-primary);
 }
 .faq-contact-container .contact {
   margin-top: 3.5rem;
