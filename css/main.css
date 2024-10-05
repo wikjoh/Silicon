@@ -1035,6 +1035,217 @@ section#reviews {
   line-height: 1.3;
 }
 
+.faq-contact-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.faq-contact-container .header h2 {
+  margin-top: 3rem;
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-extra);
+}
+.faq-contact-container .header p {
+  /* Poor contrast, but according to design */
+  color: var(--color-gray-700);
+}
+.faq-contact-container p {
+  margin-top: 1rem;
+  font-size: var(--fs-body-l);
+  line-height: 1.6;
+}
+.faq-contact-container .faq-accordion {
+  --_faq-border: 1px solid var(--color-faqoutline);
+  margin-top: 3.5rem;
+  border: var(--_faq-border);
+  border-radius: 8px;
+}
+.faq-contact-container .faq-accordion details {
+  background-color: var(--color-faqbg);
+  border-bottom: var(--_faq-border);
+  overflow: hidden;
+  /* No border on last details-element to prevent double border*/
+}
+.faq-contact-container .faq-accordion details:last-child {
+  border-bottom: unset;
+}
+.faq-contact-container .faq-accordion details[open] {
+  padding-bottom: 1rem;
+}
+.faq-contact-container .faq-accordion details[open] .answer {
+  border-top: var(--_faq-border);
+}
+.faq-contact-container .faq-accordion summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-body-m);
+  font-weight: var(--fw-semi);
+  line-height: 1.3;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: var(--transition-default);
+  /* Hide marker */
+  list-style: none;
+}
+.faq-contact-container .faq-accordion summary span {
+  color: var(--color-heading);
+}
+.faq-contact-container .faq-accordion summary:hover {
+  background-color: var(--color-faqchevronbg);
+}
+.faq-contact-container .faq-accordion p {
+  padding-inline: 1.5rem;
+  font-size: var(--fs-body-s);
+  line-height: 1.6;
+}
+.faq-contact-container .faq-accordion p:last-child {
+  padding-bottom: 1rem;
+}
+.faq-contact-container .faq-accordion .chevron-faq {
+  background-color: var(--color-faqchevronbg);
+  color: var(--color-faqchevronarrow);
+  width: 36px;
+  height: 36px;
+  font-size: 0.625rem;
+  /* Set pointer-events none for click to pass through to summary element*/
+  pointer-events: none;
+  /* Prevent shrunk and skewed chevron buttons */
+  flex-shrink: 0;
+  /* Add margin to the left of the button equal to parent padding-right */
+  margin-left: 1rem;
+  /* Transition to smooth out color change and rotation */
+  transition: all 0.5s ease;
+  /* Add some slight outlining around the chevrons */
+  box-shadow: 0 0 4px 0px var(--color-faqoutline);
+}
+.faq-contact-container .faq-accordion details[open] .btn-chevron {
+  transform: rotate(180deg);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  /* Change outline color to give it a glowing appearance */
+  box-shadow: 0 0 4px 0px var(--color-primary);
+}
+.faq-contact-container .contact {
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.faq-contact-container .btn-contact {
+  border-style: none;
+  border-radius: 6px;
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-semi);
+  line-height: 1.6;
+  padding: 1em 2em;
+}
+.faq-contact-container .contact-cards {
+  display: none;
+  width: 100%;
+  gap: 1.5rem;
+}
+.faq-contact-container .contact-cards .chat-card, .faq-contact-container .contact-cards .phone-card {
+  /* Make cards take up equal width */
+  flex-basis: 100%;
+}
+.faq-contact-container .contact-card {
+  padding: 1.5em 1.5em 2em;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 8px;
+}
+.faq-contact-container .contact-card a {
+  font-size: var(--fs-body-s);
+  line-height: 1.6;
+  font-weight: var(--fw-semi);
+}
+.faq-contact-container .fa-comment-dots {
+  /* Flip icon horizontally to match design */
+  transform: scaleX(-1);
+}
+.faq-contact-container .cc-icon {
+  font-size: 1.75rem;
+}
+.faq-contact-container .phone-color {
+  color: var(--color-primary);
+}
+.faq-contact-container .chat-color {
+  color: #22C55E;
+}
+.faq-contact-container .card-text, .faq-contact-container a {
+  font-size: var(--fs-body-s);
+}
+.faq-contact-container a {
+  display: block;
+  margin-top: 1rem;
+}
+.faq-contact-container a i {
+  margin-left: 1rem;
+}
+.faq-contact-container .subscribe {
+  margin-top: 2.5rem;
+  padding: 3rem 1rem 0;
+  background-color: var(--color-subscribebg);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.faq-contact-container .subscribe .cta {
+  display: flex;
+  align-items: center;
+}
+.faq-contact-container .subscribe .cta h2 {
+  font-size: 1.375rem;
+  line-height: 1.35;
+}
+.faq-contact-container .subscribe .cta h2.desktop-text {
+  display: none;
+}
+.faq-contact-container .subscribe .cta img {
+  margin-right: 1rem;
+}
+.faq-contact-container .subscribe .input-container {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  position: relative;
+}
+.faq-contact-container .subscribe .input-container * {
+  border: none;
+}
+.faq-contact-container .subscribe .input-container input {
+  font-size: 1rem;
+  padding: 0 1rem 0 2.75rem;
+  /* Subtract padding from width, else it causes grid to overflow */
+  width: calc(100% - 2.75rem);
+  border-radius: 8px 0 0 8px;
+  border: 1px solid var(--color-gray-400);
+  color: var(--color-subscribetext);
+}
+.faq-contact-container .subscribe .input-container input:focus {
+  outline-offset: -0.4em;
+}
+.faq-contact-container .subscribe .input-container input::-moz-placeholder {
+  color: var(--color-gray-500);
+}
+.faq-contact-container .subscribe .input-container input::placeholder {
+  color: var(--color-gray-500);
+}
+.faq-contact-container .subscribe .input-container .mail-icon {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+}
+.faq-contact-container .subscribe .input-container .btn-subscribe {
+  border-radius: 0 8px 8px 0;
+  font-size: 1rem;
+  line-height: 1.625;
+  font-weight: var(--fw-semi);
+}
+
 @media (768px <= width) {
   /* Change margin & padding */
   :root {
