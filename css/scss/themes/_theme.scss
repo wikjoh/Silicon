@@ -1,23 +1,26 @@
 @use '../abstracts/' as *;
 
-$color-bg: $color-bg-white;
-$color-navlink: $color-navlink-whitebg;
-$color-burger: $color-gray-800;
-$color-heading: $color-heading-whitebg;
-$color-paragraph: $color-paragraph-whitebg;
-$color-switch-bg: $color-gray-600;
-$color-bg-dlbtn: $color-bg-dlbtn-whitebg;
-$color-chevronbg: $color-chevronbg-whitebg;
-$color-chevronarrow: $color-chevronarrow-whitebg;
-$color-brandlogo-border: $color-brandlogo-border-whitebg;
-$color-feature-cards-img-bg: $color-feature-cards-img-bg-bgwhite;
-$color-how-bg: $color-how-bg-white;
-$color-reviewsbg: $color-reviewsbg-whitebg;
-$color-reviewbg: $color-reviewbg-whitebg;
-$color-reviewrole: $color-reviewrole-whitebg;
-$color-faqbg: $color-faqbg-whitebg;
-$color-faqoutline: $color-faqoutline-whitebg;
-$color-faqchevronbg: $color-faqchevronbg-whitebg;
-$color-faqchevronarrow: $color-faqchevronarrow-whitebg;
-$color-subscribebg: $color-subscribebg-whitebg;
-$color-subscribetext: $color-paragraph-whitebg;
+:root {
+  /* Default theme - white/light */
+  --color-bg: var(--color-bg-white);
+  --color-navlink: var(--color-navlink-whitebg);
+  --color-burger: var(--color-gray-800);
+  --color-heading: var(--color-heading-whitebg);
+  --color-paragraph: var(--color-paragraph-whitebg);
+  --color-switch-bg: var(--color-gray-600);
+  --color-bg-dlbtn: var(--color-bg-dlbtn-whitebg);
+  --color-chevronbg: var(--color-chevronbg-whitebg);
+  --color-chevronarrow: var(--color-chevronarrow-whitebg);
+  --color-brandlogo-border: var(--color-brandlogo-border-whitebg);
+  --color-feature-cards-img-bg: var(--color-feature-cards-img-bg-bgwhite);
+  --color-how-bg: var(--color-how-bg-white);
+  --color-reviewsbg: var(--color-reviewsbg-whitebg);
+  --color-reviewbg: var(--color-reviewbg-whitebg);
+  --color-reviewrole: var(--color-reviewrole-whitebg);
+  --color-faqbg: var(--color-faqbg-whitebg);
+  --color-faqoutline: var(--color-faqoutline-whitebg);
+  --color-faqchevronbg: var(--color-faqchevronbg-whitebg);
+  --color-faqchevronarrow: var(--color-faqchevronarrow-whitebg);
+  --color-subscribebg: var(--color-subscribebg-whitebg);
+  --color-subscribetext: var(--color-paragraph-whitebg);
+}
