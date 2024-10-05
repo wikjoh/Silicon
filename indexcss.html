@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon stuff, generated using realfavicongenerator.net. ChatGPT "html favicon best practice". -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- End favicon -->
+  <link rel="stylesheet" href="/styles/styles.css">
+  <script src="https://kit.fontawesome.com/66b6d46acf.js" crossorigin="anonymous"></script>
+  <title>Silicon | Payments Made Easy</title>
+  <meta name="description" content="Join 10+ million customers using Silicon to manage their payments, transfers and budgeting. Available in all countries.">
+</head>
+<body>
+
+  <div class="themewrapper">
+
+    <header id="nav">
+      <a href="#main-content" class="jump-to-main">Jump to main content</a>
+      <div class="main-navbar wrapper">
+        <div class="navbar-left flex">
+          <a class="logo" href="/" aria-current="page">
+            <img class="logo-img" src="/assets/logo-bglight.svg" alt="Silicon Logotype">
+          </a>
+          
+          <nav id="navbar-links" class="navbar-links">
+            <ul>
+              <li><a class="navbar-link" href="#">Features</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="navbar-right flex">
+          <!-- Labels for toggling darkmode.
+          The label that doesn't correspond to users preffered scheme will be hidden.  -->
+          <div class="theme-toggle-switches flex">
+            <span class="dm-text" aria-hidden="true">Dark mode</span>
+            
+            <label id="label-darkmode-switch-whitebg" for="darkmode-switch-whitebg" class="dm-toggle-switch">
+              <span class="dmswitchbg"></span>
+            </label>
+            <label id="label-darkmode-switch-darkbg" for="darkmode-switch-darkbg" class="dm-toggle-switch">
+              <span class="dmswitchbg"></span>
+            </label>
+
+            <span class="dm-chbox-hidden debug">prefers-color-scheme-light-box</span>
+            <input id="darkmode-switch-whitebg" class="darkmode-checkboxes visually-hidden" type="checkbox" aria-label="Enable darkmode">
+            <span class="dm-chbox-hidden debug">prefers-color-scheme-dark-box</span>
+            <input id="darkmode-switch-darkbg" class="darkmode-checkboxes visually-hidden" type="checkbox" checked aria-label="Enable darkmode">
+          </div>
+          
+          <a id="signin-button" class="btn-primary btn-signin" href="#">
+            <img class="usericon" src="/assets/icons/signupbuttonusericon.svg" alt="">
+            <span>Sign in / up</span>
+          </a>
+          
+          <div class="btn-burger">
+            <label for="burger-toggle">
+              <i class="fa-solid fa-bars burger-menu-open"></i>
+              <i class="fa-solid fa-xmark burger-menu-close"></i>
+            </label>
+          </div>
+          <input type="checkbox" id="burger-toggle" class="visually-hidden" aria-label="Toggle open main menu">
+        </div>
+      </div>
+      
+      <!-- Hidden in desktop -->
+      <div id="burger-menu" class="burger-menu">
+        <!-- Since I'm doing this without JS and can't delay applyning display:none until after transform,
+         **  in order to maintain proper animated closing of menu when putting display:none to hide elements from accessibility tree,
+         **  duplicate the nav-element and reveal the one with aria-hidden attributes when closing the menu. -->
+        <nav class="burger-nav hide-aria" aria-hidden="true">
+          <ul>
+            <li>
+              <a class="btn-primary btn-signin" href="#" tabindex="-1">
+                <img class="usericon" src="/assets/icons/signupbuttonusericon.svg" alt="">
+                <span>Sign in / up</span>
+              </a>
+            </li>
+            <li>
+              <a class="navbar-link" href="#" tabindex="-1">Features</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="burger-nav reveal-aria">
+          <ul>
+            <li>
+              <a class="btn-primary btn-signin" href="#">
+                <img class="usericon" src="/assets/icons/signupbuttonusericon.svg" alt="">
+                <span>Sign in / up</span>
+              </a>
+            </li>
+            <li>
+              <a class="navbar-link" href="#">Features</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="hero">
+        <div class="hero-container wrapper">
+          <h1 class="headline">Manage All Your<br>Money in One App</h1>
+
+          <div class="content">
+            <p class="pitch">
+              We offer you a new generation of the mobile banking. <br class="paragraph-splitter"> Save, spend & manage money in your pocket.
+            </p>
+
+            <div class="dlbuttons">
+              <a class="btn-dl btn-appstore" href="#"><img class="btn-apple-img" src="/assets/appstorebadges/appstore-light.svg" alt="Apple Appstore download button"></a>
+              <a class="btn-dl btn-googleplay" href="#"><img class="btn-google-img" src="/assets/appstorebadges/googleplay-light.svg" alt="Google Play download button"></a>
+            </div>
+  
+            <div class="discover-more-container">
+              <a class="discover-more" href="#features">
+                <label class="btn-chevron chevron-discovermore"></label>
+                <span>Discover more</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-images">
+            <img class="hero-img-shadow" src="/assets/images/tablet/hero-shadow.png" alt="">
+            <img class="hero-img-back" src="/assets/images/tablet/hero-back.png" alt="">
+            <img class="hero-img-front" src="/assets/images/tablet/hero-front.png" alt="An image of two overlapping phones with the Silicon app, one displaying transaction features, the other budgeting.">
+          </div>
+
+        </div>
+      </section>
+
+      <section id="features">
+        <div class="features-container wrapper">
+          
+          <div class="brandlogo-container" aria-label="Brands that endorse our app">
+            <div class="brandlogo">
+              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-1.svg" alt="Brand1">
+            </div>
+
+            <div class="brandlogo">
+              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-2.svg" alt="Brand2">
+            </div>
+
+            <div class="brandlogo">
+              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-3.svg" alt="Brand3">
+            </div>
+
+            <div class="brandlogo">
+              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-4.svg" alt="Brand4">
+            </div>
+
+            <div class="brandlogo desktop-only">
+              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-5.svg" alt="Brand5">
+            </div>
+
+            <div class="brandlogo desktop-only">
+              <img class="brandlogo-img" src="/assets/images/brand-logos/logoipsum-6.svg" alt="Brand6">
+            </div>
+
+          </div>
+
+
+          <div class="content-container">
+            <div class="left-content">
+              <img class="phone-img" src="/assets/images/desktop/features-phone.png" alt="An image showcasing the transaction features of the app.">
+              <img class="card-img" src="/assets/images/desktop/features-card.png" alt="">
+            </div>
+  
+            <div class="right-content">
+              <header>
+                <h2 class="headline">App Features</h2>
+                <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+              </header>
+              
+              <div class="feature-cards">
+                <div class="easy card">
+                  <div class="card-img-container">
+                    <img src="/assets/icons/appfeatureicons/easypayments.svg" alt="">
+                  </div>
+                  <div class="cardtext">
+                    <h3>Easy Payments</h3>
+                    <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
+                  </div>
+                </div>
+                <div class="data card">
+                  <div class="card-img-container">
+                    <img src="/assets/icons/appfeatureicons/datasecurity.svg" alt="">
+                  </div>
+                  <div class="cardtext">
+                    <h3>Data Security</h3>
+                    <p>Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non.</p>
+                  </div>
+                </div>
+                <div class="cost card">
+                  <div class="card-img-container">
+                    <img src="/assets/icons/appfeatureicons/coststatistics.svg" alt="">
+                  </div>
+                  <div class="cardtext">
+                    <h3>Cost Statistics</h3>
+                    <p>Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
+                  </div>
+                </div>
+                <div class="support card">
+                  <div class="card-img-container">
+                    <img src="/assets/icons/appfeatureicons/support247.svg" alt="">
+                  </div>
+                  <div class="cardtext">
+                    <h3>Support 24/7</h3>
+                    <p>A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
+                  </div>
+                </div>
+                <div class="regular card">
+                  <div class="card-img-container">
+                    <img src="/assets/icons/appfeatureicons/regularcashback.svg" alt="">
+                  </div>
+                  <div class="cardtext">
+                    <h3>Regular Cashback</h3>
+                    <p>Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
+                  </div>
+                </div>
+                <div class="top card">
+                  <div class="card-img-container">
+                    <img src="/assets/icons/appfeatureicons/topstandards.svg" alt="">
+                  </div>
+                  <div class="cardtext">
+                    <h3>Top Standards</h3>
+                    <p>Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how">
+        <div class="how-container wrapper">
+          <h2>How Does It Work?</h2>
+
+          <div class="images-container" aria-label="A set of images showcasing some features of the app.">
+            <div class="img tablet left">
+              <img src="/assets/images/tablet/howdoesitwork-left.png" alt="Card transactions.">
+            </div>
+            <div class="img desktop left">
+              <img src="/assets/images/desktop/howdoesitwork-left.png" alt="Budget and spending.">
+            </div>
+            <div class="img mobile center">
+              <img src="/assets/images/mobile/howdoesitwork.png" alt="Money transfers.">
+            </div>
+            <div class="img tablet center">
+              <img src="/assets/images/tablet/howdoesitwork-center.png" alt="Money tranfers.">
+            </div>
+            <div class="img desktop center">
+              <img src="/assets/images/desktop/howdoesitwork-center.png" alt="Card transactions.">
+            </div>
+            <div class="img tablet right">
+              <img src="/assets/images/tablet/howdoesitwork-right.png" alt="Money transfer interface.">
+            </div>
+            <div class="img desktop right">
+              <img src="/assets/images/desktop/howdoesitwork-right.png" alt="Money transfers.">
+            </div>
+          </div>
+
+          <div class="image-description mobile">
+            <h3>Transfers to people from your contact list</h3>
+            <p>Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+          </div>
+
+          <div class="image-description tablet">
+            <h3>Step 3. Transfers to people from your contact list</h3>
+            <p>Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+          </div>
+
+          <div class="image-description desktop">
+            <h3>Latest transaction history</h3>
+            <p>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="payment">
+        <!-- Only in desktop -->
+         <div class="payment-container wrapper">
+          <div class="transfer-text">
+              <h2>Make your money<br>transfer simple and clear</h2>
+              <ul>
+                <li><img src="assets/icons/checkmarkercircle.svg" alt="">Banking transactions are free for you</li>
+                <li><img src="assets/icons/checkmarkercircle.svg" alt="">No monthly cash commission</li>
+                <li><img src="assets/icons/checkmarkercircle.svg" alt="">Manage payments and transactions online</li>
+              </ul>
+              <a class="btn-learn-more btn-primary" href="#">
+                <span>Learn more<i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+
+            <div class="img-container top">
+              <img class="img-transfer back" src="assets/images/desktop/payment-transfer-back.png" alt="">
+              <img class="img-transfer front" src="assets/images/desktop/payment-transfer-front.png" alt="Graph showing account balance over time.">
+            </div>
+
+            <div class="img-container bottom">
+              <img class="img-payment back" src="assets/images/desktop/payment-receive-back.png" alt="">
+              <img class="img-payment front" src="assets/images/desktop/payment-receive-card.png" alt="App contacts list.">
+            </div>
+
+            <div class="payment-text">
+              <h2>Receive payment from<br>international bank details</h2>
+              <div class="cards">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/assets/icons/appfeatureicons/easypayments.svg" alt="">
+                  </div>
+                  <p>Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
+                </div>
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="/assets/icons/appfeatureicons/regularcashback.svg" alt="">
+                  </div>
+                  <p>A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
+                </div>
+              </div>
+              <a class="btn-learn-more btn-primary" href="#">
+                <span>Learn more<i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+         </div>
+      </section>
+
+      <section id="reviews">
+      <!-- Only in desktop -->
+       <div class="reviews-container wrapper">
+        <h2>Clients are<br>Loving Our App</h2>
+
+          <div class="review left">
+            <img class="img-quote-icon" src="assets/icons/quote-icon.svg" alt="">
+            <blockquote>
+              <img src="assets/icons/rating-4of5.svg" alt="4 out of 5 stars">
+              <p>Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus, egestas lacus, egestas justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.</p>
+            </blockquote>
+            <footer class="author">
+              <div class="author-img">
+                <img src="assets/images/desktop/review-author-female.png" alt="Picture of Fannie">
+              </div>
+              <div class="author-details">
+                <p class="author-name">Fannie Summers</p>
+                <p class="author-role">Designer</p>
+              </div>
+            </footer>
+          </div>
+
+          <div class="review right">
+            <img class="img-quote-icon" src="assets/icons/quote-icon.svg" alt="">
+            <blockquote>
+              <img src="assets/icons/rating-5of5.svg" alt="5 out of 5 stars">
+              <p>Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl bibendum nulla tincidunt eu enim ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.</p>
+            </blockquote>
+            <footer class="author">
+              <div class="author-img">
+                <img src="assets/images/desktop/review-author-male.png" alt="Picture of Albert">
+              </div>
+              <div class="author-details">
+                <p class="author-name">Albert Flores</p>
+                <p class="author-role">Developer</p>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq-contact">
+        <div class="faq-contact-container wrapper">
+          <header class="header">
+            <h2 class="headline tac">Any questions?<br>Check out the FAQs</h2>
+            <p class="getintouch-text tac">Still have unanswered questions and need to get in touch?</p>
+          </header>
+
+          <div class="faq-accordion">
+            <details open>
+              <summary class="question">
+                <span>Is any of my personal information stored in the App?</span>
+                <label class="btn-chevron chevron-faq"></label>
+              </summary>
+              <div class="answer">
+                <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
+                <p>Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
+              </div>
+            </details>
+
+            <details>
+              <summary class="question">
+                <span>What formats can I download my transaction history in?</span>
+                <label class="btn-chevron chevron-faq"></label>
+              </summary>
+              <div class="answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sequi amet animi nobis officiis. Alias laboriosam, quam aut iusto pariatur nihil atque aliquam! Enim vero provident impedit perspiciatis nulla sit corrupti mollitia voluptatem sapiente atque possimus, distinctio nostrum cum veniam rem, ipsum obcaecati dolore? Quisquam nemo delectus pariatur dolor numquam?</p>
+              </div>
+            </details>
+
+            <details>
+              <summary class="question">
+                <span>Can I schedule future transfers?</span>
+                <label class="btn-chevron chevron-faq"></label>
+              </summary>
+              <div class="answer">
+                <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
+              </div>
+            </details>
+
+            <details>
+              <summary class="question">
+                <span>When can I use Banking App services?</span>
+                <label class="btn-chevron chevron-faq"></label>
+              </summary>
+              <div class="answer">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum enim nam ea neque amet in magni esse assumenda, quasi tempora debitis totam obcaecati laboriosam veritatis ipsa quae maxime impedit incidunt rerum aut perferendis distinctio temporibus! Vitae repellat id provident non saepe recusandae dicta voluptate, nesciunt consectetur officiis! Beatae, nihil nulla?</p>
+              </div>
+            </details>
+
+            <details>
+              <summary class="question">
+                <span>Can I create my own password that is easy for me to remember?</span>
+                <label class="btn-chevron chevron-faq"></label>
+              </summary>
+              <div class="answer">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid beatae veritatis magnam reiciendis numquam porro corrupti et tenetur quis. Blanditiis totam cupiditate eum architecto aspernatur harum, vel temporibus. Ut facere, sapiente quis, perspiciatis sint ex nesciunt deserunt quisquam consectetur consequuntur necessitatibus et. Voluptatibus velit, voluptatem accusantium necessitatibus minus illum expedita.</p>
+              </div>
+            </details>
+
+            <details>
+              <summary class="question">
+                <span>What happens if I forget or lose my password?</span>
+                <label class="btn-chevron chevron-faq"></label>
+              </summary>
+              <div class="answer">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid beatae veritatis magnam reiciendis numquam porro corrupti et tenetur quis. Blanditiis totam cupiditate eum architecto aspernatur harum, vel temporibus. Ut facere, sapiente quis, perspiciatis sint ex nesciunt deserunt quisquam consectetur consequuntur necessitatibus et. Voluptatibus velit, voluptatem accusantium necessitatibus minus illum expedita.</p>
+              </div>
+            </details>            
+          </div>
+
+          <div class="contact">
+            <button class="btn-contact btn-primary">Contact us now</button>
+            <div class="contact-cards">
+              <div class="phone-card contact-card">
+                <i class="fa-solid fa-phone-volume cc-icon phone-color"></i>
+                <p class="card-text">Still have questions?</p>
+                <a class="phone-color" href="tel:123456789">Contact us<i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="chat-card contact-card">
+                <i class="fa-solid fa-comment-dots cc-icon chat-color"></i>
+                <p class="card-text">Don't like phone calls?</p>
+                <a class="chat-color" href="#">Contact us<i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="subscribe">
+            <div class="cta">
+              <img src="assets/icons/subscribe-bellicon.svg" alt="Notification bell.">
+              <h2>Subscribe to our newsletter</h2>
+              <h2 class="desktop-text">Subscribe to our newsletter to stay informed about latest updates</h2>
+            </div>
+            <div class="email-form">
+              <form action="#" method="post" id="subscribe-email-form" name="subscribe-email-form">
+                <label for="email"></label>
+                <div class="input-container">
+                  <img class="mail-icon" src="assets/icons/subscribe-mailicon.svg" alt="">
+                  <input type="email" id="email" placeholder="Your email" required>
+                  <button class="btn-primary btn-subscribe">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <span>© 2024 Silicon. All rights reserved.<br class="footer-splitter"> Credit MadrasThemes</span>
+      </div>
+    </footer>
+
+  </div> <!-- Themewrapper div -->
+</body>
+</html>

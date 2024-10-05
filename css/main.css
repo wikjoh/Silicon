@@ -1200,6 +1200,9 @@ section#reviews {
   font-size: var(--fs-body-l);
   line-height: 1.6;
 }
+.faq-contact-container .faq-accordion p {
+  font-size: var(--fs-body-s);
+}
 .faq-contact-container .contact {
   margin-top: 3.5rem;
   display: flex;
