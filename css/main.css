@@ -236,6 +236,29 @@ a:hover {
   padding: 1rem;
 }
 
+.btn-burger {
+  display: flex;
+  justify-content: center;
+  /* Set width to avoid div changing width when icon is changed */
+  width: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 0.5rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-burger);
+}
+.btn-burger label {
+  /* Add some padding to make it easier to click on touch devices */
+  padding: 0.3rem;
+}
+.btn-burger label:hover {
+  cursor: pointer;
+}
+.btn-burger .burger-menu-close {
+  display: none;
+}
+
 .jump-to-main {
   display: inline-block;
   padding: 1rem;
@@ -275,29 +298,6 @@ a:hover {
   border-radius: 50%;
   background-color: var(--color-white);
   transition: var(--transition-theme);
-}
-
-.btn-burger {
-  display: flex;
-  justify-content: center;
-  /* Set width to avoid div changing width when icon is changed */
-  width: 1.5rem;
-  margin-left: 2rem;
-  margin-right: 0.5rem;
-  background-color: transparent;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--color-burger);
-}
-.btn-burger label {
-  /* Add some padding to make it easier to click on touch devices */
-  padding: 0.3rem;
-}
-.btn-burger label:hover {
-  cursor: pointer;
-}
-.btn-burger .burger-menu-close {
-  display: none;
 }
 
 .visually-hidden {
@@ -429,4 +429,102 @@ header#nav:has(#burger-toggle:checked) .burger-nav.hide-aria {
 }
 .main-navbar .btn-signin {
   margin-left: 2rem;
+}
+
+section#hero {
+  /* Add padding to give room for navbar */
+  padding-top: 4rem;
+  background: rgb(99, 102, 241);
+  background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "hero-headline" "hero-content";
+  /* Hide in mobile */
+}
+.hero-container .paragraph-splitter, .hero-container .hero-images {
+  display: none;
+}
+.hero-container .headline {
+  grid-area: hero-headline;
+  text-align: center;
+  font-size: var(--fs-hero-headline-mobile);
+  margin-top: 1.5rem;
+}
+.hero-container .content {
+  grid-area: hero-content;
+  text-align: center;
+  margin-top: 2rem;
+}
+.hero-container .pitch {
+  font-size: var(--fs-body-l);
+  line-height: 1.6;
+}
+.hero-container .dlbuttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.hero-container .btn-dl {
+  /* Give buttons a higher z-index to make sure they aren't covered
+  ** by overflow from position: absolute images */
+  z-index: 50;
+  background-color: var(--color-bg-dlbtn);
+  border-radius: 8px;
+  padding: 8px 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-default);
+}
+.hero-container .btn-dl:hover {
+  background-color: var(--color-gray-600);
+  color: var(--color-white);
+  text-decoration: none;
+}
+.hero-container .discover-more-container {
+  display: flex;
+  justify-content: center;
+}
+.hero-container .discover-more {
+  display: flex;
+  align-items: center;
+  font-size: var(--fs-body-s);
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+.hero-container .chevron-discovermore {
+  background-color: var(--color-chevronbg);
+  color: var(--color-chevronarrow);
+  width: 44px;
+  height: 44px;
+  font-size: 0.75rem;
+}
+.hero-container .hero-images {
+  grid-area: hero-images;
+  align-self: end;
+  justify-self: right;
+  position: relative;
+}
+.hero-container .hero-images .hero-img-shadow {
+  position: absolute;
+  bottom: 0;
+  right: 200px;
+  z-index: 5;
+}
+.hero-container .hero-images .hero-img-back {
+  position: absolute;
+  bottom: 0;
+  right: 142px;
+  z-index: 10;
+}
+.hero-container .hero-images .hero-img-front {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 15;
 }
