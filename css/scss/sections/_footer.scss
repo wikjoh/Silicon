@@ -1,3 +1,5 @@
+@use '../abstracts/' as *;
+
 .footer {
   padding: 1.5rem 0;
   display: flex;
@@ -7,7 +9,17 @@
   font-size: var(--fs-body-s);
   line-height: 1.6;
 
+  @include desktop {
+    padding: 3rem 0;
+  }
+
   span {
     color: var(--color-gray-600);
+  }
+
+  .footer-splitter {
+    @include tablet {
+      display: none;
+    }
   }
 }

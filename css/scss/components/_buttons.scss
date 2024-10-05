@@ -41,6 +41,10 @@
   font-weight: var(--fw-semi);
   line-height: 1.6;
   padding: 1em 2em;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .btn-dl {
