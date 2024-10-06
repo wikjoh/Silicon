@@ -45,8 +45,11 @@
       }
     }
 
-    /* Hide marker */
+    /* Hide default arrow/marker */
     list-style: none;
+    &::-webkit-details-marker {
+      display: none;
+    }
   }
 
   p {

@@ -1410,7 +1410,7 @@ a:active, .navbar-link:active {
      -moz-user-select: none;
           user-select: none;
   transition: var(--transition-default);
-  /* Hide marker */
+  /* Hide default arrow/marker */
   list-style: none;
 }
 .faq-accordion summary span {
@@ -1420,6 +1420,9 @@ a:active, .navbar-link:active {
   .faq-accordion summary:hover {
     background-color: var(--color-faqchevronbg);
   }
+}
+.faq-accordion summary::-webkit-details-marker {
+  display: none;
 }
 .faq-accordion p {
   padding-inline: 1.5rem;
