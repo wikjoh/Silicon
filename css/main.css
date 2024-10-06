@@ -1061,27 +1061,23 @@ section#reviews {
   }
 }
 
-a {
+a, .navbar-link {
   color: var(--color-primary);
   text-decoration: none;
 }
 @media (hover: hover) {
-  a:hover {
+  a:hover, .navbar-link:hover {
     color: var(--color-primary);
   }
+}
+a:active, .navbar-link:active {
+  color: var(--color-primary);
 }
 
 .navbar-link {
   color: var(--color-navlink);
   font-weight: var(--fw-semi);
-  opacity: var(--navlink-opacity);
   transition: var(--transition-default);
-}
-@media (hover: hover) {
-  .navbar-link:hover {
-    color: var(--color-primary);
-    text-decoration: none;
-  }
 }
 
 .btn-primary, .btn-contact, .btn-learn-more, .btn-signin {

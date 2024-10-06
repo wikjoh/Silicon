@@ -9,18 +9,14 @@ a {
       color: var(--color-primary);
     }
   }
+  &:active {
+    color: var(--color-primary);
+  }
 }
 
 .navbar-link {
+  @extend a;
   color: var(--color-navlink);
   font-weight: var(--fw-semi);
-  opacity: var(--navlink-opacity);
   transition: var(--transition-default);
-  
-  &:hover {
-    @include hover {
-      color: var(--color-primary);
-      text-decoration: none;
-    }
-  }
 }
