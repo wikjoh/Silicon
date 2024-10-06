@@ -11,7 +11,7 @@
     A project for learning the basics of HTML and (S)CSS
     <br />
     <br />
-    <a href="https://silicon.lowcal.host">View Demo</a>
+    <a href="https://silicon.lowcal.host" target="_blank">View Demo</a>
   </p>
 </div>
 
@@ -24,6 +24,6 @@ The dark mode and mobile navigation menu has been built without using any JavaSc
 <br />
 <br />
 
-<a href="https://silicon.lowcal.host">
+<a href="https://silicon.lowcal.host" target="_blank">
   <img src="https://github.com/wikjoh/Silicon/raw/master/showcase.png" alt="Project screenshot">
 </a>
