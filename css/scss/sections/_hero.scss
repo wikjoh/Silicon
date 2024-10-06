@@ -123,6 +123,17 @@ section#hero {
 
     @include tablet {
       display: block;
+      .desktop {
+        display: none;
+      }
+    }
+    @include desktop {
+      .tablet {
+        display: none;
+      }
+      .desktop {
+        display: block;
+      }
     }
 
     .hero-img-shadow {
@@ -132,7 +143,6 @@ section#hero {
       z-index: 5;
 
       @include desktop {
-        content: url('/assets/images/desktop/hero-shadow.png');
         bottom: 0;
         right: 425px;
       }
@@ -144,7 +154,6 @@ section#hero {
       z-index: 10;
 
       @include desktop {
-        content: url('/assets/images/desktop/hero-back.png');
         bottom: 0;
         right: 235px;
       }
@@ -156,7 +165,6 @@ section#hero {
       z-index: 15;
 
       @include desktop {
-        content: url('/assets/images/desktop/hero-front.png');
         right: 0;
         bottom: 0;
       }
