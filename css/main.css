@@ -1639,7 +1639,7 @@ a:active, .navbar-link:active {
     **  and apply border on open details elements*/
   }
   body:has(#darkmode-switch-whitebg:checked) .themewrapper .logo-img {
-    content: url("/assets/logo-bgdark.svg");
+    content: url("/assets/images/logo-bgdark.svg");
   }
   body:has(#darkmode-switch-whitebg:checked) .themewrapper section#hero {
     background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgb(19, 16, 34) 100%);
@@ -1654,10 +1654,10 @@ a:active, .navbar-link:active {
     content: url("/assets/icons/chevron-dn-dark.svg");
   }
   body:has(#darkmode-switch-whitebg:checked) .themewrapper .btn-apple-img {
-    content: url("/assets/appstorebadges/appstore-dark.svg");
+    content: url("/assets/images/appstorebadges/appstore-dark.svg");
   }
   body:has(#darkmode-switch-whitebg:checked) .themewrapper .btn-google-img {
-    content: url("/assets/appstorebadges/googleplay-dark.svg");
+    content: url("/assets/images/appstorebadges/googleplay-dark.svg");
   }
   body:has(#darkmode-switch-whitebg:checked) .themewrapper .dmswitchbg::before {
     transform: translateX(20px);
@@ -1717,7 +1717,7 @@ a:active, .navbar-link:active {
     **  and apply border on open details elements*/
   }
   body:has(#darkmode-switch-darkbg:checked) .themewrapper .logo-img {
-    content: url("/assets/logo-bgdark.svg");
+    content: url("/assets/images/logo-bgdark.svg");
   }
   body:has(#darkmode-switch-darkbg:checked) .themewrapper section#hero {
     background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgb(19, 16, 34) 100%);
@@ -1732,10 +1732,10 @@ a:active, .navbar-link:active {
     content: url("/assets/icons/chevron-dn-dark.svg");
   }
   body:has(#darkmode-switch-darkbg:checked) .themewrapper .btn-apple-img {
-    content: url("/assets/appstorebadges/appstore-dark.svg");
+    content: url("/assets/images/appstorebadges/appstore-dark.svg");
   }
   body:has(#darkmode-switch-darkbg:checked) .themewrapper .btn-google-img {
-    content: url("/assets/appstorebadges/googleplay-dark.svg");
+    content: url("/assets/images/appstorebadges/googleplay-dark.svg");
   }
   body:has(#darkmode-switch-darkbg:checked) .themewrapper .dmswitchbg::before {
     transform: translateX(20px);

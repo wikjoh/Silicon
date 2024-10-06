@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Favicon stuff, generated using realfavicongenerator.net. ChatGPT "html favicon best practice". -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <!-- Favicons are supposed to be available at site root dir for searchengines, i.e. site.com/favicon.ico, but to declutter main folder, put them inside /favicons/ and add redirect on webserver instead -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <!-- End favicon -->
@@ -26,7 +27,7 @@
       <div class="main-navbar wrapper">
         <div class="navbar-left flex">
           <a class="logo" href="/" aria-current="page">
-            <img class="logo-img" src="/assets/logo-bglight.svg" alt="Silicon Logotype">
+            <img class="logo-img" src="/assets/images/logo-bglight.svg" alt="Silicon Logotype">
           </a>
           
           <nav id="navbar-links" class="navbar-links">
@@ -115,8 +116,8 @@
             </p>
 
             <div class="dlbuttons">
-              <a class="btn-dl btn-appstore" href="#"><img class="btn-apple-img" src="/assets/appstorebadges/appstore-light.svg" alt="Apple Appstore download button"></a>
-              <a class="btn-dl btn-googleplay" href="#"><img class="btn-google-img" src="/assets/appstorebadges/googleplay-light.svg" alt="Google Play download button"></a>
+              <a class="btn-dl btn-appstore" href="#"><img class="btn-apple-img" src="/assets/images/appstorebadges/appstore-light.svg" alt="Apple Appstore download button"></a>
+              <a class="btn-dl btn-googleplay" href="#"><img class="btn-google-img" src="/assets/images/appstorebadges/googleplay-light.svg" alt="Google Play download button"></a>
             </div>
   
             <div class="discover-more-container">
