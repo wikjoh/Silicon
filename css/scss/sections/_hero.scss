@@ -49,6 +49,7 @@ section#hero {
       text-align: left;
     }
   }
+
   .content {
     grid-area: hero-content;
     text-align: center;
@@ -61,6 +62,7 @@ section#hero {
       margin-top: 0;
     }
   }
+
   .pitch {
     font-size: var(--fs-body-l);
     line-height: 1.6;
@@ -71,6 +73,7 @@ section#hero {
       }
     }
   }
+
   .dlbuttons {
     display: flex;
     flex-direction: column;
@@ -147,6 +150,7 @@ section#hero {
         right: 425px;
       }
     }
+
     .hero-img-back {
       position: absolute;
       bottom: 0;
@@ -158,6 +162,7 @@ section#hero {
         right: 235px;
       }
     }
+    
     .hero-img-front {
       position: absolute;
       right: 0;

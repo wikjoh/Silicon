@@ -19,6 +19,7 @@
 ## About The Project
 
 This is my solution for the assignment of building the given <a href="https://github.com/wikjoh/Silicon/raw/master/Silicon%20Design%20Template.fig">Figma design<a> using HTML and SCSS.
+<br />
 The dark mode and mobile navigation menu has been built without using any JavaScript.
 <br />
 <br />
