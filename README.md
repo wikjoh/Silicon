@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://github.com/wikjoh/Silicon">
-    <img src="https://github.com/wikjoh/Silicon/raw/master/android-chrome-192x192.png" alt="Logo" width="192" height="192">
+    <img src="https://github.com/wikjoh/Silicon/raw/master/favicons/android-chrome-192x192.png" alt="Logo" width="192" height="192">
   </a>
 
   <h3 align="center">Silicon</h3>
