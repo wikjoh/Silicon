@@ -6,6 +6,12 @@
 
 @mixin desktop {
   @media (width >= 1400px) {
-    @content
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    @content;
   }
 }

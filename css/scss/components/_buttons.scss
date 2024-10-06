@@ -60,9 +60,11 @@
   transition: var(--transition-default);
   
   &:hover {
-    background-color: var(--color-gray-600);
-    color: var(--color-white);
-    text-decoration: none;
+    @include hover {
+      background-color: var(--color-gray-600);
+      color: var(--color-white);
+      text-decoration: none;
+    }
   }
 }
 

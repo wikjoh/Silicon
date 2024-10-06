@@ -1,9 +1,13 @@
+@use '../abstracts/' as *;
+
 a {
   color: var(--color-primary);
   text-decoration: none;
   
   &:hover {
-    color: var(--color-primary);
+    @include hover {
+      color: var(--color-primary);
+    }
   }
 }
 
@@ -14,7 +18,9 @@ a {
   transition: var(--transition-default);
   
   &:hover {
-    color: var(--color-primary);
-    text-decoration: none;
+    @include hover {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
   }
 }
